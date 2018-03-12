@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="dtaqCheckpointForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqProjMachCheckpointForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqPartForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqCheckpointTypeForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqCheckpointUseForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqProjMachCheckpointForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		
+		<form-bean name="dtaqLineForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqSegmentForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqStationForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqCheckPointGroupForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqDataForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqDataInfoForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="checkpointPictureForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="importTxtForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="impTxtForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="fileFormForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+
+		<form-bean name="saveTxtForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+
+        <form-bean name="dtaqAutoCheckpointForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqLayerForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqSectionForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="localStructureForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqKimoliteForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        
+        <form-bean name="dtaqLaunchingMethodForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqConstructionMethodForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqBuildingForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqPipeForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+       
+		<!--数据采集-->
+ 		<form-bean name="dtaqDataInfoQueryForm" type="org.apache.struts.validator.LazyValidatorForm" />
+ 		<form-bean name="dtaqDataInfoQuery2Form" type="org.apache.struts.validator.LazyValidatorForm" />
+ 		<form-bean name="dtaqDataInfoQuery3Form" type="org.apache.struts.validator.LazyValidatorForm" />
+ 		<form-bean name="dtaqAutoDataInfoQuery3Form" type="org.apache.struts.validator.LazyValidatorForm" />
+ 		
+ 		<form-bean name="projectMaterialsForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="blockStructureForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="peripheralBuildingForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="projectGeologyForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="stationStructureForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="undergroundPipelineForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="stratumRockForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqWarnInfoForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="dtaqWarnAnalysisForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="dtaqWarnThingSignForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="dtaqWarnThingForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<form-bean name="warnAnalysisSignForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		<!--人员资质信息管理-->
+ 		<form-bean name="constructorForm" type="org.apache.struts.validator.LazyValidatorForm" />
+ 		<form-bean name="constructorTotalForm" type="org.apache.struts.validator.LazyValidatorForm" />
+ 		<form-bean name="dtaqSumQueryForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+ 		
+ 		<!--安全巡检信息管理-->
+ 		<form-bean name="safeInspectingForm" type="org.apache.struts.validator.LazyValidatorForm" />
+        <form-bean name="dtaqCheckpointHistoryForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <!-- 综合数据仓库 -->
+        <form-bean name="dtaqStationQueryForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+        <form-bean name="dtaqDataQueryForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/dtaqCheckpointAction" name="dtaqCheckpointForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckPointIndex.jsp"/>
+			<forward name="listCheckPoint" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckPointIndex.jsp"/>
+			<forward name="list" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckPointList.jsp"/>
+			<forward name="otherList" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckpointList1.jsp"/>
+			<forward name="create" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckpointAdd.jsp"/>
+			<forward name="doCompare" path="/biz/projectMonitor/thirdMonitor/docompare.jsp"/>
+			<forward name="compare" path="/biz/projectMonitor/thirdMonitor/compare.jsp"/>
+			<forward name="edit" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckpointEdit.jsp"/>
+			<forward name="view" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckpointView.jsp"/>
+			
+			<forward name="viewDataReport" path="/biz/safeControlCenter/safeAnalysisTotal/monitingDataReport.jsp"/>
+			<forward name="doImport" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/autoImport.jsp"></forward>
+			<forward name="autoDoImport" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/autoImport.jsp"></forward>
+			<forward name="success" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/success.jsp"/>
+			
+			
+			
+		</action>
+		<action path="/checkpointManageAction" name="dtaqCheckpointForm" parameter="method" scope="request" validate="false">
+			<forward name="pointTotal" path="/biz/projectMonitor/checkPoint/checkpointManage/checkpointTotal.jsp"/>
+			<forward name="workList" path="/biz/projectMonitor/checkPoint/checkpointManage/workPointList.jsp"/>
+			<forward name="thirdList" path="/biz/projectMonitor/checkPoint/checkpointManage/thirdPointList.jsp"/>
+			<forward name="showDetail" path="/biz/projectMonitor/checkPoint/checkpointManage/view.jsp"/>
+			<forward name="doCompare" path="/biz/projectMonitor/checkPoint/checkpointManage/doCompare.jsp"/>
+			
+		</action>
+		<action path="/dtaqProjMachCheckpointAction" name="dtaqProjMachCheckpointForm" parameter="method" scope="request" validate="false">
+		</action>
+		
+		<action path="/dtaqPartAction" name="dtaqPartForm" parameter="method" scope="request" validate="false">
+	         	<forward name="index" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckPointIndex.jsp"/>
+	         	<forward name="list" path="/biz/projectMonitor/checkPoint/DtaqPart/dtaqPartList.jsp"/>
+	         	<forward name="create" path="/biz/projectMonitor/checkPoint/DtaqPart/dtaqPartAdd.jsp"/>
+	         	<forward name="edit" path="/biz/projectMonitor/checkPoint/DtaqPart/dtaqPartEdit.jsp"/>
+	         	<forward name="view" path="/biz/projectMonitor/checkPoint/DtaqPart/dtaqPartView.jsp"/>
+	         	<forward name="successPage" path="/biz/projectMonitor/thirdMonitor/successPage.jsp"/>
+		</action>
+		
+		<action path="/dtaqAutoCheckpointAction" name="dtaqAutoCheckpointForm" parameter="method" scope="request" validate="false">
+	            <forward name="index" path="/biz/projectMonitor/checkPoint/DtaqCheckpoint/dtaqCheckPointIndex.jsp"/>
+	         	<forward name="list" path="/biz/projectMonitor/checkPoint/dtaqAutoCheckpoint/dtaqAutoCheckpointList.jsp"/>
+	         	<forward name="create" path="/biz/projectMonitor/checkPoint/dtaqAutoCheckpoint/dtaqAutoCheckpointAdd.jsp"/>
+	         	<forward name="edit" path="/biz/projectMonitor/checkPoint/dtaqAutoCheckpoint/dtaqAutoCheckpointEdit.jsp"/>
+	         	<forward name="view" path="/biz/projectMonitor/checkPoint/dtaqAutoCheckpoint/dtaqAutoCheckpointView.jsp"/>
+			<forward name="autoDoImport" path="/biz/projectMonitor/checkPoint/dtaqAutoCheckpoint/autoImport.jsp"></forward>
+			<forward name="success" path="/biz/projectMonitor/checkPoint/dtaqAutoCheckpoint/success.jsp"/>
+		</action>
+		
+		
+		
+		<action path="/importTxtAction" name="importTxtForm" parameter="method" scope="request" validate="false">
+		<forward name="list" path="/biz/projectMonitor/importTxt/importTxtList.jsp"/>
+		</action>
+		
+		<action path="/saveTxtAction" name="saveTxtForm" parameter="method" scope="request" validate="false">
+		<forward name="list" path="/biz/projectMonitor/saveTxt/list.jsp"/>
+		</action>
+		
+		<action path="/impTxtAction" name="impTxtForm" parameter="method" scope="request" validate="false">
+		<forward name="list" path="/biz/projectMonitor/importTxt/impTxtList.jsp"/>
+		</action>
+		
+		<action path="/dtaqCheckpointTypeAction" name="dtaqCheckpointTypeForm" parameter="method" scope="request" validate="false">
+		 <forward name="list" path="/biz/projectMonitor/checkPoint/checkpointType/checkpointTypeList.jsp" />
+      <forward name="edit" path="/biz/projectMonitor/checkPoint/checkpointType/checkpointTypeEdit.jsp" />
+      <forward name="editType5" path="/biz/projectMonitor/checkPoint/checkpointType/checkpointTypeEditType5.jsp" />
+      <forward name="view" path="//biz/projectMonitor/checkPoint/checkpointType/checkpointTypeView.jsp" />
+      <forward name="success" path="/biz/projectMonitor/checkPoint/checkpointType/checkpointTypeList.jsp" redirect="true" />
+		</action>
+		
+		<action path="/dtaqProjMachCheckpointAction" name="dtaqProjMachCheckpointForm" parameter="method" scope="request" validate="false">
+		</action>
+		
+		<!--地铁线路信息-->
+		<action path="/dtaqLineAction" name="dtaqLineForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/projectMonitor/dtaqLine/dtaqLineIndex.jsp" />
+			<forward name="list" path="/biz/projectMonitor/dtaqLine/dtaqLineList.jsp" />
+			<forward name="listLeft" path="/biz/projectMonitor/dtaqLine/dtaqLineListLeft.jsp" />
+			<forward name="create" path="/biz/projectMonitor/dtaqLine/dtaqLineAddForm.jsp" />
+			<forward name="edit" path="/biz/projectMonitor/dtaqLine/dtaqLineEditForm.jsp" />
+			<forward name="drawMap" path="/biz/projectMonitor/dtaqLine/lineEditLine.jsp" />
+			<forward name="gisAnalyseIndex" path="/biz/projectMonitor/dtaqLine/gisAnalyseIndex.jsp" />
+			<forward name="gisAnalyseTree" path="/biz/projectMonitor/dtaqLine/gisAnalyseTree.jsp" />
+			<forward name="gisAnalyse" path="/biz/projectMonitor/dtaqLine/gisAnalyse.jsp" />
+			<forward name="sysAnnouncementView" path="/biz/projectMonitor/dtaqLine/sysAnnouncementView.jsp" />
+			<forward name="stationSuggestView" path="/biz/projectMonitor/dtaqLine/stationSuggestView.jsp" />
+			<forward name="success" path="/dtaqLineAction.do?method=index" redirect="true"/>
+		</action>
+		<!--地铁标段信息-->
+		<action path="/dtaqSegmentAction" name="dtaqSegmentForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqSegment/dtaqSegmentList.jsp" />
+			<forward name="create" path="/biz/projectMonitor/dtaqSegment/dtaqSegmentAddForm.jsp" />
+			<forward name="edit" path="/biz/projectMonitor/dtaqSegment/dtaqSegmentEditForm.jsp" />
+			<forward name="success" path="/dtaqLineAction.do?method=index" redirect="true"/>
+		</action>
+		<!--地铁工点信息-->
+		<action path="/dtaqStationAction" name="dtaqStationForm" parameter="method" scope="request" validate="false">
+
+		  <forward name="selectStations" path="/biz/sysmanager/sysmaintain/sysOperator/selectStations.jsp"/>
+
+			<forward name="list" path="/biz/projectMonitor/dtaqStation/dtaqStationList.jsp" />
+			<forward name="create" path="/biz/projectMonitor/dtaqStation/dtaqStationAddForm.jsp" />
+			<forward name="edit" path="/biz/projectMonitor/dtaqStation/dtaqStationEditForm.jsp" />
+			<forward name="view" path="/biz/projectMonitor/dtaqStation/dtaqStationView.jsp" />
+			<forward name="toStationCondition" path="/biz/projectMonitor/dtaqStation/index.jsp" />
+			<forward name="showEnvironment" path="/biz/projectMonitor/dtaqStation/showEnvironment.jsp" />
+			<forward name="showWin" path="/biz/generaLibrary/stationQuery/showEnvironment.jsp" />
+			<forward name="success" path="/dtaqLineAction.do?method=index" redirect="true"/>
+
+		</action>
+		<!--车站分层信息-->
+		<action path="/dtaqLayerAction" name="dtaqLayerForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqLayer/dtaqLayerList.jsp" />
+<!--			<forward name="success" path="/dtaqLineAction.do?method=index" redirect="true"/>-->
+		</action>
+		<!--车站分段信息-->
+		<action path="/dtaqSectionAction" name="dtaqSectionForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqSection/dtaqSectionList.jsp" />
+<!--			<forward name="success" path="/dtaqLineAction.do?method=index" redirect="true"/>-->
+		</action>
+		<!--结构本体-->
+		<action path="/localStructureAction" name="localStructureForm" parameter="method" scope="request" validate="false">
+			<forward name="edit" path="/biz/projectMonitor/localStructure/localStructureEditForm.jsp" />
+			<forward name="view" path="/biz/projectMonitor/localStructure/localStructureView.jsp"/>
+			<forward name="success" path="/localStructureAction.do?method=list" redirect="true"/>
+		</action>
+		<!--水土-->
+		<action path="/dtaqKimoliteAction" name="dtaqKimoliteForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqKimolite/dtaqKimoliteList.jsp" />
+			<forward name="edit" path="/biz/projectMonitor/dtaqKimolite/dtaqKimoliteEditForm.jsp" />
+			<forward name="viewList" path="/biz/projectMonitor/dtaqKimolite/dtaqKimoliteViewList.jsp" />
+		</action>
+		<!--工法-->
+		<action path="/dtaqLaunchingMethodAction" name="dtaqLaunchingMethodForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqLaunchingMethod/dtaqLaunchingMethodList.jsp" />
+			<forward name="viewList" path="/biz/projectMonitor/dtaqLaunchingMethod/dtaqLaunchingMethodViewList.jsp" />
+			<forward name="showExcelImport" path="/biz/projectMonitor/dtaqLaunchingMethod/showExcelImport.jsp" />
+			<forward name="success" path="/dtaqLaunchingMethodAction.do?method=list" redirect="true"/>
+		</action>
+		<!--辅助工法-->
+		<action path="/dtaqConstructionMethodAction" name="dtaqConstructionMethodForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqConstructionMethod/dtaqConstructionMethodList.jsp" />
+			<forward name="viewList" path="/biz/projectMonitor/dtaqConstructionMethod/dtaqConstructionMethodViewList.jsp" />
+			<forward name="showExcelImport" path="/biz/projectMonitor/dtaqLaunchingMethod/showExcelImport.jsp" />
+			<forward name="success" path="/dtaqConstructionMethodAction.do?method=list" redirect="true"/>
+		</action>
+		<!--建筑物-->
+		<action path="/dtaqBuildingAction" name="dtaqBuildingForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqBuilding/dtaqBuildingList.jsp" />
+			<forward name="viewList" path="/biz/projectMonitor/dtaqBuilding/dtaqBuildingViewList.jsp" />
+			<forward name="showExcelImport" path="/biz/projectMonitor/dtaqLaunchingMethod/showExcelImport.jsp" />
+			<forward name="success" path="/dtaqBuildingAction.do?method=list" redirect="true"/>
+		</action>
+		<!--管线-->
+		<action path="/dtaqPipeAction" name="dtaqPipeForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqPipe/dtaqPipeList.jsp" />
+			<forward name="viewList" path="/biz/projectMonitor/dtaqPipe/dtaqPipeViewList.jsp" />
+			<forward name="showExcelImport" path="/biz/projectMonitor/dtaqLaunchingMethod/showExcelImport.jsp" />
+			<forward name="success" path="/dtaqPipeAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<action path="/dtaqCheckPointGroupAction" name="dtaqCheckPointGroupForm" parameter="method" scope="request" validate="false">
+		</action>
+		
+		<action path="/dtaqDataAction" name="dtaqDataForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqData/dtaqDataList.jsp"/>
+			<forward name="geographicPicture" path="/biz/projectMonitor/dtaqData/geographicPicture.jsp"/>
+			<forward name="excelImport" path="/biz/projectMonitor/dtaqData/showExcelImport.jsp"/>
+		
+		
+		</action>
+		
+		<action path="/dtaqDataInfoAction" name="dtaqDataInfoForm" parameter="method" scope="request" validate="false">
+			<forward name="monitorWork" path="/biz/projectMonitor/dataInfo/monitorWork.jsp"/>
+			<forward name="view" path="/biz/projectMonitor/dataInfo/dtaqDataInfoView.jsp"/>
+			<forward name="create" path="/biz/projectMonitor/dataInfo/dtaqDataInfoAddForm.jsp"/>
+			<forward name="edit" path="/biz/projectMonitor/dataInfo/dtaqDataInfoEditForm.jsp"/>
+			<forward name="list" path="/biz/projectMonitor/dataInfo/dtaqDataInfoList.jsp"/>
+		
+		</action>
+		<action path="/projectMaterialsAction" name="projectMaterialsForm" parameter="method" scope="request" validate="false">
+		<forward name="index" path="/biz/projectMonitor/projectMaterials/projectMaterialsIndex.jsp"></forward>
+		<forward name="left" path="/biz/projectMonitor/projectMaterials/projectMaterialsTree.jsp"></forward>
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/projectMaterialsEdit.jsp"></forward>
+		<forward name="stationStructureEdit" path="/biz/projectMonitor/projectMaterials/stationStructureEdit.jsp"></forward>
+		<forward name="view" path="/biz/projectMonitor/projectMaterials/projectMaterialsView.jsp"></forward>
+		
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		<forward name="list" path="/biz/projectMonitor/projectMaterials/projectMaterialsList.jsp"></forward>
+		<forward name="exSuccess" path="/biz/projectMonitor/projectMaterials/successPage.jsp"></forward>
+		</action>
+		<action path="/blockStructureAction" name="blockStructureForm" parameter="method" scope="request" validate="false">
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/blockStructureEdit.jsp"></forward>
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		
+		</action>
+		<action path="/peripheralBuildingAction" name="peripheralBuildingForm" parameter="method" scope="request" validate="false">
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/peripheralBuildingEdit.jsp"></forward>
+		<forward name="showExcelImport" path="/biz/projectMonitor/projectMaterials/showExcelImport.jsp"></forward>
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		
+		</action>
+		<action path="/projectGeologyAction" name="projectGeologyForm" parameter="method" scope="request" validate="false">
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/projectGeologyEdit.jsp"></forward>
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		
+		</action>
+		<action path="/stationStructureAction" name="stationStructureForm" parameter="method" scope="request" validate="false">
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/stationStructureEdit.jsp"></forward>
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		
+		</action>
+		<action path="/undergroundPipelineAction" name="undergroundPipelineForm" parameter="method" scope="request" validate="false">
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		<forward name="showExcelImport" path="/biz/projectMonitor/projectMaterials/showExcelImport.jsp"></forward>
+		
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/undergroundPipelineEdit.jsp"></forward>
+		
+		</action>
+		<action path="/stratumRockAction" name="stratumRockForm" parameter="method" scope="request" validate="false">
+		<forward name="editTab" path="/biz/projectMonitor/projectMaterials/projectMaterialsEditTab.jsp"></forward>
+		<forward name="showExcelImport" path="/biz/projectMonitor/projectMaterials/showExcelImport.jsp"></forward>
+		
+		<forward name="edit" path="/biz/projectMonitor/projectMaterials/stratumRockEdit.jsp"></forward>
+		</action>
+		<!--监测数据跟踪分析	-->
+		<action path="/checkpointPictureAction" name="checkpointPictureForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/monitorDataAnalysis/checkpointPictureList.jsp"/>
+			<forward name="selectPoints" path="/biz/projectMonitor/monitorDataAnalysis/selectPoints.jsp"/>
+			<forward name="addPointGroup" path="/biz/projectMonitor/monitorDataAnalysis/addPointGroup.jsp"/>
+			<forward name="deletePointGroup" path="/biz/projectMonitor/monitorDataAnalysis/deletePointGroup.jsp"/>
+			<forward name="realtimeCurve" path="/biz/projectMonitor/monitorDataAnalysis/realtimeCurve.jsp"/>
+			<forward name="showSuccessionCurve" path="/biz/projectMonitor/monitorDataAnalysis/showSuccessionCurve.jsp"/>
+		</action>
+		<action path="/dtaqCheckpointUseAction" name="dtaqCheckpointUseForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/checkPointUse/checkPointUseList.jsp"/>
+			<forward name="index" path="/biz/projectMonitor/checkPointUse/checkpointUseIndex.jsp"/>
+			<forward name="tree" path="/biz/projectMonitor/checkPointUse/pointTree.jsp"/>
+			<forward name="edit" path="/biz/projectMonitor/checkPointUse/edit.jsp"/>
+			<forward name="create" path="/biz/projectMonitor/checkPointUse/addForm.jsp"/>
+			<forward name="successPage" path="/biz/projectMonitor/checkPointUse/successPage.jsp"></forward>
+		</action>
+		<!--数据采集-->
+		<action path="/dtaqDataInfoQuery3Action" name="dtaqDataInfoQuery3Form" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqDataInfoQuery3/dtaqDataInfoQuery3List.jsp"/>
+			<forward name="view" path="/biz/projectMonitor/dtaqDataInfoQuery3/dtaqDataInfoQuery3View.jsp"/>
+			<forward name="showPartTimes" path="/biz/projectMonitor/dtaqDataInfoQuery3/showPartTimes.jsp"/>
+			<forward name="showPartTimes3" path="/biz/projectMonitor/dtaqDataInfoQuery3/showPartTimes3.jsp"/>
+			<forward name="showComparePointTimes" path="/biz/projectMonitor/dtaqDataInfoQuery3/showComparePointTimes.jsp"/>
+			<forward name="showComparePointTimes3" path="/biz/projectMonitor/dtaqDataInfoQuery3/showComparePointTimes3.jsp"/>
+			<forward name="index" path="/biz/projectMonitor/dtaqDataInfoQuery3/dtaqDataInfoQuery3Index.jsp"/>
+			<forward name="listLeft" path="/biz/projectMonitor/dtaqDataInfoQuery3/dtaqDataInfoQuery3ListLeft.jsp"/>
+<!--		      <forward name="list" path="/biz/dtaq/dataInfoQuery3/list.jsp" />-->
+<!--		      <forward name="thirdList" path="/biz/dtaq/dataInfoQuery3/thirdList.jsp" />-->
+<!--		      <forward name="view" path="/biz/dtaq/dataInfoQuery3/view.jsp" />-->
+<!--		      <forward name="success" path="/dtaq/dataInfoQuery3.do" redirect="true" />-->
+	    </action>
+		<!--数据采集-->
+		<action path="/dtaqDataInfoQueryAction" name="dtaqDataInfoQueryForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqDataInfoQuery/dtaqDataInfoQueryList.jsp"/>
+	    </action>
+		<!--数据采集-->
+		<action path="/dtaqDataInfoQuery2Action" name="dtaqDataInfoQuery2Form" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqDataInfoQuery2/dtaqDataInfoQuery2List.jsp"/>
+			<forward name="indexPicture" path="/biz/projectMonitor/dtaqDataInfoQuery2/indexPicture.jsp"/>
+	 		<forward name="treePicture" path="/biz/projectMonitor/dtaqDataInfoQuery2/treePicture.jsp"/>
+			<forward name="listPicture" path="/biz/projectMonitor/dtaqDataInfoQuery2/pointState.jsp"/>
+			<forward name="index_jh" path="/biz/projectMonitor/dtaqDataInfoQuery2/loadPointPicIndex.jsp"/>
+			<forward name="left" path="/biz/projectMonitor/dtaqDataInfoQuery2/loadPointPicLeft.jsp"/>
+			<forward name="loadPointPic" path="/biz/projectMonitor/dtaqDataInfoQuery2/loadPointPic.jsp"/>
+	    </action>
+		<action path="/dtaqAutoDataInfoQuery3Action" name="dtaqAutoDataInfoQuery3Form" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/dtaqAutoDataInfoQuery3List.jsp"/>
+			<forward name="view" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/dtaqAutoDataInfoQuery3View.jsp"/>
+			<forward name="showPartTimes" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/showPartTimes.jsp"/>
+			<forward name="showComparePointTimes" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/showComparePointTimes.jsp"/>
+			<forward name="showComparePointTimes3" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/showComparePointTimes3.jsp"/>
+			<forward name="index" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/dtaqAutoDataInfoQuery3Index.jsp"/>
+			<forward name="listLeft" path="/biz/projectMonitor/dtaqAutoDataInfoQuery3/dtaqAutoDataInfoQuery3ListLeft.jsp"/>
+	    </action>
+	    <action path="/dtaqWarnInfoAction" name="dtaqWarnInfoForm" parameter="method" scope="request" validate="false">
+			<forward name="monitorWork" path="/biz/projectMonitor/dataInfo/monitorWork.jsp"/>
+			<forward name="view" path="/biz/projectMonitor/dtaqWarnInfo/dtaqWarnInfoView.jsp"/>
+			<forward name="edit" path="/biz/projectMonitor/dtaqWarnInfo/dtaqWarnInfoForm.jsp"/>
+			<forward name="list" path="/biz/projectMonitor/dtaqWarnInfo/dtaqWarnInfoList.jsp"/>
+		    <forward name="showReason" path="/biz/projectMonitor/dtaqWarnInfo/showReason.jsp"/>
+		    <forward name="viewDetails" path="/biz/projectMonitor/dtaqWarnInfo/viewDetails.jsp"/>
+		    <forward name="issueSign" path="/biz/projectMonitor/dtaqWarnInfo/issueSign.jsp"/>
+		</action>
+	    
+	    <!--人员资质信息管理 -->
+		<action path="/constructorAction" name="constructorForm" parameter="method" scope="request" validate="false">
+				<forward name="index" path="/biz/projectMonitor/constructEmployee/constructEmployeeIndex.jsp"/>
+				<forward name="listLeft" path="/biz/projectMonitor/constructEmployee/constructEmployeeListLeft.jsp"/>				
+				<forward name="list" path="/biz/projectMonitor/constructEmployee/constructEmployeeList.jsp"/>
+				
+				<forward name="queryIndex" path="/biz/projectMonitor/constructEmployee/constructEmployeeQueryIndex.jsp"/>
+				<forward name="queryListLeft" path="/biz/projectMonitor/constructEmployee/constructEmployeeQueryListLeft.jsp"/>				
+				<forward name="queryList" path="/biz/projectMonitor/constructEmployee/constructEmployeeQueryList.jsp"/>
+								
+				<forward name="create" path="/biz/projectMonitor/constructEmployee/constructEmployeeAddForm.jsp"/>
+				<forward name="edit" path="/biz/projectMonitor/constructEmployee/constructEmployeeEditForm.jsp"/>
+				<forward name="view" path="/biz/projectMonitor/constructEmployee/constructEmployeeView.jsp"/>
+				<forward name="add" path="/biz/projectMonitor/constructEmployee/constructEmployeeAdd.jsp"/>
+				
+				<forward name="success" path="/constructorAction.do?method=list" redirect="true"/>
+				<forward name="exsuccess" path="/biz/projectMonitor/constructEmployee/exSuccess.jsp" />
+		</action>
+		
+		<!--人员资质信息统计 -->
+		<action path="/constructorTotalAction" name="constructorTotalForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/constructEmployee/constructEmployeeTotalList.jsp"/>
+			<forward name="success" path="/constructorTotalAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!--安全巡检信息管理 -->
+		<action path="/safeInspectingAction" name="safeInspectingForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/projectMonitor/safeInspecting/safeInspectingIndex.jsp"/>
+				<forward name="listLeft" path="/biz/projectMonitor/safeInspecting/safeInspectingListLeft.jsp"/>				
+				<forward name="list" path="/biz/projectMonitor/safeInspecting/safeInspectingList.jsp"/>
+				
+				<forward name="create" path="/biz/projectMonitor/safeInspecting/safeInspectingAddForm.jsp"/>
+				<forward name="edit" path="/biz/projectMonitor/safeInspecting/safeInspectingEditForm.jsp"/>
+				<forward name="view" path="/biz/projectMonitor/safeInspecting/safeInspectingView.jsp"/>
+				
+				<forward name="success" path="/safeInspectingAction.do?method=list" redirect="true"/>
+				<forward name="exsuccess" path="/biz/projectMonitor/safeInspecting/exSuccess.jsp" />
+				
+				
+				
+		</action>
+	    <action path="/dtaqSumQueryAction" name="dtaqSumQueryForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqSumQuery/dtaqSumQueryList.jsp"/>
+			<forward name="segmentAnalysis" path="/biz/projectMonitor/dtaqSumQuery/segmentAnalysis.jsp"/>
+			<forward name="typeAnalysis" path="/biz/projectMonitor/dtaqSumQuery/typeAnalysis.jsp"/>
+			<forward name="segmentAnalysisDetails" path="/biz/projectMonitor/dtaqSumQuery/segmentAnalysisDetails.jsp"/>
+			<forward name="success" path="/dtaqSumQueryAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/dtaqWarnAnalysisAction" name="dtaqWarnAnalysisForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqWarnAnalysis/dtaqWarnAnalysisList.jsp"/>
+			<forward name="index" path="/biz/projectMonitor/dtaqWarnAnalysis/dtaqWarnAnalysisIndex.jsp"/>
+			<forward name="tree" path="/biz/projectMonitor/dtaqWarnAnalysis/stationTree.jsp"/>
+			<forward name="downSend" path="/biz/projectMonitor/dtaqWarnAnalysis/analysisDownSend.jsp"/>
+			<forward name="successPage" path="/biz/projectMonitor/dtaqWarnAnalysis/successPage.jsp"/>
+			<forward name="selectSignEmployee" path="/biz/projectMonitor/dtaqWarnAnalysis/selectSignEmployee.jsp"/>
+			<forward name="success" path="/dtaqWarnAnalysisAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/warnAnalysisSignAction" name="warnAnalysisSignForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqWarnAnalysisSign/warnAnalysisSignList.jsp"/>
+			<forward name="sign" path="/biz/projectMonitor/dtaqWarnAnalysisSign/sign.jsp"/>
+			<forward name="querySign" path="/biz/projectMonitor/dtaqWarnAnalysisSign/querySign.jsp"/>
+			<forward name="queryList" path="/biz/projectMonitor/dtaqWarnAnalysisSign/warnAnalysisSignQueryList.jsp"/>
+			<forward name="successPage" path="/biz/projectMonitor/dtaqWarnAnalysis/successPage.jsp"/>
+			<forward name="selectSignEmployee" path="/biz/projectMonitor/dtaqWarnAnalysis/selectSignEmployee.jsp"/>
+			<forward name="success" path="/warnAnalysisSignAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/dtaqWarnThingAction" name="dtaqWarnThingForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqWarnThing/dtaqWarnThingList.jsp"/>
+			<forward name="edit" path="/biz/projectMonitor/dtaqWarnThing/edit.jsp"/>
+			<forward name="view" path="/biz/projectMonitor/dtaqWarnThing/view.jsp"/>
+			<forward name="sign" path="/biz/projectMonitor/dtaqWarnThing/sign.jsp"/>
+			<forward name="successPage" path="/biz/projectMonitor/dtaqWarnAnalysis/successPage.jsp"/>
+			<forward name="selectSignEmployee" path="/biz/projectMonitor/dtaqWarnAnalysis/selectSignEmployee.jsp"/>
+			<forward name="success" path="/dtaqWarnThingAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/dtaqWarnThingSignAction" name="dtaqWarnThingSignForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/dtaqWarnThing/dtaqWarnThingSignList.jsp"/>
+			<forward name="edit" path="/biz/projectMonitor/dtaqWarnThing/sign.jsp"/>
+			<forward name="querySign" path="/biz/projectMonitor/dtaqWarnAnalysisSign/querySign.jsp"/>
+			<forward name="queryList" path="/biz/projectMonitor/dtaqWarnAnalysisSign/warnAnalysisSignQueryList.jsp"/>
+			<forward name="successPage" path="/biz/projectMonitor/dtaqWarnAnalysis/successPage.jsp"/>
+			<forward name="selectSignEmployee" path="/biz/projectMonitor/dtaqWarnAnalysis/selectSignEmployee.jsp"/>
+			<forward name="success" path="/dtaqWarnThingSignAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/dtaqCheckpointHistoryAction" name="dtaqCheckpointHistoryForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/projectMonitor/checkpointHistory/checkpointHistoryList.jsp"></forward>
+			<forward name="index" path="/biz/projectMonitor/checkpointHistory/checkpointHistoryIndex.jsp"></forward>
+			<forward name="tree" path="/biz/projectMonitor/checkpointHistory/pointTree.jsp"></forward>
+			
+			<forward name="success" path="/dtaqCheckpointHistoryAction.do?method=list" redirect="true"/>
+		
+		</action>
+		<!-- 综合数据仓库 -->
+		<action path="/dtaqStationQueryAction" name="dtaqStationQueryForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/generaLibrary/stationQuery/stationQueryList.jsp"></forward>
+			<forward name="viewStationCondition" path="/biz/generaLibrary/stationQuery/view.jsp"></forward>
+			<forward name="showEnvironment" path="/biz/generaLibrary/stationQuery/showEnvironment.jsp"></forward>
+			<forward name="success" path="/dtaqCheckpointHistoryAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/dtaqDataQueryAction" name="dtaqDataQueryForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/generaLibrary/dataQuery/dtaqDataQueryList.jsp"></forward>
+			<forward name="totalShow" path="/biz/generaLibrary/dataQuery/totalShow.jsp"></forward>
+			<forward name="success" path="/dtaqCheckpointHistoryAction.do?method=list" redirect="true"/>
+		</action>
+	</action-mappings>
+</struts-config>

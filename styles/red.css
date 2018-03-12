@@ -1,0 +1,233 @@
+/** CSS Document **/
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd,  blockquote,
+pre, form, table, th, td { 
+	margin: 0; 
+	padding: 0; 
+}
+	
+	/********登录样式********/
+	.login_body{margin:0px;padding:0px; background-color:#F2EFEA}
+	#mainDiv{
+		position:absolute; 
+		top:50%; 
+		margin:-192px 0 0 0; 
+		height:385px; 
+		width:100%;
+		background-image:url(../styles/images_red/login_bg.jpg) ;
+		background-repeat:repeat-x;
+	}
+	#loginDiv{
+		height:385px;
+		width:544px;
+		margin:0px auto;
+		background-image:url(../styles/images_red/login_content.jpg);
+		text-align:center
+	}
+			#loginDiv table{ text-align:center; width:350px;backgroun-color:red; margin-left:110px; margin-left:30px\9}
+			.loginFont {
+				text-align: right;color:#6b6b6b; font-size:14px; font-weight:bold;
+			}
+			.timeFont {
+				text-align: center;color:#ffffff; font-size:14px; font-family: "宋体";
+			}
+			.cueFont {
+				text-align: center;color:#6b6b6b; font-size:14px; font-weight:bold;
+			}
+			.inputStyle {
+				text-align: left;
+			}
+			
+			
+/**********头部************/
+#Layer1 {position:absolute;width:95px;height:63px;z-index:1;left: 920px;top: 0px;}
+.logo{background:url(../styles/images_red/top_lead.gif); background-repeat:no-repeat; width:470px}
+.logo_cen{background:url(../styles/img/top_middle.jpg)}
+
+/***********顶部菜单***********/
+.body_hidden{ overflow:hidden}
+
+.td_left{
+	background:url(../styles/img/main_menu_bg.jpg);
+}
+.td_middle{
+ 	background:url(../styles/img/main_menu_bg.jpg);
+	width:28px;
+}
+.td_right{
+	 background:url(../styles/img/main_menu_bg.jpg);
+	 text-align:right ;
+}
+.tmenu_div {
+	width:100%
+}
+.tmenu_div p {
+	text-align:center;
+ 	background:transparent;
+ 	cursor: pointer;
+ 	color:#ffffff;
+	float:left;
+	font-weight:bold !important;
+	vertical-align:middle!important;
+	height:33px!important;
+	padding-top:5px;
+}
+.tmenu_div table {
+	 background-color:#A0E2FB ;
+	  border:1px solid #E8E8E8 ;
+}
+.tmenu_div .verticleLine {
+	color: #ffffff !important;
+}
+.tmenu_div .menu_div {
+	width: 100%;
+	overflow: hidden;
+}
+.tabgroup_on {
+	float:left;
+	margin-left:0px; 
+	margin-right:0px; 
+	display:block;   
+	font-weight:bold !important;
+	font-size:14px ;
+	color:#ffffff !important;
+	background-image:url(../styles/images_red/main_menu_selected.jpg);
+	height:31px;
+	text-align:center;
+	line-height:31px ;
+	cursor:pointer ;
+	width:138px;
+}
+.tabgroup_off {
+	float:left;
+	margin-left:0px; 
+	margin-right:0px; 
+	display:block;   
+	font-size:14px ;
+	font-weight:normal !important;
+	color:#ffffff !important;
+	background-image:url(../styles/img/main_menu_default.jpg);
+	height:31px;
+	text-align:center;
+	line-height:31px ;
+	cursor:pointer ;
+	width:138px;
+}
+
+/**********左侧菜单****************/
+.body_menu{height:100%;background-color:#fefaf7;border-right:1px solid #cfcfcf}
+.content{padding-left:10px;}
+.content span{cursor:pointer; height:25px;line-height:25px;background:url(images/asterisk_orange.png) no-repeat;padding-left:15px;}
+.subDiv table{width:95%;}
+.subDiv td{font-size:12px;color:#003399 ;border-bottom:1px dashed #d9d8d6 ;}
+.subDiv a{color:#039 ;text-decoration:none;}
+
+.normalTd{background-color:#f8f4f1;}
+.overTd{background-color:#d5d5d5;}
+.selectedTd{background-color:#d5d5d5;}
+
+#container{height:95%;margin-right:5px;margin-left:5px;margin-top:0px;}
+
+/**********折叠菜单**********/
+.body_switch{
+	background-color:#f2efea;
+    overflow:hidden;
+}
+#btnCtl {
+    left:0px;
+    width:8px;
+    margin-top: 200px;
+    margin-bottom:0px;
+}
+.switch_img{
+	background-image:url(../styles/images_red/pointer_left.jpg); width:8px;
+	height:85px;
+}
+.collapse_img{
+	background-image:url(../styles/images_red/pointer_right.jpg); width:8px;
+	height:85px;
+}
+
+/**********************站内消息*************************/
+.body_mess{
+	background-color: #ffffff; padding: 0px; margin: 0px;
+}
+.title {
+	font-size: 14px;
+	color: #313131;
+	font-weight: bold;
+	margin-top:0px;margin-left:20px;
+}
+.titleDiv {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 0px;
+}
+.cDiv {
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+}
+.nocDiv {
+	border: 0px solid #C0C0C0;
+	background-color: #ffffff;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+}
+.mainDiv {
+	margin-left: 8px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+	width: 100%;
+
+}
+.mainDivExtend {
+	margin-left: 8px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 10%;
+}
+.mDiv {
+	width: 97%;
+	margin-top: 0px;
+}
+.sDiv {
+	width:97%;
+	float: left;
+	margin-top: 0px;
+}
+.left_titleback{
+	background-image: url(../styles/images_red/title_pointer.jpg); background-repeat: no-repeat;width:100px;height:25px;line-height:20px; border-bottom:2px solid #d1090b;
+}
+.right_titleback{
+	background-image: url(../styles/images_red/title_bg.jpg); background-repeat:repeat-x; width:100%; height: 23px;
+	border-top:1px solid #c0c0c0;border-left:1px solid #c0c0c0;border-right:1px solid #c0c0c0
+}
+
+
+/*************框架里面******************/
+.title_back{
+	background-image:url(../styles/images_red/flag_red.png);background-repeat:no-repeat;background-color:#f8f4f1;
+	height:26px;line-height:26px;padding-left:23px;font-size:12px;border:1px solid #CFCFCF; background-position:5px 3px;
+}
+.write{
+	background-image: url(../styles/img/wriMail.gif); background-repeat: no-repeat; background-position: left
+}
+.con_warp{
+	font-size: 12px; margin-left: 25px;
+}
+.con_warp a{color: #515151}
+.mess_shouxin{background-image: url(../styles/img/recMail.gif); background-repeat: no-repeat; background-position: left}
+.mess_box{background-image: url(../styles/img/testMail.gif); background-repeat: no-repeat; background-position: left}
+.mess_fa{background-image: url(../styles/img/sendMail.gif); background-repeat: no-repeat; background-position: left}
+.mess_cao{background-image: url(../styles/img/cgMail.gif); background-repeat: no-repeat; background-position: left}
+
+.span_color{
+	font-size:13px; color:white;margin-left:10px;font-weight:bold
+}

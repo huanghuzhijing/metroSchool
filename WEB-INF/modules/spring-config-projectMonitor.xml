@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+       <!--  Servlet  Action配置文件 -->
+<beans default-autowire="byName" default-lazy-init="true">
+         <bean name="/dtaqProjMachCheckpointAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqProjMachCheckpointAction" />
+          <bean name="/dtaqPartAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqPartAction" />
+          <bean name="/dtaqCheckpointTypeAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqCheckpointTypeAction" />
+          <bean name="/dtaqCheckpointHistoryAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqCheckpointHistoryAction" />
+          <bean name="/dtaqCheckpointAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqCheckpointAction" />
+          <bean name="/checkpointManageAction" class="com.whmetro.projectMonitor.checkPoint.action.CheckpointManageAction" />
+          
+          <bean name="/dtaqCheckpointUseAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqCheckpointUseAction" />
+          <bean name="/dtaqThirdMonitorAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqThirdMonitorAction" />
+          <bean name="/dtaqAutoCheckpointAction" class="com.whmetro.projectMonitor.checkPoint.action.DtaqAutoCheckpointAction" />
+          <bean name="/dtaqLineAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqLineAction" />     
+          <bean name="/dtaqSegmentAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqSegmentAction" />
+          <bean name="/dtaqStationAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqStationAction" />
+          <bean name="/dtaqCheckPointGroupAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqCheckPointGroupAction" />
+          <bean name="/dtaqDataAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqDataAction"/>
+          <bean name="/dtaqDataInfoAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqDataInfoAction"/>
+		  
+		  <!--  监测数据跟踪分析        -->
+          <bean name="/checkpointPictureAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.CheckpointPictureAction"/>
+          <bean name="/importTxtAction" class="com.whmetro.projectMonitor.checkPoint.action.ImportTxtAction"/>
+          <bean name="/saveTxtAction" class="com.whmetro.projectMonitor.checkPoint.action.SaveTxtAction"/>
+          <bean name="/impTxtAction" class="com.whmetro.projectMonitor.checkPoint.action.ImpTxtAction"/>
+		  <!--	监测数据填报查询	  -->
+		  <bean name="/dtaqDataInfoQueryAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqDataInfoQueryAction"/>
+		  <bean name="/dtaqDataInfoQuery2Action" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqDataInfoQuery2Action"/>
+		  <bean name="/dtaqDataInfoQuery3Action" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqDataInfoQuery3Action"/>
+		  <bean name="/dtaqAutoDataInfoQuery3Action" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqAutoDataInfoQuery3Action"/>
+		   <!-- 工程资料信息管理 -->
+		   <bean name="/projectMaterialsAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.ProjectMaterialsAction"/>
+		   <bean name="/stratumRockAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.StratumRockAction"></bean>
+		   <bean name="/undergroundPipelineAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.UndergroundPipelineAction"></bean>
+		   <bean name="/stationStructureAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.StationStructureAction"></bean>
+		   <bean name="/projectGeologyAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.ProjectGeologyAction"></bean>
+		   <bean name="/peripheralBuildingAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.PeripheralBuildingAction"></bean>
+		   <bean name="/blockStructureAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.BlockStructureAction"></bean>
+		   <bean name="/dtaqLayerAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqLayerAction"></bean>
+		   <bean name="/dtaqSectionAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqSectionAction"></bean>
+		   <bean name="/localStructureAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.LocalStructureAction"></bean>
+		   <bean name="/dtaqKimoliteAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqKimoliteAction"></bean>
+		   
+		   <bean name="/dtaqLaunchingMethodAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqLaunchingMethodAction"></bean>
+		   <bean name="/dtaqConstructionMethodAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqConstructionMethodAction"></bean>
+		   <bean name="/dtaqBuildingAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqBuildingAction"></bean>
+		   <bean name="/dtaqPipeAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqPipeAction"></bean>
+		   <bean name="/dtaqWarnInfoAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.action.DtaqWarnInfoAction"/>
+		   <bean name="/dtaqWarnAnalysisAction" class="com.whmetro.projectMonitor.warn.action.DtaqWarnAnalysisAction"/>
+		   <bean name="/warnAnalysisSignAction" class="com.whmetro.projectMonitor.warn.action.WarnAnalysisSignAction"/>
+		   <bean name="/dtaqWarnThingAction" class="com.whmetro.projectMonitor.warn.action.DtaqWarnThingAction"></bean>
+		   <bean name="/dtaqWarnThingSignAction" class="com.whmetro.projectMonitor.warn.action.DtaqWarnThingSignAction"></bean>
+		   
+		   <!--	人员资质信息管理	  -->
+		  <bean name="/constructorAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.constructEmployee.action.ConstructorAction"/>
+		  <bean name="/constructorTotalAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.constructEmployee.action.ConstructorTotalAction"/>
+		  <bean name="/dtaqSumQueryAction" class="com.whmetro.projectMonitor.warn.action.DtaqSumQueryAction"></bean>
+		 
+		 <!--	安全巡检信息管理	  -->
+		  <bean name="/safeInspectingAction" class="com.whmetro.projectMonitor.monitorDataAnalysis.safeInspecting.action.SafeInspectingAction"/> 
+		  <bean name="/dtaqStationQueryAction" class="com.whmetro.generalLibrary.stationQuery.action.DtaqStationQueryAction"/> 
+		  <bean name="/dtaqDataQueryAction" class="com.whmetro.generalLibrary.monitorLibrary.action.DtaqDataQueryAction"/> 
+		  
+</beans>

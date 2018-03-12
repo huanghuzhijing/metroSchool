@@ -1,0 +1,1238 @@
+/** CSS Document **/
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd,  blockquote,
+pre, form, table, th, td { 
+	margin: 0; 
+	padding: 0; 
+}
+
+body{
+	background-color:#ffffff;
+	scrollbar-face-color:#E6EAF0; 
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-3dlight-color:#E3ECF7;
+	scrollbar-darkshadow-color:#646566;
+	scrollbar-Shadow-color:#FFFFFF;
+	scrollbar-arrow-color:#646566;
+	scrollbar-track-color:#ffffff;
+	font-size: 12px;
+	font-weight: normal;
+}
+ul,li{
+	list-style-type:none;
+}
+textarea{
+	color:#333;
+	height:50px;
+	width:80%;
+	border:1px solid #666;
+	margin-bottom:3px
+}
+
+.compactToolbar select
+{
+	height:20px;
+	line-height:20px;
+	margin-left:3px;
+	margin-right:1px
+}
+table {
+	font-weight: normal;
+	font-size: 12px ;
+	COLOR: #000000;
+}
+/********table样式*********/
+
+.queryTable{ /*列表页面-查询条件区-table*/
+	margin-top:3px ;
+	margin-left:5px ;
+	margin-right:5px ;
+	width:99%;
+	border:1px solid #C0C0C0 ;
+	border-spacing:0px;
+	border-collapse:collapse;
+	background:#ffffff ;
+	text-align: left;
+	text-indent:3px
+}
+.queryTable table{
+	color:#515151 ;
+	margin:2px 0;
+}
+
+.queryContentTable{
+	text-align: left;	
+	text-indent:3px
+}
+.queryTitle{
+	background:url(img/titleShow.gif) ;
+	height:22px ;
+	border-bottom:1px solid #C0C0C0 ;
+	font-weight:bold ;
+	color:#313131 ;
+	font-size: 13px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.titleTable{ /*一般为增加、修改或详细页面 固定信息显示区 -table*/
+    width:100%;
+    color:#515151; 
+    font-size:12px ;
+	border:0px solid #C0C0C0 ;
+	border-spacing:0px;
+	border-collapse: collapse;
+	
+	
+}
+.titleTable table{
+	color:#3777B4 ;
+}
+
+.titleTable TD {      
+ 
+    height: 25px; 
+}
+.titleShow{
+	background:url(img/titleShow.gif) ;
+	height:22px ;
+	border-bottom:1px solid #8EB1C3 ;
+	font-weight:bold ;
+	color:#3777B4 ;
+	font-size: 13px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+
+.formTable{  /*增加\修改页面 可增加、修改信息区-table*/
+	width:100% ;
+	font-size:12px ;
+	color:#515151;
+	font-weight: normal;
+	border:0px;
+	border-spacing:0px;
+	border-collapse:collapse;	
+}
+
+.formTable TD {      
+ 
+    height: 25px; 
+}
+
+
+.listTable{  /*列表页面 子列表显示区-table*/
+	background-color:#f1f1f1 ;
+	
+	width:100%;
+	border:1px solid #C0C0C0;
+ 	border-spacing:0;
+ 	border-collapse:collapse;
+	
+}
+
+.listTable thead{
+	background-color:#f1f1f1 ;
+}
+.listTable th{
+	background:#DFF0F9  repeat-x;
+	font-size:12px;
+	color: #313131;
+ 	height:20px;
+	text-align:center ;
+	letter-spacing: 2px;
+	vertical-align:middle ;
+	border: 1px solid #dcdcdc;
+}
+
+.listTable tr {
+	background-color:#FFFFFF;
+	
+	event: expression(
+	onmouseover =   function() { 
+     this . style . backgroundColor =   '#fdecae'
+    }
+    ,
+    onmouseout  = function () {
+    this .style.backgroundColor = ''
+	}
+    )
+}
+.listTable td{
+	font: 13px  Verdana, Arial, Helvetica, sans-serif;
+    /*background-color:#FFFFFF;*/
+	color:#515151 ;
+	text-align: center ;
+	border: 1px solid #DCDCDC;
+	cursor: hand;
+	border-top: 0;
+}
+.listTable table.z-btn td,#tableReceive_table table.z-btn td{
+	border:0px solid white;
+}
+
+.listTable1{  /*列表页面 子列表显示区-table*/
+	background-color:#f1f1f1 ;
+	margin:2px;
+	width:100%;
+	border:1px solid #C0C0C0;
+ 	border-spacing:0 10px;
+ 	border-collapse:collapse;
+	
+}
+
+.listTable1 thead{
+	background-color:#f1f1f1 ;
+}
+.listTable1 th{
+	background:#DFF0F9  repeat-x;
+	font-size:24px;
+	color: #313131;
+ 	height:20px;
+	text-align:center ;
+	letter-spacing: 2px;
+	vertical-align:middle ;
+	border: 1px solid #dcdcdc;
+}
+
+.listTable1 tr {
+	background-color:#FFFFFF;
+	
+	event: expression(
+	onmouseover =   function() { 
+     this . style . backgroundColor =   '#fdecae'
+    }
+    ,
+    onmouseout  = function () {
+    this .style.backgroundColor = ''
+	}
+    )
+}
+.listTable1 td{
+	font: 20px  Verdana, Arial, Helvetica, sans-serif;
+    /*background-color:#FFFFFF;*/
+	color:#515151 ;
+	text-align: center ;
+	padding:4px;
+	margin:4px;
+	border: 1px solid #DCDCDC;
+	cursor: hand;
+	border-top: 0;
+}
+.listTable1 table.z-btn td,#tableReceive_table table.z-btn td{
+	border:0px solid white;
+}
+/*******************************eXtremeTable 样式***************************************/
+
+.eXtremeTable .tableRegion{
+	margin-top:0px ;
+	margin-left:5px ;
+	margin-right:0px ;
+	margin-bottom:5px ;
+	font-size: 12px;
+	width:99% ;
+	border:1px solid #C0C0C0;
+ 	border-collapse:collapse;
+ 	border-spacing:0;
+ 	text-align: left;
+ 	
+}
+.eXtremeTable .statusBar{
+	padding-left: 12px;
+	
+	color: #515151;
+	height:20px ;
+	font-size: 12px;
+}
+.compactToolbar{
+	
+	color: #28456B;
+}
+
+.eXtremeTable .tableHeader{
+	
+	font: bold 12px  Verdana, Arial, Helvetica, sans-serif;
+	color: #313131;
+	border-right: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 6px 6px 6px 6px;
+	background: #f1f1f1 ;
+	vertical-align: middle;
+	
+		
+}
+.eXtremeTable .odd {
+	border-left: 1px solid #f3f3f3;
+	border-top: 0;
+	background: #fff  ;
+	font: 13px  Verdana, Arial, Helvetica, sans-serif;
+}
+
+.eXtremeTable .even {
+  	border-left: 1px solid #f3f3f3;
+	border-top: 0;
+	background: #f3f3f3  no-repeat;
+	font: 13px Verdana, Arial, Helvetica, sans-serif;
+	
+	
+}
+
+.eXtremeTable .tdRight { /*列置右*/
+	text-align: right;
+}
+
+.eXtremeTable .tdLeft {  /*列置左*/
+	text-align: left;
+}
+
+.tableBody{
+	font-size:12px ;
+	color:#515151 ;
+}
+.tableBody td{
+	border:1px solid #DCDCDC;
+	text-align: center ;
+}
+.eXtremeTable{
+	margin-top:5px ;
+}
+
+.eXtremeTable .highlight td {
+	color: #000000;
+	font: 13px  Verdana, Arial, Helvetica, sans-serif;
+	background-color: #fdecae;
+	cursor: hand;
+}
+.eXtremeTable .calcResult {
+	
+	color: black;
+	font: 13px Verdana, Arial, Helvetica, sans-serif;
+	text-align: right ;
+	font-weight:bold;
+	height: 20px;
+}
+.eXtremeTable .calcTitle {
+	color: black;
+	font: 13px Verdana, Arial, Helvetica, sans-serif;
+	text-align: centerright ;
+	font-weight:bold;
+	height: 20px;
+}
+/****************************TD 样式*****************************/
+.tdLeftOne {   /*一行显示一个填报项 样式*/
+	background-color: #ffffff;
+	width:20%;
+	color: #336699;
+	font-size: 13px;
+	text-align: right;
+}
+.tdRightOne {
+	background-color: #ffffff;
+	width:80%;
+	color: #515151;
+	font-size: 13px;
+	font-family: "宋体";
+}
+.tdLeftTwo {   /*一行显示两个填报项 样式*/
+	background-color: #ffffff;
+	width:15%;
+	color: #515151;
+	font-size: 13px;
+	text-align: right;
+
+}
+.tdRightTwo {
+	background-color: #ffffff;
+	width:35%;
+	color: #515151;
+	font-size: 13px;
+	font-family: "宋体";
+
+}
+
+.tdLeftOneTwo {   /*一行显示一个填报项和两个填报项，在同一页面时,一行显示一个填报项的样式*/
+	background-color: #ffffff;
+	width:15%;
+	color: #515151;
+	font-size: 13px;
+	text-align: right;
+
+}
+.tdRightOneTwo {
+	background-color: #ffffff;
+	width:85%;
+	color: #515151;
+	font-size: 13px;
+	font-family: "宋体";
+}
+
+.tdRight { /*列置右*/
+	text-align: right;
+}
+
+.tdLeft {  /*列置左*/
+	text-align: left;
+}
+
+.formTable tbody tr td:first-child{ /*第一列 样式*/
+	color: #333;
+	font-size: 13px;
+	text-align: right;
+	}
+.formTable tbody tr td:first-child+td{ /*第二列 样式*/
+	color: #333;
+	font-size: 13px;
+	font-family: "宋体";
+	}
+.formTable tbody tr td:first-child+td+td{ /*第三列 样式*/
+	color: #333;
+	font-size: 13px;
+	text-align: right;
+	}
+.formTable tbody tr td:first-child+td+td+td{ /*第四列 样式*/
+	color: #333;
+	font-size: 13px;
+	font-family: "宋体";
+	}
+.titleTable tbody tr td:first-child{ /*第一列 样式*/
+	color: #333;
+	font-size: 13px;
+	text-align: right;
+	}
+.titleTable tbody tr td:first-child+td{ /*第二列 样式*/
+	color: #333;
+	font-size: 13px;
+	font-family: "宋体";
+	}
+.titleTable tbody tr td:first-child+td+td{ /*第三列 样式*/
+	color: #333;
+	font-size: 13px;
+	text-align: right;
+	}
+.titleTable tbody tr td:first-child+td+td+td{ /*第四列 样式*/
+	color: #333;
+	font-size: 13px;
+	font-family: "宋体";
+	}
+
+.formTable table#file{ float:right;}
+
+
+
+/****************************DIV*****************************/
+.listButtonDiv{   /*列表页面-按钮区 样式*/
+	border:none;
+	background-color:#FFFFFF ;
+	margin-top:10px ;
+	margin-left:5px ;
+	margin-right:5px ;
+	margin-bottom:3px ;
+	padding-right:0px;
+	width:99% ;
+	text-align:left;
+	diaplay:block;
+}
+.listButtonDiv .z-btn{
+	display:inline;
+	vertical-align:middle;
+	font:normal 11px tahoma,verdana,helvetica;
+	cursor:pointer;
+	white-space:nowrap;
+	width: auto;
+	float:left;	
+	margin-right:3px;
+	margin-bottom:3px ;
+}
+
+.inputInfoDiv{  /*增加/修改页面 填报情况显示区 样式*/
+	font-size:13px ;
+	color:#515151 ;
+	font-weight:bold ;
+	margin-top:8px ;
+	text-align: center;
+}
+
+.saveDiv{     /*增加/修改页面 保存按钮显示区 样式*/
+	text-align: center;
+	border:none;
+	background-color:#FFFFFF ;
+	margin-top:5px ;
+	margin-left:5px ;
+	margin-right:5px ;
+	margin-bottom:5px ;
+	padding-right:0px;
+	width:99% ;
+}
+.saveDiv .z-btn{
+	display:inline-table;
+}
+.promptDiv{     /*列表页面 提示信息显示区 样式*/
+	text-align: left;
+	border:none;
+	font-weight: bold;
+	background-color:#FFFFFF ;
+	margin-top:10px ;
+	margin-left:5px ;
+	margin-right:5px ;
+	margin-bottom:3px ;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	color: #313131;
+	font-size: 12px;
+}
+.promptDiv .z-btn,#ec_table .z-btn{float:left;margin-right:5px; margin-bottom:5px}
+.tableTreeDiv{  /*tableTree页面,树内容显示区 样式*/
+
+	margin-top:5px ;
+	margin-left: 5px;
+	margin-right: 1px;
+	margin-bottom: 5px;
+
+}
+
+.annexDiv{ /*公用附件列表页面*/
+	border-bottom:1px solid #BBCFDC ;
+	width:100%;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:10px ;
+	text-align: left;
+}
+
+/****************************input输入框*****************************/
+input{
+	}
+input.inputText{  /*填报输入框*/
+	background : #FFFFFF;
+	border : thin solid #666;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	color: #333;
+	FONT-SIZE: 9pt;
+	}
+input.showText{  /*显示输入框*/
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 1px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 1px;
+	FONT-SIZE: 9pt;
+	BACKGROUND: #ffffff;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: 0px;
+	CURSOR: text;
+	COLOR: #333;
+	PADDING-TOP: 1px;
+	BORDER-BOTTOM: #666 1px solid;
+	}
+input.viewText{  /*无边框的显示输入框*/
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 1px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 1px;
+	FONT-SIZE: 9pt;
+	BACKGROUND: #ffffff;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: 0px;
+	CURSOR: text;
+	COLOR: #800807;
+	PADDING-TOP: 1px;
+	BORDER-BOTTOM: 0px;
+	}
+/****************************field样式*****************************/
+fieldset{
+	border:1px solid #C0C0C0;
+	font-size:13px;
+	font-weight: bold;
+	padding-top:5px;
+	padding-left:1px;
+	padding-right:1px;
+	padding-bottom:5px;
+	width:99%;
+	margin:5px;
+}
+.field_mar5{
+	border:1px solid red;margin:5px;
+}
+.specialFs{
+
+	border:1px solid #FFCC00;
+	margin-top:0px ;
+	margin-bottom:0px ;
+	margin-left:1px;
+	margin-right:1px ;
+	font-size:13px;
+	font-weight: bold;
+	padding-top:5px;
+	padding-left:1px;
+	padding-right:1px;
+	padding-bottom:5px;
+	width:99%;
+	
+}
+.specialFs legend{
+
+	color:red;
+	
+}
+legend {
+	color:#313131;
+}
+/****************************span样式*****************************/
+span.redSpan {   /*必填项红星的样式*/
+	color:  red;
+	margin-right: 0px;	
+}
+
+span.noRedSpan {   /*非必填项星星的样式*/
+	color:  #ffffff;
+	margin-right: 0px;	
+}
+
+span.keyInfoSpan {   /*重点（突出）信息样式*/
+	color:  #d10909;
+	margin-right: 0px;	
+}
+
+.promptSpan{   /*提示信息的样式*/
+	font-weight: bold;
+	text-align:left;
+	color: red;
+	}
+
+.inputShowLeft{   /*填报信息显示区*/
+	padding-right: 10px;	
+	}
+.inputShowRight{   /*填报信息显示区*/
+	padding-left: 10px;	
+	}
+
+.annexSpan{
+	font-size: 13px;
+	color:  #3777B4;
+	font-weight:bold ;
+	border-left: #BBCFDC 1px solid;
+	border-right: #BBCFDC 1px solid;
+	border-top:#BBCFDC 1px solid;
+	border-bottom:none ;
+	background:url(img/tabDef.gif);
+	background-color: transparent;
+	text-align:center;
+	height:18px ;
+	line-height:18px ;
+	
+}
+/************************img 图片显示大小**********************************************/
+.imgShow{  /*电子签名图片*/
+  width: 360px;
+  height: 180px;
+}
+.img_workFlowImage{
+	 width: 900px;
+     height: 600px;
+}
+/************************tab 选项卡 样式**********************************************/
+
+.TabItemMiddle {
+	height: 25px;
+	width:130px;
+	background-image: url(img/tab.jpg);
+	background-repeat: repeat-x;
+	cursor:pointer;
+	border:1px solid #EDF2F8 ;
+	text-align:center;
+}
+.TabItemSelectedMiddle {
+	height: 25px;
+	width:130px;
+	border:1px solid #EDF2F8 ;
+	background-image: url(img/tab_selected.jpg);
+	text-align:center;
+}
+.TabItemTextSelected {
+	font-family: arial;
+	font-size: 12px;
+	width:130px;
+	color: #33FF00;
+	margin-left:5px ;
+	margin-right:5px ;
+	text-align:center;
+	font-weight: bold;
+}
+.TabItemText {
+	margin-left: 5px;
+	margin-right: 5px;
+	font-family: arial;
+	font-size: 12px;
+	width:130px;
+	color:#ffffff ;
+	text-align:center;
+}
+.TabItemHoverMiddle {
+	cursor: hand;
+	height: 25px;
+	width:130px;
+	background-image: url(img/tab_Hover.jpg);
+	background-repeat: repeat-x;
+	cursor:pointer;
+	text-align:center;
+	border:1px solid #EDF2F8 ;
+}
+
+
+.TabLine {
+	background-repeat: repeat-x;
+}
+
+.TabBack {
+	background-color: #FFFFFF;
+	border-collapse: collapse;
+	table-layout:fixed;
+	width: 100%;
+}
+
+.xppTab {
+	width:100% ;
+	margin-top:5px ;
+	margin-left:2.5px ;
+	margin-right:2.5px ;
+	margin-bottom:5px ;
+}
+
+.TabContent {
+	position:relative;
+	margin: 0px 0px 0px 0px;
+	height:100%;
+	width:100%;
+	display:inline-block;
+	display:-moz-inline-stack;
+	*display:inline;
+	zoom:1;
+	border-top:1px solid #EDF2F8;
+	padding-top:4px;
+	margin-top:-1px;
+}
+
+.TabBody {
+	position:relative;
+	border-left: 1px solid #EDF2F8;
+	border-right: 1px solid #EDF2F8;
+	border-bottom: 1px solid #EDF2F8;
+	background-color: white;
+	padding: 0px 0px 0 0px;
+	width:100%;
+}
+
+/****************************************<a>标签*******************************/
+/*A:link {
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none
+}
+*/
+
+a {color:#000000;
+    text-decoration:underline;}
+a:link {
+    color:#000000;
+    text-decoration:underline;
+    }
+    a:visited {
+
+    text-decoration:none;
+    }
+    a:hover {
+    color:blue;
+    text-decoration:none;
+    }
+    a:active {
+    color:#ff0000;
+    text-decoration:none;
+    }
+    
+    .a_selected{color:#ff0000;
+    text-decoration:none;}
+
+
+/**********************************************************************/
+
+
+/*2010-08-09 屏蔽
+.searchTable{
+	margin-top:5px ;
+	margin-left:8px ;
+	margin-right:8px ;
+	margin-bottom:5px ;
+	height:90% ;
+	width:98% ;
+	background-color:#EDF2F8;
+	color:#024280;
+	font-size:12px ;
+	border-top:5px solid #EDF2F8 ;
+	border-bottom:5px solid #ffffff ;
+	border-right:3px solid #EDF2F8 ;
+}
+.searchTable tr{
+	height:20px ;
+    line-height:20px ;
+}
+
+
+
+.button1{
+	font-size: 8pt;
+	font-weight: bold;
+	color:  #3777B4;
+	
+	border:1px ridge #FFAF69;
+	background:url(img/bottom1.jpg);
+	
+	text-align:center;
+	text-decoration:blink;
+	height:20px ;
+	line-height:18px ;
+	padding:0px; 
+	
+}  
+
+.button2{
+	font-size: 9pt;
+	color:  #03437F;
+	border: #BBCFDC 1px solid;
+	background-color: #F8FAFB;
+	text-align:center;
+	height:20px ;
+	line-height:18px ;
+}
+.button3{
+	font-size: 8pt;
+	font-weight: bold;
+	color:  #3777B4;
+	border: #BBCFDC 1px solid;
+
+	background-color:#FFAF69;
+	text-align:center;
+	text-decoration:blink;
+	height:20px ;
+	line-height:18px ;
+	padding:0px; 
+	
+}  
+.comDiv{
+	border:none;
+	background-color:#FFFFFF ;
+	margin-top:10px ;
+	margin-left:5px ;
+	margin-right:5px ;
+	margin-bottom:3px ;
+	padding-right:0px;
+	width:100% ;
+}
+.commondDiv{
+	margin-right:0px ;
+	border:none;
+	text-align:left;
+
+}
+.tableMemoDiv{
+	font-size:12px ;
+	color:#065DAD ;
+	font-weight:bold ;
+	margin-left:30px ;
+	height:20px ;
+	line-height:18px ;
+}
+.tableMemoDiv1{
+	font-size:12px ;
+	color:#065DAD ;
+	font-weight:bold ;
+	margin-left:2px ;
+	height:20px ;
+	line-height:18px ;
+}
+.tableMemoSpan{
+	margin-left:20px ;
+}
+
+.tableTotalDiv{
+	width:100% ;
+	font-size:12px ;
+	color:#065DAD ;
+	font-weight:bold ;
+	background-color: #EDF2F8 ;
+	margin-left:5px ;
+	margin-right:5px ;
+	text-align: right ;
+	border: #BBCFDC 1px solid;
+}
+
+.stateShow{
+	background-color: #F4A2A8;
+}
+.stateShow1{
+	background-color: #EEF486;		
+}
+
+.messageDiv{
+	font-size:12px ;
+	font-weight:bold ;
+ 	text-align: center ;
+ 	margin-top:10px ;
+ 	
+}
+
+
+.defTable{
+	background-color:#CDDDE6 ;
+	margin:5px ;
+	width:99%;
+	
+}
+.defTable thead{
+	background-color:#EDF2F8 ;
+}
+.defTable th{
+	background:#DEE8E9 url(img/titleTable.gif) repeat-x;
+ 	color:#3777B4;
+ 	height:20px;
+ 	font-weight:bold ;
+	text-align:center ;
+	vertical-align:middle ;
+}
+.defTable td{
+	font-size:13px;
+    background-color:#FFFFFF;
+	color:#336699 ;
+	font-family:宋体;
+	text-align: center ;
+}
+
+
+
+.titleandlist {
+	width: 98%;
+	margin: 8px;
+	background-color: #ffffff;
+	border-top: 1px #DDF1FA solid;
+	border-right-width: 1px #DDF1FA solid;
+	border-bottom-width: 1px #DDF1FA solid;
+	border-left-width: 1px #DDF1FA solid;
+}
+
+
+
+
+.tr02 {
+	background-color: #ffffff;
+	font-size: 13px;
+	font-family: "����";
+	color:#336699;
+}
+.tr03 {
+	
+	background-color: #DEE9F2;
+	font-size: 13px;
+	color:#336699;
+}
+
+
+.memoFont{
+	font-size:12px ;
+	color:#865AF6 ;
+	display:inline ;
+}
+.pointFont{
+	font-size:12px ;
+	color:#3705B7 ;
+}
+
+
+
+.opacity {
+	opacity:0;
+	FILTER:Alpha(Opacity=0);
+}
+.text {
+	border: 1px solid #c0c1b3;
+}
+.text.opacity {
+	position:absolute;
+	height:20px;}
+.text.file {
+	width:129px!important;
+	width:135px;
+	z-index:100;
+}
+.titleDiv{
+	font-size:13px ;
+	color:#065DAD ;
+	width:98% ;
+	background-color:#99CCFF ;
+	height:25px ;
+	line-height:25px ;
+	margin-bottom:0px ;
+}
+
+
+
+.tabDiv{
+	border-bottom:1px solid #BBCFDC ;
+	width:100%;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:10px ;
+}
+
+
+
+
+
+.tabSelected{
+	font-size: 9pt;
+	color:  #ffffff;
+	font-weight:bold ;
+	border-left: #C0C0C0 1px solid;
+	border-right: #C0C0C0 1px solid;
+	border-top:#C0C0C0 1px solid;
+	border-bottom:none ;
+	background:url(img/tab_selected.jpg);
+	background-color: transparent;
+	text-align:center;
+	height:25px ;
+	line-height:20px ;
+	width:130px ;
+}
+.tabDef{
+	font-size: 9pt;
+	color:  #787773;
+	border-left: #C0C0C0 1px solid;
+	border-right: #C0C0C0 1px solid;
+	border-top:#C0C0C0 1px solid;
+	border-bottom:none ;
+	background:url(img/tab.jpg);
+	background-color: transparent;
+	text-align:center;
+	height:25px ;
+	line-height:20px ;
+	width:130px ;
+}
+
+
+
+
+
+
+.tabFile{
+	font-size: 13px;
+	color:  #3777B4;
+	font-weight:bold ;
+	border-left: #BBCFDC 1px solid;
+	border-right: #BBCFDC 1px solid;
+	border-top:#BBCFDC 1px solid;
+	border-bottom:none ;
+	background:url(img/tabDef.gif);
+	background-color: transparent;
+	text-align:center;
+	height:25px ;
+	line-height:25px ;
+	
+}
+
+.waitDiv{
+	margin-top:30 px ;
+	color:#0098D8 ;
+	font-weight:bold ;
+	font-size:12px;
+}
+
+*/
+/**************************************************该位置原default.css文件内容***********************************************/
+.button_back{
+	font-size: 8pt;
+	font-weight: bold;
+	color:  #3777B4;
+	/*border: #BBCFDC 1px solid;*/
+	border:1px ridge #FFAF69;
+	background:url(img/bottom1.jpg);
+	/*background-color: transparent;*/
+	text-align:center;
+	text-decoration:blink;
+	height:20px ;
+	line-height:18px ;
+	padding:0px; 
+	
+}  
+.tabSelected{
+	font-size: 9pt;
+	color:  #ffffff;
+	font-weight:bold ;
+	border:1px solid #EDF2F8 ;
+	background:url(img/tab_selected.jpg);
+	background-repeat:repeat-x;
+	background-color: transparent;
+	text-align:center;
+	height:25px ;
+	width:130px ;
+}
+.tabDef{
+	font-size: 9pt;
+	color:  #787773;
+	border:1px solid #EDF2F8 ;
+	background:url(img/tab.jpg);
+	background-repeat:repeat-x;
+	background-color: transparent;
+	text-align:center;
+	height:25px ;
+	width:130px ;
+}
+/*************************合并表头样式**************************/
+/********个人工作太*************/
+.ul_work_shortcuts{ height:100%;}
+			.ul_work_shortcuts li{ float:left; width:70px; height:85px; margin-top:8px; text-align:center}
+				.ul_work_shortcuts  a{ color:#333; text-decoration:none}
+				.ul_work_shortcuts  .a_shortcuts{ display:block; margin-top:5px;}
+				.ul_work_shortcuts  a img{ width:64px; height:64px; border:0;font-size:12px;}
+/***********************************督办单********************************/
+.div_form{
+	width:98%;margin:0px auto;
+}
+	.div_form_title{
+		width:97%; text-align:center; font-size:24px; font-weight:bold; margin:15px 0; color:red; lerrer-spacing:1px
+	}
+		.font_left{width:100%; text-align:left; font-size:15px; margin-bottom:5px; color:red;font-weight:normal;}
+		.table_red{
+			width:100%;text-align:left;border:1px solid red;   font-weight:normal; 
+			border-collapse:collapse; margin-bottom:5px
+		}
+		.table_red td{
+				border:1px solid red; /*text-indent:2px;*/font-siez:15px; font-weight:normal;
+				height:25px
+		}
+			.table_red td b{
+				font-siez:15px; font-weight:normal; float:right; padding-right:5px;color: red;
+			}
+			.form_input{
+				vertical-align:top;
+				font-size:9pt;
+				margin:3px;
+				background : #FFFFFF;
+				border :1px solid #666;
+				color: #333;
+			}
+			.table_red td textarea{
+				margin:3px;
+				vertical-align:text-top;
+				font-size:9pt;
+				border:1px solid #333;
+			}
+			.table_red_tdRight {
+              color: #fffff;
+              width:23%;
+             }
+             .table_red_tdLeft {
+              width:10%;
+             }
+           
+/***************************工作计划*********************************/
+.table_borwse{
+	border: 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 98%;
+    margin-bottom:8px;
+}
+	.table_borwse th {
+	    background: url("img/titleShow.gif") repeat-x scroll 0 0 transparent;
+	    border: 1px solid #B6B6B6;
+	    height: 25px;
+	    line-height: 25px;
+	}
+	.table_borwse td{
+		border: 1px solid #B6B6B6;
+	    height: 25px;
+	    line-height: 25px;
+	}
+	.from_textarea{
+		margin:3px 0;
+		vertical-align:text-top;
+		font-size:9pt;
+		border:1px solid #333;
+	}
+	.weekday{
+		width:99%; text-align:right
+	}
+	.table_borwse .select_mar3{
+		margin:3px;
+	}
+/******************个人资料设置**************/
+.inputLine {
+    border-color: -moz-use-text-color -moz-use-text-color #999999;
+    border-right: 0 none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    font-family: "verdana","arial","����";
+    font-size: 14px;
+}
+
+.tr_title_edit {
+    background-color: #F6F6F6;
+    text-align: right;
+    padding-right:5px;
+}
+.tr_content_edit {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding-left:3px;
+}
+.treeTd{ vertical-align: top; min-width:80px;margin-top:10px;}
+.people_img{
+	border: 1px solid #999999;
+    display: block;
+    height: 90px;
+    padding: 1px;
+    text-align: center;
+    width: 90px;
+}
+.div_blue{
+	text-align:left; font-size:14px; font-weight:bold; margin:5px 0; color:blue; 
+}
+/******************qinmao设置**************/
+.div_float_right{
+	float: right;
+	font-weight: bold;
+	color: #313131;
+	font-size: 12px;
+	margin:0px;
+	padding:0px;
+	background-color:#FFFFFF ;
+}
+
+
+.listTable .highlight td {
+	color: #000000;
+	font: 13px  Verdana, Arial, Helvetica, sans-serif;
+	background-color: #C0C0C0;
+	cursor: hand;
+}
+
+.listTable .odd {
+	border-left: 1px solid #f3f3f3;
+	border-top: 0;
+	background: #fff  ;
+	font: 13px  Verdana, Arial, Helvetica, sans-serif;
+}
+
+.trDiv{     /*增加/修改页面 保存按钮显示区 样式*/
+	text-align: left;
+}
+.trDiv .z-btn{
+	display:inline-table;
+}
+

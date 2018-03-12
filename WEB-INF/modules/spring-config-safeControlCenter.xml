@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+       <!--  Servlet  Action配置文件 -->
+<beans default-autowire="byName" default-lazy-init="true">
+	<bean name="/dtaqSituationAnalyseAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqSituationAnalyseAction"/>
+	<bean name="/dtaqSituationSuggestAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqSituationSuggestAction"/>
+	<bean name="/dtaqWarnSignAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqWarnSignAction"/>
+	<bean name="/dtaqRiskPatrolAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqRiskPatrolAction"/>
+	<bean name="/safeAnalysisTotalAction" class="com.whmetro.safeControlCenter.securitySituation.action.SafeAnalysisTotalAction"/>
+	<bean name="/announcementAction" class="com.whmetro.systemmanage.action.AnnouncementAction"/>
+	<bean name="/dataEmulationAction" class="com.whmetro.systemmanage.action.DataEmulationAction"/>
+	<bean name="/dtaqSituationMotionanalAction" class="com.whmetro.systemmanage.action.DtaqSituationMotionanalAction"/>
+	<bean name="/hcHiddenTypeAction" class="com.whmetro.safeControlCenter.hcHidden.action.HcHiddenTypeAction"/>
+	<bean name="/hcSolutionAction" class="com.whmetro.safeControlCenter.hcHidden.action.HcSolutionAction"/>
+	<bean name="/safetyDaylyLogAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.SafetyDaylyLogAction"/>
+	<bean name="/hcSolutionApproveAction" class="com.whmetro.safeControlCenter.hcHidden.action.HcSolutionApproveAction"/>
+	<bean name="/emergencyMemberAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.EmergencyMemberAction" />
+    <bean name="/emergencyMaterialPlanAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.EmergencyMaterialPlanAction" />
+    <bean name="/emergencyMaterialItemAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.EmergencyMaterialItemAction" />
+	<bean name="/riskLibAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.RiskLibAction" />
+	<bean name="/riskPlanAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.RiskPlanAction" />
+	
+	<bean name="/safeDocAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.SafeDocAction"/>
+	<bean name="/safeDocAnnexAction" class="com.whmetro.safeControlCenter.safeRiskManager.action.SafeDocAnnexAction"/>
+	
+	<bean name="/accidentDealAction" class="com.whmetro.safeControlCenter.accident.action.AccidentDealAction"/>
+	<bean name="/accidentReportAction" class="com.whmetro.safeControlCenter.accident.action.AccidentReportAction"/>
+	<bean name="/accidentReportAnnexAction" class="com.whmetro.safeControlCenter.accident.action.AccidentReportAnnexAction"/>
+	
+	<bean name="/maSiteWorkAction" class="com.whmetro.safeControlCenter.innerwork.action.MaSiteWorkAction"/>
+	<bean name="/maGeneralWorkAction" class="com.whmetro.safeControlCenter.innerwork.action.MaGeneralWorkAction"/>
+	<bean name="/maSiteWorkLogAction" class="com.whmetro.safeControlCenter.innerwork.action.MaSiteWorkLogAction"/>		
+    <bean name="/maWorkLogAppraisalAction" class="com.whmetro.safeControlCenter.innerwork.action.MaWorkLogAppraisalAction"/>
+	<bean name="/dtaqSecurityAnalyseAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqSecurityAnalyseAction"/>
+	
+	<bean name="/serviceMailInfoAction" class="com.whmetro.sms.action.ServiceMailInfoAction"/>
+	<bean name="/dtaqScheduleAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqScheduleAction"/>
+	<bean name="/dtaqScheduleExcavateAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqScheduleExcavateAction"/>
+	<bean name="/dtaqScheduleMainAction" class="com.whmetro.safeControlCenter.securitySituation.action.DtaqScheduleMainAction"/>
+	
+	<bean name="/segmentScheduleAction" class="com.whmetro.systemmanage.action.SegmentScheduleAction"/>
+	
+</beans>

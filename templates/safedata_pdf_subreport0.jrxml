@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="safedata_pdf_subreport0"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="630"
+		 pageHeight="802"
+		 columnWidth="630"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isFloatColumnFooter="true"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<reportFont name="china" isDefault="false" fontName="宋体" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+
+	<parameter name="third_title" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="project_direction_T" isForPrompting="false" class="java.lang.String"/>
+
+	<field name="id" class="java.lang.Integer"/>
+	<field name="station_id" class="java.lang.Integer"/>
+	<field name="write_date" class="java.lang.String"/>
+	<field name="type_id" class="java.lang.Integer"/>
+	<field name="type_kind" class="java.lang.Integer"/>
+	<field name="type_name" class="java.lang.String"/>
+	<field name="organ_type" class="java.lang.String"/>
+	<field name="point_id_positiveTotal" class="java.lang.Integer"/>
+	<field name="point_name_positiveTotal" class="java.lang.String"/>
+	<field name="data_total_positiveTotal" class="java.lang.String"/>
+	<field name="data_rate_positiveTotal" class="java.lang.String"/>
+	<field name="bg_color_positiveTotal" class="java.lang.String"/>
+	<field name="point_id_positiveRate" class="java.lang.Integer"/>
+	<field name="point_name_positiveRate" class="java.lang.String"/>
+	<field name="data_total_positiveRate" class="java.lang.String"/>
+	<field name="data_rate_positiveRate" class="java.lang.String"/>
+	<field name="bg_color_positiveRate" class="java.lang.String"/>
+	<field name="point_id_negativeTotal" class="java.lang.Integer"/>
+	<field name="point_name_negativeTotal" class="java.lang.String"/>
+	<field name="data_total_negativeTotal" class="java.lang.String"/>
+	<field name="data_rate_negativeTotal" class="java.lang.String"/>
+	<field name="bg_color_negativeTotal" class="java.lang.String"/>
+	<field name="point_id_negativeRate" class="java.lang.Integer"/>
+	<field name="point_name_negativeRate" class="java.lang.String"/>
+	<field name="data_total_negativeRate" class="java.lang.String"/>
+	<field name="data_rate_negativeRate" class="java.lang.String"/>
+	<field name="bg_color_negativeRate" class="java.lang.String"/>
+	<field name="actual_point_count" class="java.lang.String"/>
+	<field name="should_point_count" class="java.lang.String"/>
+	<field name="project_direction" class="java.lang.String"/>
+	<field name="info_id_positiveTotal" class="java.lang.Integer"/>
+	<field name="info_id_positiveRate" class="java.lang.Integer"/>
+	<field name="info_id_negativeTotal" class="java.lang.Integer"/>
+	<field name="info_id_negativeRate" class="java.lang.Integer"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="44"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="1"
+						y="1"
+						width="88"
+						height="43"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-1"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[测量项目]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="89"
+						y="1"
+						width="135"
+						height="21"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-2"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[最大正方向累计]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="89"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-3"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[测点]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="134"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-4"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[累计]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="179"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-5"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[速率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="224"
+						y="1"
+						width="135"
+						height="21"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-6"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[最大正方向速率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="224"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-7"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[测点]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="269"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-8"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[累计]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="314"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-9"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[速率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="359"
+						y="1"
+						width="135"
+						height="21"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-10"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[最大负方向累计]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="359"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-11"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[测点]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="404"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-12"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[累计]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="449"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-13"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[速率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="494"
+						y="1"
+						width="135"
+						height="21"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-14"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[最大负方向速率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="494"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-15"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[测点]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="539"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-16"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[累计]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="584"
+						y="22"
+						width="45"
+						height="22"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-17"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china"/>
+					</textElement>
+				<text><![CDATA[速率]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="20"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="1"
+						y="0"
+						width="88"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{type_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="89"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-2"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{point_name_positiveTotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="134"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-3"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_total_positiveTotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="179"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-4"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_rate_positiveTotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="224"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-5"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{point_name_positiveRate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="269"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-6"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_total_positiveRate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="314"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-7"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_rate_positiveRate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="359"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-8"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{point_name_negativeTotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="404"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-9"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_total_negativeTotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="449"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-10"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_rate_negativeTotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="494"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-11"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{point_name_negativeRate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="539"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-12"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_total_negativeRate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="584"
+						y="0"
+						width="45"
+						height="20"
+						backcolor="#FFFFFF"
+						key="textField-13"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#333333"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font reportFont="china" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{data_rate_negativeRate}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-lazy-init="false">
+	<!-- JBPMcfg类的载入 -->	
+	<bean id="jbpmConfiguration" class="org.springmodules.workflow.jbpm31.LocalJbpmConfigurationFactoryBean">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="configuration" value="/WEB-INF/jbpm.cfg.xml" />
+    </bean>
+    <bean id="jbpmFacade" class="com.whmetro.systemmanage.sysconfigmanager.service.JbpmFacade">
+        <property name="sessionFactory" ref="sessionFactory" />
+        <property name="jbpmConfiguration" ref="jbpmConfiguration"></property>
+    </bean>
+    <bean id="workFlowManager" class="com.whmetro.systemmanage.sysconfigmanager.service.WorkFlowManager">
+         <property name="sessionFactory" ref="sessionFactory"></property>
+         <property name="jbpmFacade" ref="jbpmFacade"></property>
+    </bean>
+    
+    <!-- 动态分配参与者的handler -->
+    <bean id="actorAssignmentHandler" class="com.whmetro.systemmanage.sysconfigmanager.service.ActorAssignmentHandler">
+        <property name="workFlowManager" ref="workFlowManager"></property>
+    </bean>
+    <bean id="roleAssignmentHandler" class="com.whmetro.systemmanage.sysconfigmanager.service.RoleAssignmentHandler">
+         <property name="workFlowManager" ref="workFlowManager"></property>
+    </bean>
+
+</beans>

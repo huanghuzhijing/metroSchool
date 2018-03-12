@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+		"-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+		"http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+<form-validation>
+	<formset>
+			<form name="sysModuleInfoForm">
+			</form>
+			<form name="sysModuleOperationForm">
+			</form>
+			<form name="sysRoleForm">
+			</form>
+			<form name="sysRoleModuleJoinForm">
+			</form>
+			<form name="sysOperatorForm">
+			</form>
+			<form name="sysOperRoleJoinForm">
+			</form>
+			<form name="sysUsergroupForm">
+			</form>
+			<form name="sysUsergroupEmpForm">
+			</form>
+			<form name="organizationForm">
+			</form>
+			<form name="employeeForm">
+			</form>
+			<form name="corpTypeForm">
+			</form>
+			<form name="corpForm">
+			</form>
+			<form name="dicForm">
+			</form>
+			<form name="dicDataForm">
+			</form>
+			<form name="sysLogForm">
+			</form>
+
+			<form name="sysCodeRuleForm">
+			</form>
+			<form name="sysCodeRuleitemForm">
+			</form>
+			<form name="sysMessageRemindForm">
+			</form>
+		
+			<form name="sysProjectOrganconfigForm">
+			</form>
+			<form name="dtaqCheckpointForm"></form>
+			<form name="dtaqProjMachCheckpointForm"></form>
+			<form name="dtaqPartForm"></form>
+			<form name="dtaqCheckpointTypeForm"></form>
+			<form name="dtaqCheckpointHistoryForm"></form>
+			
+			<form name="dtaqLineForm"></form>
+			<form name="dtaqSegmentForm"></form>
+			<form name="dtaqStationForm"></form>
+			<form name="dtaqCheckPointGroupForm"></form>
+			<form name="dtaqDataForm"></form>
+			<form name="dtaqDataInfoForm"></form>
+			<form name="dtaqSituationAnalyseForm"></form>
+			<form name="dtaqSituationSuggstForm"></form>
+			<form name="dtaqWarnSignForm"></form>
+	</formset>
+</form-validation>

@@ -1,0 +1,1038 @@
+<decorators defaultdir="/templates">
+    <excludes>
+    
+    
+<!--                                     过滤文件                                          -->
+        <pattern>/index.jsp</pattern>
+        <pattern>/sysLogin.jsp</pattern>
+        <pattern>/login.do*</pattern>
+        <pattern>/loginsystem.do*</pattern>
+        <pattern>/logout.jsp</pattern>
+        <pattern>/top.jsp</pattern>
+        <pattern>/commons/*</pattern>
+        <pattern>/scripts/*</pattern>
+        <pattern>/widgets/*</pattern>
+        <pattern>/styles/*</pattern>
+         <pattern>/js/*</pattern>
+        <pattern>/*download*</pattern>
+        <pattern>/*__skip__*</pattern>        
+        <pattern>/btn.jsp</pattern>
+        <pattern>/udbtn.jsp</pattern>
+        <pattern>/mainshow.html </pattern>
+        <pattern>/biz/schedule/netdiagram.jsp</pattern>
+        <pattern>/bizplat.do?method=moduleManager*</pattern>
+        <pattern>/personalInfoAction.do?method=image*</pattern>
+        <pattern>/employeeSealAction.do?method=image*</pattern>
+        <pattern>/corpEmployeeAction.do?method=delete*</pattern>
+        <pattern>/dataDictAction.do?method=validateDelete*</pattern>
+        <pattern>/dataDictRecordAction.do?method=listRe*</pattern>
+        <pattern>/dataDictRecordAction.do?method=delete*</pattern>
+        <pattern>/corpTypeAction.do?method=validateDelete*</pattern>
+        <pattern>/corpAction.do?method=validateDelete*</pattern>
+        <pattern>/corpAction.do?method=listLeft*</pattern>
+        <pattern>/corpAction.do?method=list*</pattern>
+        <pattern>/corpTypeAction.do?method=listLeft*</pattern>
+        <pattern>/corpTypeAction.do?method=list*</pattern>
+        <pattern>/projectPeriodsAction.do?method=validateDelete*</pattern>
+        <pattern>/projectPeriodsAction.do?method=listLeft*</pattern>
+        <pattern>/projectPeriodsAction.do?method=list*</pattern>
+        <pattern>/personMailboxSendAction.do?method=menu*</pattern>
+        <pattern>/personMailboxSendAction.do?method=count*</pattern>
+        <pattern>/personMailboxSendAction.do?method=countNoread*</pattern>
+        <pattern>/corpAction.do?method=checkOrganCode*</pattern>
+        <pattern>/bizplat.do?method=bizPlatTree*</pattern>    
+        <pattern>/bizplat.do?method=helpManager*</pattern>
+        <pattern>/bizplat.do?method=selectModule*</pattern>
+        <pattern>/*.xml</pattern>
+        <pattern>/loginsystem.do?method=checkStatus*</pattern>
+        <pattern>/sysUsergroupEmpAction.do?method=listLeft*</pattern>
+        <pattern>/sysUsergroupEmpAction.do?method=listRight*</pattern>
+        <pattern>/projectInfoConfigAction.do?method=listLeft*</pattern>
+        <pattern>/projectInfoConfigAction.do?method=listRight*</pattern>
+        <pattern>/sysUsergroupEmpAction.do?method=delete*</pattern>
+        <pattern>/projectInfoConfigAction.do?method=delete*</pattern>
+        <pattern>/sysCodeRuleitemAction.do?method=list*</pattern>
+        <pattern>/sysCodeRuleitemAction.do?method=delete*</pattern>
+        <pattern>/projectInfoConfigAction.do?method=projectPeriodsEmplist*</pattern>
+        <pattern>/sysModuleInfoAction.do?method=checkdelete*</pattern>
+        <pattern>/sysModuleOperationAction.do?method=checkcommandcode*</pattern>
+        <pattern>/sysRoleAction.do?method=checkrolename*</pattern>
+        <pattern>/sysOperatorAction.do?method=checkusername*</pattern>
+        <!-- ajax 验证 -->
+        <pattern>/warnAnalysisSignAction.do?method=deleteMySign*</pattern>
+        
+        <pattern>/sysOperatorAction.do?method=validatePassWord*</pattern>
+        <pattern>/sysOperatorAction.do?method=purviewDisplay*</pattern>
+        <pattern>/sysModuleInfoAction.do?method=create*</pattern>
+        <pattern>/sysModuleInfoAction.do?method=edit*</pattern>
+        <pattern>/oaInformCoteAction.do?method=create*</pattern>
+        <pattern>/oaInformCoteAction.do?method=edit*</pattern> 
+		<pattern>/oaInformCoteAction.do?method=checkdelete*</pattern>
+		<pattern>/employeeAction.do?method=selectEmpsForSysOperator*</pattern>
+		<pattern>/projectPeriodsAction.do?method=validateAdd*</pattern>
+		<pattern>/sysCodeRuleitemAction.do?method=create*</pattern>
+		<pattern>/bizplat.do?method=myplatform*</pattern>
+		<pattern>/employeeAction.do?method=selectOrganForEmp*</pattern>
+		<pattern>/employeeAction.do?method=selectEmpNoteOGCOrgan*</pattern>
+		<pattern>/employeeAction.do?method=selectEmpNoteOGCGroup*</pattern>
+		<pattern>/employeeAction.do?method=selectEmpNoteOGCCorp*</pattern>
+		<pattern>/employeeAction.do?method=selectEmpNoteOGOrgan*</pattern>
+		<pattern>/employeeAction.do?method=selectEmpNoteOGGroup*</pattern>
+		<pattern>/oaCarReportAction.do?method=oaCarReportListExcel*</pattern>
+		<pattern>/outLogin.jsp</pattern>
+		<pattern>/bizplat.do?method=getTransactMessageCount*</pattern>
+		<pattern>/employeeAction.do?method=listRe*</pattern>
+		<pattern>/bizplat.do?method=bizPlatSubMenu*</pattern>
+        <pattern>/corpAction.do?method=fillSyscorp*</pattern>
+        <pattern>/workFlowAction.do?method=image*</pattern>
+        <pattern>/employeeAction.do?method=selectListForPersonMailboxSend*</pattern>
+        <pattern>/employeeAction.do?method=selectListForUserGroupForPersonMailbox*</pattern> 
+        <pattern>/employeeAction.do?method=selectListForPersonReceiveFileSend*</pattern>
+        <pattern>/employeeAction.do?method=selectListForUserGroupForPersonReciveFileMailbox*</pattern>
+        <pattern>/employeeAction.do?method=selectListForEmpCorpForPersonMailbox*</pattern>
+        <pattern>/organizationAction.do?method=selectProjectPeriods*</pattern>
+        <pattern>/sysModuleInfoAction.do?method=selectPrjPeriodsForModule*</pattern>
+        <pattern>/sysModuleOperationAction.do?method=create*</pattern>
+        <pattern>/sysModuleOperationAction.do?method=edit*</pattern>
+        <pattern>/sysRoleAction.do?method=selectForSysOperator*</pattern>
+        <pattern>/sysUsergroupAction.do?method=create*</pattern>
+        <pattern>/sysUsergroupAction.do?method=edit*</pattern>
+        <pattern>/sysUsergroupEmpAction.do?method=create*</pattern>
+        <pattern>/workFlowAction.do?method=choseActor*</pattern>
+        <pattern>/sysCodeRuleAction.do?method=create*</pattern>
+        <pattern>/sysCodeRuleAction.do?method=edit*</pattern>
+        <pattern>/sysCodeRuleitemAction.do?method=edit*</pattern>
+        <pattern>/sysProjectOrganconfigAction.do?method=selectPrjForPrjOrganCfg*</pattern>
+        <pattern>/sysProjectOrganconfigAction.do?method=selectPrjPeriodsForPrjOrganCfg*</pattern>
+        <pattern>/sysProjectOrganconfigAction.do?method=selectEmpForPrjOrganCfg*</pattern>
+        <pattern>/workFlowAction.do?method=actsByRoleId*</pattern>
+        
+        <pattern>/landContractInfoAction.do?method=checkUpReport*</pattern>
+        <pattern>/contractInfoAction.do?method=checkDelete*</pattern>
+        <pattern>/landContractInfoAction.do?method=checkDelete*</pattern>
+        <pattern>/landParcelAction.do?method=checkDelete*</pattern>
+        <pattern>/incomeContractInfoAction.do?method=checkUpReport*</pattern>
+        <pattern>/contractInfoAction.do?method=initsplitPayAll*</pattern>
+        <pattern>/landContractInfoAction.do?method=initsplitPayAll*</pattern>
+        <pattern>/contractInfoAction.do?method=checkSubmit*</pattern>
+        <pattern>/middleItemBudgetApproveAction.do?method=exportPDFFile*</pattern>
+        <pattern>/middleItemBudgetApproveAction.do?method=exportExcelFile*</pattern>
+        <pattern>/middleItemBudgetApproveAction.do?method=update*</pattern>
+        <pattern>/middleItemBudgetApproveAction.do?method=initApplypay*</pattern>
+        <pattern>/costStatisticalAccountAction.do?method=checkAccountSign*</pattern>
+        <pattern>/landHousePlacementAction.do?method=excelList*</pattern>
+        <pattern>/landHousePlacementAction.do?method=reportView*</pattern>
+        <pattern>/landHousePlacementAction.do?method=excel*</pattern>
+        <pattern>/feePayApplyAction.do?method=listProjectInfo*</pattern>
+        <pattern>/feePayApplyAction.do?method=listLandOwnership*</pattern>
+        <pattern>/feePayApplyAction.do?method=listLandParcel*</pattern>
+        <pattern>/feePayApplyAction.do?method=listLandSupplyParcel*</pattern>
+            
+        <pattern>/feePayApplyAction.do?method=listPrjBudgetItem*</pattern>
+        <pattern>/oaCtrBalanceAction.do?method=expExcel*</pattern>
+        <pattern>/ntko/*</pattern>
+        <pattern>/prjBudgetItemAction.do?method=create*</pattern>
+     	<pattern>/prjBudgetItemAction.do?method=edit*</pattern>
+        <pattern>/prjBudgetItemAction.do?method=view*</pattern>
+        <pattern>/prjBudgetItemAction.do?method=checkDelete*</pattern>
+        <pattern>/contentSelectAction.do?method=selectCostStatisticalAccount*</pattern>
+        <pattern>/costStatisticalAccountAction.do?method=create*</pattern>
+     	<pattern>/costStatisticalAccountAction.do?method=edit*</pattern>
+        <pattern>/costStatisticalAccountAction.do?method=view*</pattern>
+		<pattern>/costStatisticalAccountAction.do?method=checkDelete*</pattern>
+        <pattern>/projectInfoAction.do?method=editPrjStatus*</pattern>
+        <pattern>/payApplyPayAction.do?method=queryPayContract*</pattern>
+        <pattern>/payApplyPayAction.do?method=expQueryPayContent*</pattern>
+        <pattern>/safePrjVisualizeAction.do?method=checkDelete*</pattern>
+		<pattern>/safePrjVisualizeAction.do?method=create*</pattern>
+		<pattern>/safePrjVisualizeAction.do?method=view*</pattern>
+		<pattern>/safePrjVisualizeAction.do?method=edit*</pattern>
+		<pattern>/safePrjVisualizeAction.do?method=selectTemp*</pattern>
+		<pattern>/payApplyPayAction.do?method=analysePrjPayExcel*</pattern>
+		<pattern>/contentSelectAction.do?method=selectEmp*</pattern>
+		<pattern>/sysPostAction.do?method=create*</pattern>
+		<pattern>/sysPostAction.do?method=edit*</pattern>
+		<pattern>/sysPostAction.do?method=checkdelete*</pattern>
+        <pattern>/ctrProcessCtrAction.do?method=repExcel*</pattern>
+        <pattern>/costPrjInvestAction.do?method=monthPrjReportExcel*</pattern>
+        <pattern>/contentSelectAction.do?method=selectCtrCountWorklist*</pattern>
+        <pattern>/docCertificateAction.do?method=showChar*</pattern>
+        <pattern>/contentSelectAction.do?method=selectDocFileManager*</pattern>
+         <pattern>/contractInfoAction.do?method=selectDocSort*</pattern>
+         <pattern>/contentSelectAction.do?method=selectCtrContractArchived*</pattern>
+         <pattern>/contentSelectAction.do?method=checkType*</pattern>
+        
+        <pattern>/oaBoardroomInfoAction.do?method=validateRoomIsPlan*</pattern>
+		<!--工号验证过滤        -->
+        <pattern>/oaAttendeesAction.do?method=validateRoomIsPlan*</pattern>
+        
+        <pattern>/oaCarInfoAction.do?method=selectListForOrganization*</pattern>
+        <pattern>/oaAttenceAction.do?method=selectListForOrganization*</pattern>
+        <pattern>/oaThingsAction.do?method=selectListForOrganization*</pattern>
+     	<pattern>/oaScheduleWorkAction.do?method=editAjax*</pattern>  
+     	<pattern>/oaScheduleWorkAction.do?method=weekExcel*</pattern>     
+     	<pattern>/pigeonholeFileTypeAction.do?method=checkList*</pattern>   
+     	<pattern>/pigeonholeFileAction.do?method=boxnumberMax*</pattern> 
+     	<pattern>/pigeonholeFileAction.do?method=batchEdit*</pattern> 
+     	<pattern>/oaFileBorrowAction.do?method=pigeonholeFileList*</pattern> 
+     	<pattern>/survInspectFileAction.do?method=superviseList*</pattern> 
+     	<pattern>/survInspectFileAction.do?method=survinspectList*</pattern> 
+     	<pattern>/survInspectFileAction.do?method=survinspectView*</pattern> 
+     	<pattern>/survInspectFileTransactAction.do?method=survinspectList*</pattern> 
+     	<pattern>/survInspectFileTransactAction.do?method=superviseList*</pattern> 
+     	<pattern>/survInspectFileAction.do?method=queryTransaction*</pattern> 
+     	<pattern>/receiveFileAction.do?method=receiveList*</pattern>
+        <pattern>/receiveFileAction.do?method=superviseList*</pattern>
+        <pattern>/receiveFileTransactAction.do?method=receiveList*</pattern>
+        <pattern>/receiveFileTransactAction.do?method=superviseList*</pattern>
+     	<pattern>/receiveFileAction.do?method=queryTransaction*</pattern>
+     	<pattern>/receiveFileAction.do?method=save*</pattern>
+     	<pattern>/docMaterialsAction.do?method=docMaterialsList*</pattern>
+     	<pattern>/docMaterialsAction.do?method=superviseList*</pattern>
+     	<pattern>/docMaterialsTransactAction.do?method=docMaterialsList*</pattern>
+     	<pattern>/docMaterialsTransactAction.do?method=superviseList*</pattern>
+     	<pattern>/sendFileAction.do?method=sendList*</pattern>
+        <pattern>/sendFileAction.do?method=superviseList*</pattern>
+        <pattern>/sendFileTransactAction.do?method=sendList*</pattern>
+        <pattern>/sendFileTransactAction.do?method=superviseList*</pattern>
+     	<pattern>/sendFileAction.do?method=queryTransaction*</pattern>
+     	<pattern>/sendFileAction.do?method=excelSendFile*</pattern>
+     	<pattern>/contractInfoAction.do?method=expInfo*</pattern>
+     	<pattern>/prjSortAction.do?method=create*</pattern>
+     	<pattern>/prjSortAction.do?method=edit*</pattern>
+        <pattern>/prjSortAction.do?method=view*</pattern>
+		<pattern>/schVisualizeAction.do?method=listdata*</pattern>
+        <pattern>/schVisualizeListAction.do?method=delete*</pattern>
+        <pattern>/schVisualizeAction.do?method=listview*</pattern>
+        <pattern>/schVisualizeListAction.do?method=list*</pattern>
+        <pattern>/schPrjVisualizeAction.do?method=listdata*</pattern>
+        <pattern>/schPrjVisualizeListAction.do?method=importModel*</pattern>
+        <pattern>/schPrjVisualizeAction.do?method=listview*</pattern>
+        <pattern>/schPrjVisualizeAction.do?method=listSchVisualizeData*</pattern>
+        <pattern>/payPlanPayAction.do?method=planUpReport*</pattern>
+     	<pattern>/payPlanPayAction.do?method=checkCtrDate*</pattern>
+     	<pattern>/payPlanPayAction.do?method=moreAudit*</pattern>
+     	<pattern>/payApplyPayAction.do?method=getCtrSums*</pattern>
+     	<pattern>/payFactPayAction.do?method=getCtrSums*</pattern>
+     	<pattern>/payFactPayAction.do?method=getCtrViewSums*</pattern>
+     	<pattern>/docFileManagerAction.do?method=listLeft*</pattern>
+     	<pattern>/docFileManagerAction.do?method=listRight*</pattern>
+     	<pattern>/docFileManagerAction.do?method=create*</pattern>
+     	<pattern>/docFileManagerAction.do?method=edit*</pattern>
+     	<pattern>/docFileManagerAction.do?method=view*</pattern>
+     	
+     	<pattern>/procedureInfoAction.do?method=listLeft*</pattern>
+     	<pattern>/procedureInfoAction.do?method=listRight*</pattern>
+     	<pattern>/procedureInfoAction.do?method=create*</pattern>
+     	<pattern>/procedureInfoAction.do?method=edit*</pattern>
+     	<pattern>/procedureInfoAction.do?method=view*</pattern>
+     	
+     	<pattern>/procedureInfoTrackAction.do?method=listLeft*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=listRight*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=create*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=edit*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=view*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=refrash*</pattern>
+     	
+     	<pattern>/prjOwnerUserJoinAction.do?method=listLeft*</pattern>
+     	<pattern>/prjOwnerUserJoinAction.do?method=create*</pattern>
+     	<pattern>/prjOwnerUserJoinAction.do?method=edit*</pattern>
+     	<pattern>/prjOwnerUserJoinAction.do?method=view*</pattern>
+     
+    
+       
+     	
+  
+     	
+     	<pattern>/compCompleteCheckAction.do?method=selectPrj*</pattern>
+     	<pattern>/safeCheckReportAction.do?method=selectPrj*</pattern>
+     	
+     	<pattern>/prjSegmentInfoAction.do?method=listLeft*</pattern>
+<!--     	<pattern>/prjSegmentInfoAction.do?method=listRight*</pattern>-->
+     	<pattern>/prjSegmentInfoAction.do?method=create*</pattern>
+     	<pattern>/prjSegmentSupervisorAction.do?method=create*</pattern>
+     	
+     	<pattern>/prjSegmentInfoAction.do?method=edit*</pattern>
+     	
+<!--     	<pattern>/prjSingleBuildingAction.do?method=list*</pattern>-->
+<!--     	<pattern>/prjSingleBuildingAction.do?method=edit*</pattern>-->
+<!--     	<pattern>/prjSingleBuildingAction.do?method=create*</pattern>-->
+<!--     	<pattern>/prjSingleBuildingAction.do?method=view*</pattern>-->
+
+     	<pattern>/survPrjHeadWayImageAction.do?method=list*</pattern>
+     	<pattern>/survPrjHeadWayImageAction.do?method=listLeft*</pattern>
+     	<pattern>/survPrjHeadWayImageAction.do?method=create*</pattern>
+     	<pattern>/survPrjHeadWayImageAction.do?method=view*</pattern>
+     	
+     	<pattern>/docFileManagerAction.do?method=querynode*</pattern>
+     	<pattern>/docSortInfoAction.do?method=create*</pattern>
+     	<pattern>/docSortInfoAction.do?method=edit*</pattern>
+     	<pattern>/docSortInfoAction.do?method=checkdelete*</pattern>
+     	<pattern>/proDeclareInfoAction.do?method=create*</pattern>
+     	<pattern>/proDeclareInfoAction.do?method=edit*</pattern>
+     	<pattern>/proDeclareInfoAction.do?method=view*</pattern>
+     	<pattern>/proDeclareInfoAction.do?method=isHasInfo*</pattern>
+     	<pattern>/proDeclarePlanAction.do?method=projectInfoList*</pattern>
+     	<pattern>/proDeclarePlanListAction.do?method=expInfo*</pattern>
+     
+     	<pattern>/contentSelectAction.do?method=selectPrjSegment*</pattern>
+     	<pattern>/projectControlAction.do?method=listChild*</pattern>
+     	<pattern>/projectControlAction.do?method=generalConditions*</pattern>
+		<pattern>/projectControlAction.do?method=progress*</pattern>
+		<pattern>/projectControlAction.do?method=quality*</pattern>
+		<pattern>/projectControlAction.do?method=investment*</pattern>
+		<pattern>/projectControlAction.do?method=imageShow*</pattern>
+		<pattern>/projectControlAction.do?method=imagePubAnnexShow*</pattern>
+		<pattern>/projectControlAction.do?method=schPrjImage*</pattern>
+		<pattern>/projectControlAction.do?method=yearInvestmentReport*</pattern>
+		<pattern>/projectControlAction.do?method=list*</pattern>
+		<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlChildList1.jsp*</pattern>
+		<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlChildList2.jsp*</pattern>
+		<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlChildList3.jsp*</pattern>
+		<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlChildList4.jsp*</pattern>
+		<pattern>/projectControlAction.do?method=pmo*</pattern>
+		<pattern>/projectControlAction.do?method=listChild_1*</pattern>
+     	<pattern>/projectControlAction.do?method=listChild_2*</pattern>
+     	<pattern>/projectControlAction.do?method=prjView*</pattern>
+     	<pattern>/projectControlAction.do?method=corpView*</pattern>
+     	<pattern>/projectControlAction.do?method=declareView*</pattern>
+     	<pattern>/projectControlAction.do?method=prjOverview*</pattern>
+     	<pattern>/projectControlAction.do?method=ctrView*</pattern>
+     	<pattern>/projectControlAction.do?method=ctrPay*</pattern>
+     	<pattern>/projectControlAction.do?method=prjPay*</pattern>
+     	<pattern>/projectControlAction.do?method=prjLate*</pattern>
+     	<pattern>/projectControlAction.do?method=prjSafe*</pattern>
+     	<pattern>/projectControlAction.do?method=prjDoc*</pattern>
+     	<pattern>/projectControlAction.do?method=prjSegmentInfoContrlView*</pattern>
+     	<pattern>/schPrjVisualizeAction.do?method=delete*</pattern>
+     	<pattern>/payPlanPayAction.do?method=getComInvestSums*</pattern>
+     	<pattern>/schPrjVisualizeAction.do?method=importModel*</pattern>
+     	<pattern>/oaEmployeeAction.do?method=selectOrganForEmp*</pattern>
+     	<pattern>/receiveFileAction.do?method=excel*</pattern>
+     	<pattern>/contractInfoAction.do?method=queryContract*</pattern>
+     	
+     	<pattern>/incomeContractInfoAction.do?method=queryContract*</pattern>
+     	
+     	<pattern>/contractInfoAction.do?method=expQueryContent*</pattern>
+     	<pattern>/sendFileAction.do?method=excel*</pattern>
+    	<pattern>/docMaterialsAction.do?method=excel*</pattern>
+     	<pattern>/survInspectFileAction.do?method=excel*</pattern>
+     	<pattern>/oaCarInfoAction.do?method=excel*</pattern>
+     	<pattern>/oaThingsAction.do?method=excel*</pattern>
+     	<pattern>/oaEmployeeAction.do?method=excel*</pattern>
+     	<pattern>/pigeonholeFileAction.do?method=excel*</pattern>
+     	<pattern>/survInspectFileAction.do?method=excelInspectTable*</pattern>
+     	<pattern>/contractInfoAction.do?method=showCtrCorpAll*</pattern>
+     	<pattern>/bizplat.do?method=ipmsg*</pattern>
+     	<pattern>/costInvestAction.do?method=checkYear*</pattern>
+     	<pattern>/costInvestAction.do?method=expYearInvestRep*</pattern>
+     	<pattern>/procedureInfoAction.do?method=edit*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=create*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=edit*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=view*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=deleteTrack*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=listHistory*</pattern>
+     	<pattern>/procedureInfoTrackAction.do?method=expInfo*</pattern>
+     	<pattern>/contractInfoAction.do?method=getCtrCode*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_01.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_02.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_03.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_04.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_05.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_06.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_07.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_08.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_09.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_10.jsp*</pattern> 
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_11.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_12.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_13.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_14.jsp*</pattern>
+     	<pattern>/biz/projectmastercontrol/projectcontrol/projectControl/projectControlList_15.jsp*</pattern>
+     	<pattern>/projectInfoAction.do?method=getPrjCode*</pattern>
+     	<pattern>/projectControlAction.do?method=prjCostInvest*</pattern>
+     	<pattern>/projectControlAction.do?method=ctrPayRep*</pattern>
+     	<pattern>/projectControlAction.do?method=prjMonthCost*</pattern>
+     	<pattern>/projectControlAction.do?method=prjSchMonthPlan*</pattern>
+     	<pattern>/oaFileBorrowAction.do?method=excel*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleWeatherForecast*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleMsgReminder*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=modulePrjNotice*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleMailNotice*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleTransactNotice*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleShortcut*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleCommonDown*</pattern>
+     	<pattern>/portalModuleInfoAction.do?method=moduleScheduleWork*</pattern>
+     	<pattern>/bizplat.do?method=platformset*</pattern>
+     	<pattern>/landDocSortAction.do?method=create*</pattern>
+     	<pattern>/landDocSortAction.do?method=edit*</pattern>
+     	<pattern>/landParcelAction.do?method=mapList*</pattern>
+     	<pattern>/landPayPlanPayAction.do?method=planUpReport*</pattern>
+     	<pattern>/landPayPlanPayAction.do?method=checkCtrDate*</pattern>
+     	<pattern>/landPayPlanPayAction.do?method=moreAudit*</pattern>
+     	<pattern>/landPayApplyPayAction.do?method=getCtrSums*</pattern>
+    	<pattern>/landDemolitionInstallAction.do?method=installList*</pattern>
+    	<pattern>/landParcelAction.do?method=totalize*</pattern>
+    	<pattern>/landOwnershipAction.do?method=totalize*</pattern>
+    	<pattern>/landContractInfoAction.do?method=queryContract*</pattern>
+    	<pattern>/landExpropriationAction.do?method=expExcel*</pattern>
+    	<pattern>/landUseAction.do?method=expExcel*</pattern>
+    	<pattern>/landDemolitionAction.do?method=expExcel*</pattern>
+    	<pattern>/landParcelAction.do?method=excel*</pattern>
+    	<pattern>/landOwnershipAction.do?method=excel*</pattern>
+    	<pattern>/landDocFileAction.do?method=excel*</pattern>
+    	<pattern>/landContractInfoAction.do?method=expExcel*</pattern>
+    	<pattern>/landContractTransactAction.do?method=receiveList*</pattern>
+    	<pattern>/landContractTransactAction.do?method=superviseList*</pattern>
+    	 
+    	<pattern>/incomeContractInfoAction.do?method=expExcel*</pattern>
+    	
+    	<pattern>/landCtrAlterAmoutAction.do?method=expExcel*</pattern>
+    	<pattern>/landCtrBalanceAction.do?method=expExcel*</pattern>
+    	<pattern>/landPayPlanPayAction.do?method=expExcel*</pattern>
+    	<pattern>/landPayApplyPayAction.do?method=expExcel*</pattern>
+    	<pattern>/landDemolitionInstallAction.do?method=excel*</pattern>
+    	<pattern>/landDemolitionInstallListAction.do?method=excel*</pattern>
+    	<pattern>/landDemolitionInstallListAction.do?method=excelQuery*</pattern>
+    	<pattern>/landFeePayAction.do?method=excel*</pattern>
+    	<pattern>/sendFileAction.do?method=checkSendCode*</pattern>
+    	<pattern>/survInspectFileAction.do?method=checkSurvCode*</pattern>
+    	<pattern>/landOwnershipAction.do?method=checkDelete*</pattern>
+    	<pattern>/oaContractInfoAction.do?method=checkCode*</pattern>
+    	<pattern>/oaContractInfoAction.do?method=checkName*</pattern>
+    	<pattern>/oaContractInfoAction.do?method=expInfo*</pattern>
+		<pattern>/oaContractInfoAction.do?method=queryContract*</pattern>
+		<pattern>/oaContractInfoAction.do?method=expQueryContent*</pattern>
+		<pattern>/oaContractInfoAction.do?method=showCtrCorpAll*</pattern>
+		<pattern>/oaContractInfoAction.do?method=getCtrCode*</pattern>
+		<pattern>/oaContractInfoAction.do?method=isHasCtr*</pattern>
+		<pattern>/oaWorkContactletterAction.do?method=oaWorkContactletterList*</pattern>
+     	<pattern>/oaWorkContactletterAction.do?method=superviseList*</pattern>
+     	<pattern>/oaWorkContactletterTransactAction.do?method=oaWorkContactletterList*</pattern>
+     	<pattern>/oaWorkContactletterTransactAction.do?method=superviseList*</pattern>
+		<pattern>/oaWorkContactletterAction.do?method=excel*</pattern>
+		<pattern>/oaWorkContactletterAction.do?method=getOrderNo*</pattern>
+		<pattern>/matBaseInfoAction.do?method=exportExcel*</pattern>
+		<pattern>/matBaseInfoAction.do?method=validateDelete*</pattern>
+        <pattern>/matMaterialInfoAction.do?method=downloaddls*</pattern>
+        <pattern>/matMaterialInfoAction.do?method=downloadsccj*</pattern>
+        <pattern>/matMaterialInfoAction.do?method=exportExcel*</pattern>
+		<pattern>/matPurveyInfoAction.do?method=exportExcel*</pattern>
+		<pattern>/payApplyPayAction.do?method=excel*</pattern>
+		<pattern>/payApplyAddPayAction.do?method=excel*</pattern>
+		<pattern>/feePayPlanAction.do?method=planReportExcel*</pattern>
+		<pattern>/landPayPlanPayAction.do?method=planReportExcel*</pattern>
+		<pattern>/payOaPlanPayAction.do?method=planReportExcel*</pattern>
+		<pattern>/payPlanPayAction.do?method=planReportExcel*</pattern>
+		<pattern>/payOaApplyAddPayAction.do?method=excel*</pattern>
+		<pattern>/payOaApplyPayAction.do?method=excel*</pattern>
+		<pattern>/landPayApplyAddPayAction.do?method=excel*</pattern>
+		<pattern>/landPayApplyPayAction.do?method=excel*</pattern>
+		<pattern>/feePayApplyAction.do?method=excel*</pattern>
+		<pattern>/feePayOuterApplyAction.do?method=excel*</pattern>
+		<pattern>/prjSegmentInfoAction.do?method=selectCtr*</pattern>
+		<pattern>/payOaApplyPayAction.do?method=joinInfo*</pattern>
+		<pattern>/landPayApplyAddPayAction.do?method=joinInfo*</pattern>
+		<pattern>/payApplyAddPayAction.do?method=joinInfo*</pattern>
+		<pattern>/payCountReportingAction.do?method=autoApplyCode*</pattern>
+		<pattern>/payCountReportingAction.do?method=getContInfoByCorp*</pattern>
+		<pattern>/payApplyAddPayAction.do?method=changePayCode*</pattern>
+		<pattern>/feePayOuterApplyAction.do?method=changePayCode*</pattern>
+		<pattern>/landPayApplyAddPayAction.do?method=changePayCode*</pattern>
+		<pattern>/payOaApplyAddPayAction.do?method=changePayCode*</pattern>
+		<pattern>/payPlanViewAction.do?method=maxReportData*</pattern>
+		<pattern>/pubAnnexAction.do?method=webOfficeSave*</pattern>
+		<pattern>/payPlanViewAction.do?method=countRport*</pattern>
+		
+		<pattern>/pubAnnexAction.do?method=imageShow*</pattern>
+		<pattern>/safeQualityRecordAction.do?method=checkDelete*</pattern>
+		<pattern>/safeQualityRecordAction.do?method=create*</pattern>
+		<pattern>/safeQualityRecordAction.do?method=view*</pattern>
+		<pattern>/safeQualityRecordAction.do?method=edit*</pattern>
+		<pattern>/safeQualityWriteAction.do?method=create*</pattern>
+        <pattern>/safeQualityWriteAction.do?method=edit*</pattern>
+        <pattern>/safeQualityWriteAction.do?method=view*</pattern>
+        <pattern>/safeQualityCheckAction.do?method=auditing*</pattern>
+        <pattern>/safeQualityCheckAction.do?method=itemTableChange*</pattern>
+		<pattern>/docDesignAlterAction.do?method=initSegData*</pattern>
+		<pattern>/schPrjMonthplanInfoAction.do?method=validateDate*</pattern>
+		<pattern>/costPrjInvestAction.do?method=validateDate*</pattern>
+		<pattern>/landContractSpeclalAction.do?method=expExcel*</pattern>
+		<pattern>/receiveFileAction.do?method=queryList*</pattern>
+		<pattern>/receiveFileAction.do?method=cancelTransaction*</pattern>
+		
+		
+<!--                                                   验证                                                                             -->
+
+     	<pattern>/sysCodeRuleAction.do?method=checkCode*</pattern>
+        <pattern>/sysCodeRuleAction.do?method=changeCode*</pattern> 
+     	<pattern>/sysCodeRuleAction.do?method=checkRuleCode*</pattern>
+     	<pattern>/projectInfoAction.do?method=checkPrjCode*</pattern>
+     	<pattern>/projectInfoAction.do?method=checkPrjName*</pattern>
+     	<pattern>/contractInfoAction.do?method=checkCode*</pattern>
+		<pattern>/contractInfoAction.do?method=checkName*</pattern>
+       	<pattern>/contractInfoAction.do?method=isHasCtr*</pattern>
+       	<pattern>/prjSortAction.do?method=checkDelete*</pattern>
+       	<pattern>/schVisualizeAction.do?method=validateDelete*</pattern>
+       	<pattern>/oaCarInfoAction.do?method=validatePlateNumber*</pattern>
+       	<pattern>/oaAttenceAction.do?method=validateDate*</pattern>
+        <pattern>/schMonthPlanAction.do?method=validateDate*</pattern>	
+        <pattern>/landExpropriationAction.do?method=checkDate*</pattern>	
+        <pattern>/landUseAction.do?method=checkDate*</pattern>	
+        <pattern>/landDocSortAction.do?method=checkDelete*</pattern>
+        <pattern>/landOverllConditionAction.do?method=checkDate*</pattern>
+        <pattern>/landDemolitionInstallListAction.do?method=checkList*</pattern>
+    	<pattern>/landDemolitionInstallListAction.do?method=checkCode*</pattern>	
+        <pattern>/deptReceiveFileAction.do?method=receiveList*</pattern>
+        <pattern>/deptReceiveFileAction.do?method=queryTransaction*</pattern>
+        <pattern>/deptReceiveFileAction.do?method=excel*</pattern>
+        <pattern>/deptReceiveFileTransactAction.do?method=receiveList*</pattern>
+        <pattern>/deptSendFileAction.do?method=excel*</pattern>
+        <pattern>/deptSendFileAction.do?method=sendList*</pattern>
+        <pattern>/deptSendFileAction.do?method=queryTransaction*</pattern>
+        <pattern>/deptSendFileTransactAction.do?method=sendList*</pattern>
+        <pattern>/landPayPlanPayAction.do?method=checkPlanCopyUpReport*</pattern>
+        <pattern>/feePayPlanAction.do?method=checkPlanCopyUpReport*</pattern>
+        <pattern>/payOaPlanPayAction.do?method=checkPlanCopyUpReport*</pattern>
+        <pattern>/payPlanPayAction.do?method=checkPlanCopyUpReport*</pattern>
+        <pattern>/feePayPlanAction.do?method=checkPlanAddUpReport*</pattern>
+        <pattern>/ctrProcessCtrAction.do?method=excel*</pattern>
+        
+        
+        <pattern>/payOaApplyPayAction.do?method=getCtrSums*</pattern>
+		<pattern>/payOaFactPayAction.do?method=getCtrSums*</pattern>
+		<pattern>/payOaFactPayAction.do?method=getCtrViewSums*</pattern>
+		<pattern>/payOaPlanPayAction.do?method=planUpReport*</pattern>
+		<pattern>/payOaPlanPayAction.do?method=checkCtrDate*</pattern>
+		<pattern>/payOaPlanPayAction.do?method=moreAudit*</pattern>
+		<pattern>/payOaPlanPayAction.do?method=getComInvestSums*</pattern>
+		<pattern>/payPlanViewAction.do?method=planReportExcel*</pattern>
+		<pattern>/payPlanViewAction.do?method=planQueryReportExcel*</pattern>
+		<pattern>/payPlanViewAction.do?method=planReportData*</pattern>
+		<pattern>/payPlanViewAction.do?method=planQueryReportData*</pattern>
+		<pattern>/payPlanViewAction.do?method=executeReportExcel*</pattern>
+		<pattern>/payPlanViewAction.do?method=executeReportData*</pattern>
+		
+		<pattern>/bidInvitebidAction.do?method=selectProficient*</pattern>
+		<pattern>/bidProficientAction.do?method=excel*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=checkdelete*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=create*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=edit*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=view*</pattern>
+		
+		<pattern>/ctrCountWorklistAction.do?method=selectEmpForConstr*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=editEmpForConstr*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=selectEmpForSurv*</pattern>
+		<pattern>/ctrCountWorklistAction.do?method=editEmpForSurv*</pattern>
+		<!-- 标段管理 -->
+		<pattern>/prjSegmentInfoAction.do?method=selectEmpForConstr*</pattern>
+		<pattern>/prjSegmentInfoAction.do?method=editEmpForConstr*</pattern>
+		<pattern>/prjSegmentInfoAction.do?method=selectEmpForSurv*</pattern>
+		<pattern>/prjSegmentInfoAction.do?method=editEmpForSurv*</pattern>
+		<pattern>/prjSegmentInfoAction.do?method=selectEmpForOrg*</pattern>
+		<pattern>/prjSegmentInfoAction.do?method=editEmpForOrg*</pattern>
+		<!-- 监理标段管理 -->
+		<pattern>/prjSegmentSupervisorAction.do?method=selectPrjSegments*</pattern>
+<!--                                                    公共选择                                                                         -->
+        <pattern>/contentSelectAction.do?method=list*</pattern>
+        <pattern>/contentSelectAction.do?method=edittd*</pattern>
+        <pattern>/contentSelectAction.do?method=selectBoardroom*</pattern>
+        <pattern>/contentSelectAction.do?method=singleUser*</pattern>
+        <pattern>/contentSelectAction.do?method=selectOrgans*</pattern>
+        <pattern>/contentSelectAction.do?method=selectCorp*</pattern>
+        <pattern>/contentSelectAction.do?method=selectPrj*</pattern>
+        <pattern>/contentSelectAction.do?method=selectCtr*</pattern>
+        <pattern>/contentSelectAction.do?method=selectPrjSort*</pattern>
+        <pattern>/contentSelectAction.do?method=selectPayApplyPay*</pattern>
+        <pattern>/contentSelectAction.do?method=selectPrjs*</pattern>
+        <pattern>/contentSelectAction.do?method=selectWorkFlow*</pattern>
+        <pattern>/contentSelectAction.do?method=selectParcels*</pattern>
+        <pattern>/contentSelectAction.do?method=selectLandCtr*</pattern>
+        <pattern>/contentSelectAction.do?method=selectOwnership*</pattern>
+        <pattern>/contentSelectAction.do?method=changeCodeRuletTag*</pattern>
+		<pattern>/contentSelectAction.do?method=changeCodeRuleDeptTag*</pattern>
+		 <pattern>/contentSelectAction.do?method=selectFeePayPlan*</pattern>
+		<pattern>/contentSelectAction.do?method=selectParcelSingle*</pattern>
+		<pattern>/contentSelectAction.do?method=selectOaCtr*</pattern>
+        <pattern>/contentSelectAction.do?method=selectOrgans*</pattern>
+        <pattern>/contentSelectAction.do?method=selectSuperCorp*</pattern>
+        <pattern>/contentSelectAction.do?method=uploadFile*</pattern>
+       
+        
+        
+        <pattern>/landPayPlanPayAction.do?method=planCopyUpReport*</pattern>
+        <pattern>/feePayPlanAction.do?method=planCopyUpReport*</pattern>
+        <pattern>/payOaPlanPayAction.do?method=planCopyUpReport*</pattern>
+        <pattern>/payPlanPayAction.do?method=planCopyUpReport*</pattern>
+        <pattern>/payPlanViewAction.do?method=planEditFrom*</pattern>
+        <pattern>/payPlanViewAction.do?method=changeDelIdentify*</pattern>
+        
+        <pattern>/oaAgebdaAction.do?method=getList*</pattern>
+        <pattern>/oaAgebdaAction.do?method=saveOaAgebda*</pattern>
+        <pattern>/oaAgebdaAction.do?method=deleteOaAgebda*</pattern>
+        
+        <pattern>/servlet/UploadFileServlet*</pattern>
+        <!-- NTKO控件 -->
+         <pattern>/servlet/UploadOfficeServlet*</pattern>
+         <pattern>/servlet/UploadOfficeFileServlet*</pattern>
+         <pattern>/servlet/UploadOfficeSaveFileServlet*</pattern>
+         <pattern>/servlet/UploadOfficeSaveFileServlet</pattern>
+         <pattern>/servlet/UploadOfficeQueryFileServlet*</pattern>
+         <pattern>/servlet/UploadOfficeFinishFileServlet*</pattern>
+         <pattern>/servlet/UploadOfficeDeleteFileServlet*</pattern>
+         <pattern>/servlet/UploadOfficeDownloadFileServlet*</pattern>
+         <pattern>/ntkolfuploaddemo_JSP/uploaderfile.html</pattern>
+         <pattern>/officeControlDemo-Oracle/editoffice.jsp*</pattern>
+         <pattern>/savefileblocks.jsp</pattern>
+         <pattern>/queryfilestatus.jsp</pattern>
+         <pattern>/finishedupload.jsp</pattern>
+         <pattern>/ntkolfuploaddemo_JSP/index.jsp</pattern>
+         <pattern>/readfile.jsp*</pattern>
+         <pattern>/officeControlDemo-Oracle/editoffice.jsp*</pattern>
+         <pattern>/ntkoOfficeFileASction.do?method=getFile* </pattern>
+         <pattern>*upLoadOfficeFile.jsp*</pattern>
+         <pattern>*getOfficeId*</pattern>
+         <pattern>/ueditor/.*</pattern>
+         <pattern>/*.html*</pattern>
+         
+         <pattern>/sendFileTemplateAction.do?method=downloadhtmb*</pattern>
+         <pattern>/sendFileTemplateAction.do?method=checkdelete*</pattern>
+         <pattern>/landParcelPrjAction.do?method=checkdelete*</pattern>
+         <pattern>/landParcelPrjAction.do?method=edit*</pattern>
+         <pattern>/landParcelPrjAction.do?method=create*</pattern>
+         <!-- excel导出 -->
+         <pattern>/oaJobPlanWeekLeadAction.do?method=weekExcel*</pattern>
+         <pattern>/oaJobPlanWeekDeptAction.do?method=weekExcel*</pattern>
+         
+         <pattern>/oaJobPlanWeekLeadAction.do?method=download*</pattern>
+          
+        <pattern>/meetingCollectAction.do?method=sendList*</pattern>
+        <pattern>/meetingCollectAction.do?method=superviseList*</pattern>
+        <pattern>/meetingCollectTransactAction.do?method=sendList*</pattern>
+        <pattern>/meetingCollectTransactAction.do?method=superviseList*</pattern>
+        <pattern>/receiveFileAction.do?method=cancelTransaction*</pattern>
+        
+          <pattern>/prjCorpUserJoinAction.do?method=listLeft*</pattern>
+        <pattern>/prjCorpUserJoinAction.do?method=listRight*</pattern>
+        <pattern>/prjCorpUserJoinAction.do?method=delete*</pattern>
+       
+     <pattern>/prjOwnerUserJoinAction.do?method=tab*</pattern>
+		<!--  线路标段工点联动查询   	-->
+        <pattern>/dataLiveVideoAction.do?method=getLines*</pattern>
+        <pattern>/dataLiveVideoAction.do?method=getSections*</pattern>	
+		<pattern>/dataLiveVideoAction.do?method=getWokPoints*</pattern>
+		<pattern>/eTourConditionAction.do?method=getLines*</pattern>
+		<pattern>/eTourConditionAction.do?method=getSections*</pattern>
+		<!--  线路标段工点联动查询新版  	-->
+		<pattern>/checkpointPictureAction.do?method=querySegment*</pattern>
+		<pattern>/checkpointPictureAction.do?method=queryStation*</pattern>
+		<pattern>/checkpointPictureAction.do?method=queryType*</pattern>
+		<pattern>/checkpointPictureAction.do?method=queryPointGroup*</pattern>
+		<pattern>/checkpointPictureAction.do?method=queryPart*</pattern>
+		<pattern>/checkpointPictureAction.do?method=queryPoint*</pattern>
+		<pattern>/checkpointPictureAction.do?method=queryPointInfo*</pattern>
+		<pattern>/checkpointPictureAction.do?method=selectPoints*</pattern>
+		<pattern>/checkpointPictureAction.do?method=addPointGroup*</pattern>
+		<pattern>/checkpointPictureAction.do?method=savePointGroup*</pattern>
+		<pattern>/checkpointPictureAction.do?method=deletePointGroup*</pattern>
+		<pattern>/checkpointPictureAction.do?method=deleteGroup*</pattern>
+		
+   		<!--监测数据跟踪分析-->
+   		<pattern>/dtaqDataInfoQuery3Action.do?method=querySegment*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=queryStation*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=queryType*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=querySgjl*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=exportExcel*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=showPartTimes*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=showPartTimes3*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=showComparePointTimes*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=showComparePointTimes3*</pattern>
+		
+		<pattern>/dtaqDataInfoQuery3Action.do?method=listLeft*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?method=list*</pattern>
+		
+		<pattern>/dtaqDataInfoQuery3Action.do?andomCode=abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890&amp;method=showPartTimes*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?andomCode=abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890&amp;method=showComparePointTimes*</pattern>
+		<pattern>/dtaqDataInfoQuery3Action.do?andomCode=abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890&amp;method=showComparePointTimes3*</pattern>
+   		
+   		<!--自动监测数据跟踪分析-->
+   		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=querySegment*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=queryStation*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=queryType*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=querySgjl*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=exportExcel*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=showPartTimes*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=showComparePointTimes*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=showComparePointTimes3*</pattern>
+		
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=listLeft*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?method=list*</pattern>
+		
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?andomCode=abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890&amp;method=showPartTimes*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?andomCode=abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890&amp;method=showComparePointTimes*</pattern>
+		<pattern>/dtaqAutoDataInfoQuery3Action.do?andomCode=abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890&amp;method=showComparePointTimes3*</pattern>
+   		
+   		
+   		<!--数值与仿真编辑室-->
+   		<pattern>/dataEmulationAction.do?method=listLeft*</pattern>
+		<pattern>/dataEmulationAction.do?method=list*</pattern>
+        <pattern>/dataEmulationAction.do?method=create*</pattern>
+   		 <pattern>/dataEmulationAction.do?method=edit*</pattern>
+   		 <pattern>/dataEmulationAction.do?method=view*</pattern>
+   		 
+   		 <!--运营期安全分析-->
+   		<pattern>/dtaqSituationMotionanalAction.do?method=listLeft*</pattern>
+		<pattern>/dtaqSituationMotionanalAction.do?method=list*</pattern>
+        <pattern>/dtaqSituationMotionanalAction.do?method=create*</pattern>
+   		 <pattern>/dtaqSituationMotionanalAction.do?method=edit*</pattern>
+   		 <pattern>/dtaqSituationMotionanalAction.do?method=view*</pattern>
+   		 
+   		 <!--形象进度编辑室-->
+   		<pattern>/segmentScheduleAction.do?method=listLeft*</pattern>
+		<pattern>/segmentScheduleAction.do?method=list*</pattern>
+        <pattern>/segmentScheduleAction.do?method=edit*</pattern>
+         <pattern>/segmentScheduleAction.do?method=uploadFile*</pattern>
+         
+         <!--监测安全状态激活-->
+   		<pattern>/dtaqDataInfoQuery2Action.do?method=left*</pattern>
+		<pattern>/dtaqDataInfoQuery2Action.do?method=loadPointPic*</pattern>
+   		
+   		 
+   		 <!--工点工作管理-->
+   		<pattern>/maSiteWorkAction.do?method=listLeft*</pattern>
+		<pattern>/maSiteWorkAction.do?method=list*</pattern>
+        <pattern>/maSiteWorkAction.do?method=create*</pattern>
+   		 <pattern>/maSiteWorkAction.do?method=edit*</pattern>
+   		 <pattern>/maSiteWorkAction.do?method=view*</pattern>
+   		 
+   		
+   		<!--质安隐患信息管理-->
+   		<pattern>/hcSolutionAction.do?method=listLeft*</pattern>
+		<pattern>/hcSolutionAction.do?method=list*</pattern>
+        <pattern>/hcSolutionAction.do?method=create*</pattern>
+   		 <pattern>/hcSolutionAction.do?method=edit*</pattern>
+   		 <pattern>/hcSolutionAction.do?method=view*</pattern>
+   		 <pattern>/hcHiddenTypeAction.do?method=selectList*</pattern>
+   		 
+   		 <!--质安隐患信息审核-->
+   		<pattern>/hcSolutionApproveAction.do?method=getLines*</pattern>
+   		<pattern>/hcSolutionApproveAction.do?method=getSections*</pattern>
+   		<pattern>/hcSolutionApproveAction.do?method=getWokPoints*</pattern>
+   		
+   		<!--安全档案-->
+   		<pattern>/safeDocAction.do?method=listLeft*</pattern>
+		<pattern>/safeDocAction.do?method=list*</pattern>
+		<pattern>/safeDocAction.do?method=queryListLeft*</pattern>
+		<pattern>/safeDocAction.do?method=queryList*</pattern>
+        <pattern>/safeDocAction.do?method=create*</pattern>
+   		 <pattern>/safeDocAction.do?method=edit*</pattern>
+   		 <pattern>/safeDocAction.do?method=view*</pattern>
+   		  
+   		  
+   		  <!--安全事故快报-->
+   		<pattern>/accidentReportAction.do?method=getLines*</pattern>
+   		<pattern>/accidentReportAction.do?method=getSections*</pattern>
+   		<pattern>/accidentReportAction.do?method=getWokPoints*</pattern>
+   		
+   		<!--安全档案附件-->
+<!--   		<pattern>/safeDocAnnexAction.do?method=download*</pattern>-->
+   		
+   		
+   		<!--日志填报 新增工点-->
+   		<pattern>/maSiteWorkLogAction.do?method=validateStations*</pattern>
+   		
+   		<!--一般工作 指定人员显示ajax-->
+   		<pattern>/sysMailboxSendAction.do?method=findSendPersonName*</pattern>
+   		
+   		<!--邮件发送平台 弹出页面部门联动显示ajax-->
+   		<pattern>/employeeAction.do?method=queryOrgInfoByOrgType*</pattern>   		 		
+<!--   		<pattern>/employeeAction.do?method=selectMailEmployee*</pattern>-->
+   		
+   		<!--工作日志评价-->
+   		<pattern>/maWorkLogAppraisalAction.do?method=findAppraisalCount*</pattern>
+   		<pattern>/maWorkLogAppraisalAction.do?method=saveHistory*</pattern>
+   		
+   		<!--人员资质信息管理-->
+   		<pattern>/constructorAction.do?method=listLeft*</pattern>
+		<pattern>/constructorAction.do?method=list*</pattern>
+		<pattern>/constructorAction.do?method=queryListLeft*</pattern>
+		<pattern>/constructorAction.do?method=queryList*</pattern>
+        <pattern>/constructorAction.do?method=create*</pattern>
+   		 <pattern>/constructorAction.do?method=edit*</pattern>
+   		 <pattern>/constructorAction.do?method=view*</pattern>
+   		 <pattern>/constructorAction.do?method=exportConstructExcel*</pattern>
+   		 
+   		 <!--安全巡检信息管理-->
+   		<pattern>/safeInspectingAction.do?method=listLeft*</pattern>
+		<pattern>/safeInspectingAction.do?method=list*</pattern>
+		
+        <pattern>/safeInspectingAction.do?method=create*</pattern>
+   		 <pattern>/safeInspectingAction.do?method=edit*</pattern>
+   		 <pattern>/safeInspectingAction.do?method=view*</pattern>
+   		 <pattern>/safeInspectingAction.do?method=exportInspectingExcel*</pattern>
+   		 <pattern>/safeInspectingAction.do?method=validateWeek*</pattern>
+   		 
+   		
+		<!--安全形势分析室-->
+		<pattern>/dtaqSituationAnalyseAction.do?method=ajaxSituation*</pattern>
+		<pattern>/dtaqSituationAnalyseAction.do?method=querySafeInfo*</pattern>
+		<pattern>/dtaqSituationAnalyseAction.do?method=queryPointData*</pattern>
+		<pattern>/dtaqSituationAnalyseAction.do?method=queryConstData*</pattern>
+		<pattern>/dtaqSituationAnalyseAction.do?method=queryFCKTableContent*</pattern>
+		<pattern>/dtaqSecurityAnalyseAction.do?method=exportFile*</pattern>
+		<pattern>/dtaqSecurityAnalyseAction.do?method=reportStream*</pattern>
+		<pattern>/dtaqSecurityAnalyseAction.do?method=printData*</pattern>
+		<pattern>/dtaqSecurityAnalyseAction.do?method=displayQueryWindow*</pattern>
+		<pattern>/dtaqSecurityAnalyseAction.do?method=validateParams*</pattern>
+		
+		<!--  测点类型部位联动查询   	-->
+        <pattern>/dtaqCheckpointAction.do?method=getTypes*</pattern>
+        <pattern>/dtaqCheckpointAction.do?method=getParts*</pattern>	
+		<pattern>/dtaqCheckpointAction.do?method=getCodes*</pattern>
+
+         
+<!--                           webEditor 的使用屏蔽                                                             -->        
+        <pattern>/ewebeditor*</pattern>
+        <pattern>/ewebeditor/*</pattern>
+        <pattern>/ewebeditor/ewebeditor.htm*</pattern>
+        <pattern>/ewebeditor/popup.htm</pattern>
+        
+        <!--                          质安问题上报的屏蔽                                                             --> 
+        <pattern>/safMatterUpAction.do?method=selectPrj*</pattern>
+        <!--                   总进度计划基于页面的过滤                                                         --> 
+           <pattern>/schWbsPlanAllAction.do?method=create*</pattern>
+         <pattern>/schWbsPlanAllAction.do?method=edit*</pattern>
+         <pattern>/schWbsPlanAllAction.do?method=view*</pattern>
+        <pattern>/schWbsPlanAllAction.do?method=listRight*</pattern>
+         <pattern>/schWbsPlanAllAction.do?method=listLeft*</pattern>
+         <pattern>/schWbsPlanAllAction.do?method=list*</pattern>
+        <pattern>/schWbsPlanAllAction.do?method=selectTask*</pattern>
+       <!--                   总进度计划基于方法的过滤                                                         --> 
+        <pattern>/schWbsPlanAllAction.do?method=getActionForward*</pattern>
+        <pattern>/schWbsPlanAllAction.do?method=checkChangeWBS*</pattern>
+        <pattern>/schWbsPlanAllAction.do?method=selectTask*</pattern>
+
+     
+        <pattern>/dtaqCheckpointAction.do?method=listCheckPoint*</pattern>
+
+        <pattern>/dtaqCheckpointAction.do?method=queryType*</pattern>
+        <pattern>/dtaqCheckpointAction.do?method=getType*</pattern>
+        <pattern>/dtaqCheckpointAction.do?method=getTypes*</pattern>
+        <pattern>/dtaqCheckpointAction.do?method=getParts*</pattern>	
+		<pattern>/dtaqCheckpointAction.do?method=getCodes*</pattern>
+	
+	<pattern>/dtaqPartAction.do?method=validateDelete*</pattern>
+	<pattern>/checkpointPictureAction.do?method=showSuccessionCurve*</pattern>
+	<pattern>/checkpointPictureAction.do?method=showRealtimeCurve*</pattern>
+	<pattern>/dataLiveVideoAction.do?method=validate*</pattern>
+	<!-- 测点类型 -->
+    <pattern>/dtaqCheckpointTypeAction.do?method=validateDelete*</pattern>
+    <pattern>/dtaqCheckpointTypeAction.do?method=validateEdit*</pattern>
+	<pattern>/dtaqPartAction.do?method=validate*</pattern>
+	<pattern>/dtaqRiskPatrolAction.do?method=stationTree*</pattern>
+	<pattern>/dtaqWarnSignAction.do?method=stationTree*</pattern>
+	<pattern>/dtaqScheduleTemplateAction.do?method=list*</pattern>
+	<pattern>/dtaqScheduleTemplateAction.do?method=left*</pattern>
+	<pattern>/dtaqSegmentScheduleAction.do?method=list*</pattern>
+	<pattern>/dtaqSegmentScheduleAction.do?method=left*</pattern>
+	<pattern>/dtaqScheduleTemplateAction.do?method=uploadFile*</pattern>
+	<pattern>/dtaqSegmentScheduleAction.do?method=uploadFile*</pattern>
+    <pattern>/dtaqSegmentScheduleAction.do?method=validateDelete*</pattern>
+    <pattern>/dtaqScheduleTemplateAction.do?method=validateDelete*</pattern>
+     <pattern>/dtaqSegmentScheduleAction.do?method=create*</pattern>
+    <pattern>/dtaqScheduleTemplateAction.do?method=create*</pattern>
+     <pattern>/dtaqSegmentScheduleAction.do?method=edit*</pattern>
+    <pattern>/dtaqScheduleTemplateAction.do?method=edit*</pattern>
+    
+    <!-- 工程资料信息管理 -->
+    <pattern>/projectMaterialsAction.do?method=left*</pattern>
+    <pattern>/projectMaterialsAction.do?method=list*</pattern>
+    <pattern>/projectMaterialsAction.do?method=edit*</pattern>
+    <pattern>/projectMaterialsAction.do?method=view*</pattern>
+    <pattern>/stratumRockAction.do?method=edit*</pattern>
+    <pattern>/undergroundPipelineAction.do?method=edit*</pattern>
+    <pattern>/stationStructureAction.do?method=edit*</pattern>
+    <pattern>/projectGeologyAction.do?method=edit*</pattern>
+    <pattern>/peripheralBuildingAction.do?method=edit*</pattern>
+    <pattern>/blockStructureAction.do?method=edit*</pattern>
+    <pattern>/peripheralBuildingAction.do?method=deleteInfo*</pattern>
+    <pattern>/undergroundPipelineAction.do?method=deleteInfo*</pattern>
+    <pattern>/stratumRockAction.do?method=deleteInfo*</pattern>
+    <pattern>/peripheralBuildingAction.do?method=doExcelImport*</pattern>
+    <pattern>/undergroundPipelineAction.do?method=doExcelImport*</pattern>
+    <pattern>/stratumRockAction.do?method=doExcelImport*</pattern>
+   
+    <pattern>/organizationAction.do?method=test*</pattern>
+	<pattern>/organizationAction.do?method=selectProjectPeriods*</pattern>
+ 	<pattern>/organizationAction.do?method=validateDelete*</pattern>
+  	<pattern>/employeeAction.do?method=ajaxOrgList*</pattern>
+  	<pattern>/organizationOutAction.do?method=validateDelete*</pattern>
+  	<pattern>/employeeExtendAction.do?method=validateDelete*</pattern>
+   	<pattern>/organizationOutAction.do?method=selectCorp*</pattern>
+  	<pattern>/employeeAction.do?method=test*</pattern>
+    <pattern>/employeeAction.do?method=selectOrg*</pattern>
+    
+	<!--地铁线路信息   -->
+    <pattern>/dtaqLineAction.do?method=listLeft*</pattern>
+    <pattern>/dtaqLineAction.do?method=list*</pattern>
+    <pattern>/dtaqLineAction.do?method=checkdelete*</pattern>
+    <pattern>/dtaqLineAction.do?method=getLines*</pattern>
+    <pattern>/dtaqLineAction.do?method=gisAnalyse*</pattern>
+   
+    <pattern>/dtaqSegmentAction.do?method=list*</pattern>
+    <pattern>/dtaqStationAction.do?method=list*</pattern>
+    <pattern>/dtaqStationAction.do?method=view*</pattern>
+    <pattern>/dtaqSectionAction.do?method=list*</pattern>
+    <pattern>/dtaqSectionAction.do?method=ajaxSave*</pattern>
+    <pattern>/dtaqSectionAction.do?method=ajaxDelete*</pattern>
+    <pattern>/dtaqLayerAction.do?method=ajaxSave*</pattern>
+    <pattern>/dtaqLayerAction.do?method=list*</pattern>
+    <pattern>/dtaqStationAction.do?method=showEnvironment*</pattern>
+    <pattern>/dtaqLaunchingMethodAction.do?method=deleteInfo*</pattern>
+   
+    <pattern>/dtaqConstructionMethodAction.do?method=deleteInfo*</pattern>
+    <pattern>/dtaqBuildingAction.do?method=deleteInfo*</pattern>
+    <pattern>/dtaqPipeAction.do?method=deleteInfo*</pattern>
+    
+    
+	<pattern>/contentSelectAction.do?method=corpSelects*</pattern>
+	<pattern>/dtaqSegmentAction.do?method=validateSegmentCode*</pattern>
+	<pattern>/dtaqSegmentAction.do?method=checkdelete*</pattern>
+    <pattern>/dtaqStationAction.do?method=selectStations*</pattern>
+    <pattern>/employeeExtendAction.do?method=selectEmpsForSysOperator*</pattern>
+    <pattern>/employeeExtendAction.do?method=reSetSeg*</pattern>
+    <pattern>/eVideoTourAction.do?method=create*</pattern>
+    <pattern>/eVideoTourAction.do?method=test*</pattern>
+    <pattern>/employeeAction.do?method=selectEmpsForLine*</pattern>
+    <pattern>/dtaqRiskPatrolAction.do?method=checkNew*</pattern>
+    <pattern>/dtaqSegmentAction.do?method=validateCrop*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=tree*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=list*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=index*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=showjctable*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=showAnalyseInfo*</pattern>
+	<pattern>/safeAnalysisTotalAction.do?method=saveHistory*</pattern>
+ 	<pattern>/safeAnalysisTotalAction.do?method=findTop3History*</pattern>
+  	<pattern>/safeAnalysisTotalAction.do?method=showJcPage*</pattern>
+   	<pattern>/safeAnalysisTotalAction.do?method=showScheduleImage*</pattern>
+	<pattern>/safeAnalysisTotalAction.do?method=showStationPointPic*</pattern>
+	<pattern>/safeAnalysisTotalAction.do?method=suggestView*</pattern>
+ 	<pattern>/safeAnalysisTotalAction.do?method=viewProjectSchedule*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=viewAnalysisReport*</pattern>
+    <pattern>/dtaqCheckpointAction.do?method=viewDataReport*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=viewDataPointPicture*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=selectMessageBox*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=sendMessageBox*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=viewPointImage*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=viewImage*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=viewPointImage*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=download*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=riskInfo*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=editSign*</pattern>
+
+    
+    <pattern>/dtaqLineAction.do?method=sysAnnouncementView*</pattern>
+    <pattern>/dtaqLineAction.do?method=stationSuggestView*</pattern>
+    <pattern>/sysMailboxSendAction.do?method=menu*</pattern>
+    <pattern>/hcHiddenTypeAction.do?method=checkDelete*</pattern>
+    <pattern>/hcHiddenTypeAction.do?method=create*</pattern>
+    <pattern>/hcHiddenTypeAction.do?method=edit*</pattern>
+    <pattern>/hcHiddenTypeAction.do?method=view*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=sendMailBySituation*</pattern>
+    <pattern>/sysMailboxSendAction.do?method=selectMailboxSend*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=exportMonitorWorkExcel*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=validateStation*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=listLeft*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=listLeftQuery*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=listPage*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=listQuery*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=edit*</pattern>
+    <pattern>/safetyDaylyLogAction.do?method=view*</pattern>
+    
+    <pattern>/dtaqDataInfoAction.do?method=restrictLines*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=restrictSegments*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=restrictStations*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=restrictStationsSG*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=restrictTypes*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=exportExcel*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=querySgjl*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=queryThird*</pattern>
+    <pattern>/dtaqDataInfoAction.do?method=validateDelete*</pattern>
+    <pattern>/dtaqDataAction.do?method=modelDownLoad*</pattern>
+    
+    
+    <pattern>/riskLibAction.do?method=list*</pattern>
+    <pattern>/riskLibAction.do?method=tree*</pattern>
+    <pattern>/riskLibAction.do?method=edit*</pattern>
+    <pattern>/riskLibAction.do?method=view*</pattern>
+    <pattern>/riskLibAction.do?method=ajaxCheckDelete*</pattern>
+    <pattern>/riskPlanAction.do?method=ajaxCheckRiskPlan*</pattern>
+    <pattern>/dtaqWarnInfoAction.do?method=issueSign*</pattern>
+    <pattern>/dtaqWarnInfoAction.do?method=viewDetails*</pattern>
+    <pattern>/dtaqWarnInfoAction.do?method=showReason*</pattern>
+    <pattern>/dtaqSumQueryAction.do?method=segmentAnalysisDetails*</pattern>
+    <pattern>/dtaqWarnAnalysisAction.do?method=tree*</pattern>
+    <pattern>/dtaqWarnAnalysisAction.do?method=list*</pattern>
+    <pattern>/dtaqWarnAnalysisAction.do?method=downSend*</pattern>
+    <pattern>/dtaqWarnAnalysisAction.do?method=selectSignEmployee*</pattern>
+    <pattern>/dtaqWarnAnalysisAction.do?method=queryEmployeeInfo*</pattern>
+    <pattern>/dtaqCheckpointUseAction.do?method=list*</pattern>
+    <pattern>/dtaqCheckpointUseAction.do?method=tree*</pattern>
+    <pattern>/dtaqCheckpointUseAction.do?method=edit*</pattern>
+    <pattern>/dtaqCheckpointUseAction.do?method=create*</pattern>
+    <pattern>/dtaqDataInfoQuery3Action.do?method=view*</pattern>
+    <pattern>/dtaqAutoDataInfoQuery3Action.do?method=view*</pattern>
+    <pattern>/dtaqCheckpointHistoryAction.do?method=tree*</pattern>
+    <pattern>/dtaqCheckpointHistoryAction.do?method=edit*</pattern>
+    <pattern>/dtaqCheckpointHistoryAction.do?method=view*</pattern>
+    <pattern>/checkpointManageAction.do?method=exportExcelPoints*</pattern>
+    <pattern>/dtaqStationAction.do?method=showEnvironment*</pattern>
+    <pattern>/localStructureAction.do?method=view*</pattern>
+    <pattern>/dtaqKimoliteAction.do?method=showView*</pattern>
+    <pattern>/dtaqLaunchingMethodAction.do?method=showView*</pattern>
+    <pattern>/dtaqConstructionMethodAction.do?method=showView*</pattern>
+    <pattern>/dtaqBuildingAction.do?method=showView*</pattern>
+    <pattern>/dtaqPipeAction.do?method=showView*</pattern>
+    <pattern>/dtaqStationQueryAction.do?method=exportStationCondition*</pattern>
+    <pattern>/dtaqDataQueryAction.do?method=totalShow*</pattern>
+    <pattern>/dtaqDataQueryAction.do?method=exportExcel*</pattern>
+    <pattern>/dtaqDataQueryAction.do?method=exportTXT*</pattern>
+    <pattern>/checkpointManageAction.do?method=showDetail*</pattern>
+    <pattern>/safeAnalysisTotalAction.do?method=showDetail*</pattern>
+    <pattern>/dtaqDataInfoQueryAction.do?method=queryTimeKind*</pattern>
+    <pattern>/dtaqDataInfoQueryAction.do?method=queryTimeKind3*</pattern>
+	<pattern>/dtaqScheduleMainAction.do?method=list*</pattern>
+	<pattern>/dtaqDataInfoQuery2Action.do?method=treePicture*</pattern>
+	<pattern>/dtaqDataInfoQuery2Action.do?method=listPicture*</pattern>
+	
+	<pattern>/eTourConditionAction.do?method=completeFill*</pattern>
+	<pattern>/eTourConditionAction.do?method=selectRecordType*</pattern>
+	
+	<pattern>/organizationAction.do?method=queryOrgInfoList*</pattern>
+	<pattern>/employeeAction.do?method=selectMailEmployee*</pattern>
+	<pattern>/maWorkLogAppraisalAction.do?method=viewSiteWorkInfo*</pattern>
+	<pattern>/maWorkLogAppraisalAction.do?method=viewAnalysisReport*</pattern>
+	<pattern>/ePatrolRecordOpenCutAction.do?method=validateStatus*</pattern>
+	<pattern>/ePatrolRecordExcavationAction.do?method=validateStatus*</pattern>
+	<pattern>/ePatrolRecordBraceAction.do?method=validateStatus*</pattern>
+	<pattern>/ePatrolRecordCoverCutAction.do?method=validateStatus*</pattern>
+	<pattern>/ePatrolRecordSTMAction.do?method=validateStatus*</pattern>
+	
+	<pattern>/eTourConditionAction.do?method=selectLine*</pattern>
+	<pattern>/eTourConditionAction.do?method=expExcel*</pattern>
+	<pattern>/eTourConditionAction.do?method=exportExcel*</pattern>
+	<pattern>/dtaqStationAction.do?method=showWin*</pattern>
+	<pattern>/dtaqStationAction.do?method=queryStationId*</pattern>
+	<pattern>/eTourConditionAction.do?method=insertIfFinishValue*</pattern>
+	<pattern>/eTourConditionAction.do?method=deletePatrol*</pattern>
+	<pattern>/riskPatrolAction.do?method=showOtherMore*</pattern>
+	<pattern>/dtaqRiskPatrolAction.do?method=showMore*</pattern>
+	<pattern>/dtaqRiskPatrolAction.do?method=riskInfo*</pattern>
+    </excludes> 
+    
+    <decorator name="default" page="default.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    
+</decorators>
+

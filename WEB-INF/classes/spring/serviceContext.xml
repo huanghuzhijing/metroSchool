@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">
+
+	<!--个人信息管理  -->	
+	<bean id="employeeSealManager" class="com.whmetro.systemmanage.personalInfomanager.service.EmployeeSealManager" />
+	<bean id="personalizedSetManager" class="com.whmetro.systemmanage.personalInfomanager.service.PersonalizedSetManager" />
+	<bean id="sysMailboxReceiveManager" class="com.whmetro.systemmanage.service.SysMailboxReceiveManager" />
+	<bean id="sysMailboxSendManager" class="com.whmetro.systemmanage.service.SysMailboxSendManager" />
+	<!--邮件发送平台  -->
+	<bean id="serviceMailInfoManager" class="com.whmetro.sms.service.ServiceMailInfoManager" />
+
+
+	<!-- 组织人员管理 -->
+	<bean id="organizationManager" class="com.whmetro.systemmanage.organstaffmanager.service.OrganizationManager" />
+	<bean id="employeeManager" class="com.whmetro.systemmanage.organstaffmanager.service.EmployeeManager" />
+
+	<bean id="corpTypeManager" class="com.whmetro.systemmanage.organstaffmanager.service.CorpTypeManager" />
+	<bean id="corpManager" class="com.whmetro.systemmanage.organstaffmanager.service.CorpManager" />
+	<bean id="employeeExtendManager" class="com.whmetro.systemmanage.organstaffmanager.service.EmployeeExtendManager" />
+	
+	<!-- 系统维护管理-->
+	<bean id="bizPlatManager" class="com.whmetro.systemmanage.sysmaintain.service.BizPlatManager" />
+	<bean id="sysModuleInfoManager" class="com.whmetro.systemmanage.sysmaintain.service.SysModuleInfoManager" />
+	<bean id="sysModuleOperationManager" class="com.whmetro.systemmanage.sysmaintain.service.SysModuleOperationManager" />
+	<bean id="sysRoleManager" class="com.whmetro.systemmanage.sysmaintain.service.SysRoleManager" />
+	<bean id="sysRoleModuleJoinManager" class="com.whmetro.systemmanage.sysmaintain.service.SysRoleModuleJoinManager" />
+	<bean id="sysOperatorManager" class="com.whmetro.systemmanage.sysmaintain.service.SysOperatorManager" />
+	<bean id="sysOperatorManage" class="com.whmetro.systemmanage.sysmaintain.service.SysOperatorManage" />
+	<bean id="sysOperRoleJoinManager" class="com.whmetro.systemmanage.sysmaintain.service.SysOperRoleJoinManager" />
+	<bean id="sysUsergroupManager" class="com.whmetro.systemmanage.sysmaintain.service.SysUsergroupManager" />
+	<bean id="sysUsergroupEmpManager" class="com.whmetro.systemmanage.sysmaintain.service.SysUsergroupEmpManager" />
+	<bean id="operModuleJoinManager" class="com.whmetro.systemmanage.sysmaintain.service.OperModuleJoinManager" />
+	<bean id="pubAnnexManager" class="com.whmetro.systemmanage.sysmaintain.service.PubAnnexManager" />
+	<bean id="sysPostManager" class="com.whmetro.systemmanage.sysmaintain.service.SysPostManager" />	
+		
+	<!-- OS工作流配置 -->
+	<bean id="oswfentryManager" class="com.whmetro.systemmanage.service.OswfentryManager" />
+    <bean id="oscurrentstepManager" class="com.whmetro.systemmanage.service.OscurrentstepManager" />	
+		
+	<!--系统配置管理  -->
+	<bean id="dataDictManager" class="com.whmetro.systemmanage.sysconfigmanager.service.DataDictManager" />
+	<bean id="dataDictRecordManager" class="com.whmetro.systemmanage.sysconfigmanager.service.DataDictRecordManager" />
+	<bean id="dictViewManager" class="com.whmetro.systemmanage.sysconfigmanager.service.DictViewManager" />
+	<bean id="sysLogManager" class="com.whmetro.systemmanage.sysconfigmanager.service.SysLogManager" />
+	<bean id="projectPeriodsManager" class="com.whmetro.systemmanage.sysconfigmanager.service.ProjectPeriodsManager" />
+	<bean id="projectInfoConfigManager" class="com.whmetro.systemmanage.sysconfigmanager.service.ProjectInfoConfigManager" />
+	<bean id="sysCodeRuleitemManager" class="com.whmetro.systemmanage.sysconfigmanager.service.SysCodeRuleitemManager" />
+	<bean id="sysCodeRuleManager" class="com.whmetro.systemmanage.sysconfigmanager.service.SysCodeRuleManager" />
+	<bean id="sysMessageRemindManager" class="com.whmetro.systemmanage.sysconfigmanager.service.SysMessageRemindManager" />
+	<bean id="sysProjectOrganconfigManager" class="com.whmetro.systemmanage.sysconfigmanager.service.SysProjectOrganconfigManager" />
+	<bean id="contentSelectManager" class="com.whmetro.common.common.service.ContentSelectManager" />
+	<bean id="workFlowManager" class="com.whmetro.systemmanage.sysconfigmanager.service.WorkFlowManager"/>
+	
+	<!-- office控件 -->
+	<bean id="ntkoOfficeFileManager" class="com.whmetro.common.common.service.NtkoOfficeFileManager"/>
+	<bean id="ntkoOfficeBigFileManager" class="com.whmetro.common.common.service.NtkoOfficeBigFileManager" />
+	
+	<!-- 现场视频监控室 -->
+	<bean id="dataLiveVideoManager" class="com.whmetro.safeControlCenter.videoMonitor.service.DataLiveVideoManager" />
+      
+     <!-- 检测点信息维护 -->
+            <!-- 工程检测管理中心 -->
+          <bean id="dtaqCheckpointManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqCheckpointManager" />
+          <bean id="dtaqThirdMonitorManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqThirdMonitorManager" />
+          <bean id="dtaqProjMachCheckpointManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqProjMachCheckpointManager" />
+          <bean id="dtaqPartManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqPartManager" />
+          <bean id="dtaqCheckpointTypeManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqCheckpointTypeManager" />
+          <bean id="dtaqCheckpointHistoryManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqCheckpointHistoryManager" />
+          <bean id="dtaqAutoCheckpointManager" class="com.whmetro.projectMonitor.checkPoint.service.DtaqAutoCheckpointManager" />
+        
+                  
+          <bean id="dtaqLineManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqLineManager" />     
+          <bean id="dtaqSegmentManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqSegmentManager" />
+          <bean id="dtaqStationManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqStationManager" />
+          <bean id="dtaqCheckPointGroupManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqCheckPointGroupManager" />
+          <!-- 监测数据填报业务层     -->
+          <bean id="dtaqDataManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqDataManager"/>
+          <bean id="dtaqDataInfoManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqDataInfoManager"/>
+          <bean id="dtaqAutoDataManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqAutoDataManager"/>
+          <bean id="dtaqAutoDataInfoManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqAutoDataInfoManager"/>
+          <!-- 安全预警总控中心 -->
+          <bean id="dtaqSituationAnalyseManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqSituationAnalyseManager" />
+          <bean id="dtaqSituationSuggestManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqSituationSuggestManager" />
+          <bean id="dtaqSituationCheckManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqSituationCheckManager" />
+          <bean id="dtaqWarnSignManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqWarnSignManager" />
+		  <bean id="dtaqRiskPatrolManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqRiskPatrolManager" />
+		   <bean id="announcementManager" class="com.whmetro.systemmanage.service.AnnouncementManager" />
+		   <bean id="dataEmulationManager" class="com.whmetro.systemmanage.service.DataEmulationManager" />
+		   <bean id="dtaqSituationMotionanalManager" class="com.whmetro.systemmanage.service.DtaqSituationMotionanalManager" />
+		    
+		    <bean id="segmentScheduleManager" class="com.whmetro.systemmanage.service.SegmentScheduleManager" />
+		    				   
+		   <!-- 工作,工作日志与评价 -->
+	<bean id="maGeneralWorkAllotManager" class="com.whmetro.safeControlCenter.innerwork.service.MaGeneralWorkAllotManager" />
+	<bean id="maGeneralWorkLogManager" class="com.whmetro.safeControlCenter.innerwork.service.MaGeneralWorkLogManager" />
+	<bean id="maGeneralWorkManager" class="com.whmetro.safeControlCenter.innerwork.service.MaGeneralWorkManager" />
+	<bean id="maSiteWorkAllotManager" class="com.whmetro.safeControlCenter.innerwork.service.MaSiteWorkAllotManager" />
+	<bean id="maSiteWorkLogManager" class="com.whmetro.safeControlCenter.innerwork.service.MaSiteWorkLogManager" />
+	<bean id="maSiteWorkManager" class="com.whmetro.safeControlCenter.innerwork.service.MaSiteWorkManager" />
+	<bean id="maWorkLogAppraisalManager" class="com.whmetro.safeControlCenter.innerwork.service.MaWorkLogAppraisalManager" />
+	<bean id="maAppraisalHistoryManager" class="com.whmetro.safeControlCenter.innerwork.service.MaAppraisalHistoryManager" />
+		   
+		   
+		   <!-- 安全风险管理中心 -->
+		   <bean id="hcSolutionManager" class="com.whmetro.safeControlCenter.hcHidden.service.HcSolutionManager" />
+		   <bean id="hcSolutionApproveManager" class="com.whmetro.safeControlCenter.hcHidden.service.HcSolutionApproveManager" />
+		   <bean id="safeDocManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.SafeDocManager" />
+		    <bean id="safeDocAnnexManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.SafeDocAnnexManager" />
+		    
+		    <!-- 安全事故 -->
+		     <bean id="accidentDealManager" class="com.whmetro.safeControlCenter.accident.service.AccidentDealManager" />
+		      <bean id="accidentReportAnnexManager" class="com.whmetro.safeControlCenter.accident.service.AccidentReportAnnexManager" />
+		       <bean id="accidentReportManager" class="com.whmetro.safeControlCenter.accident.service.AccidentReportManager" />
+		   
+		   <!-- 人员资质信息管理 -->
+		     <bean id="constructorManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.constructEmployee.service.ConstructorManager" />
+		   
+		   <!-- 安全巡检信息管理 -->
+		     <bean id="safeInspectingManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.safeInspecting.service.SafeInspectingManager" />   
+		   
+		   <!-- 工程基础信息管理 -->
+		  <bean id="dtaqScheduleTemplateManager" class="com.whmetro.systemmanage.sysconfigmanager.service.DtaqScheduleTemplateManager" />
+		   <bean id="dtaqSegmentScheduleManager" class="com.whmetro.systemmanage.sysconfigmanager.service.DtaqSegmentScheduleManager" />
+		   <!-- 工程资料信息管理 -->
+		   <bean id="projectMaterialsManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.ProjectMaterialsManager"></bean>
+		   <bean id="stratumRockManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.StratumRockManager"></bean>
+		   <bean id="undergroundPipelineManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.UndergroundPipelineManager"></bean>
+		   <bean id="stationStructureManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.StationStructureManager"></bean>
+		   <bean id="projectGeologyManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.ProjectGeologyManager"></bean>
+		   <bean id="peripheralBuildingManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.PeripheralBuildingManager"></bean>
+		   <bean id="blockStructureManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.BlockStructureManager"></bean>
+		   
+		   <bean id="importTxtManager" class="com.whmetro.projectMonitor.checkPoint.service.ImportTxtManager" />
+           <bean id="saveTxtManager" class="com.whmetro.projectMonitor.checkPoint.service.SaveTxtManager" />
+           <bean id="impTxtManager" class="com.whmetro.projectMonitor.checkPoint.service.ImpTxtManager" />
+      
+		   <bean id="dtaqLayerManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqLayerManager" />
+		   <bean id="dtaqSectionManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqSectionManager" />
+		   <bean id="localStructureManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.LocalStructureManager" />
+		   <bean id="dtaqKimoliteManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqKimoliteManager" />
+		   <bean id="dtaqLaunchingMethodManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqLaunchingMethodManager" />
+		   <bean id="dtaqConstructionMethodManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqConstructionMethodManager" />
+		   <bean id="dtaqBuildingManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqBuildingManager" />
+		   <bean id="dtaqPipeManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqPipeManager" />
+           <!-- e工卡 -->
+           <bean id="eTourConditionManager" class="com.whmetro.eWorkCard.service.ETourConditionManager" />
+           <bean id="eVideoTourManager" class="com.whmetro.eWorkCard.service.EVideoTourManager" />
+           <bean id="ePatrolRecordOpenCutManager" class="com.whmetro.eWorkCard.service.EPatrolRecordOpenCutManager" />
+           <bean id="ePatrolRecordExcavationManager" class="com.whmetro.eWorkCard.service.EPatrolRecordExcavationManager" />
+           <bean id="ePatrolRecordBraceManager" class="com.whmetro.eWorkCard.service.EPatrolRecordBraceManager" />
+           
+           <bean id="ePatrolRecordCoverCutManager" class="com.whmetro.eWorkCard.service.EPatrolRecordCoverCutManager" />
+           <bean id="ePatrolRecordSTMManager" class="com.whmetro.eWorkCard.service.EPatrolRecordSTMManager" />
+           
+           
+           <bean id="gisVisitHistoryManager" class="com.whmetro.safeControlCenter.securitySituation.service.GisVisitHistoryManager"></bean>
+           <bean id="hcHiddenTypeManager" class="com.whmetro.safeControlCenter.hcHidden.service.HcHiddenTypeManager"></bean>
+           <bean id="safetyDaylyLogManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.SafetyDaylyLogManager" />
+           <!-- 紧急联动 -->
+           <bean id="emergencyMemberManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.EmergencyMemberManager" />
+           <bean id="emergencyMaterialPlanManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.EmergencyMaterialPlanManager" />
+           <bean id="emergencyMaterialItemManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.EmergencyMaterialItemManager" />
+           <bean id="riskLibManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.RiskLibManager" />
+           <bean id="riskPlanManager" class="com.whmetro.safeControlCenter.safeRiskManager.service.RiskPlanManager" />
+           <!-- 监测预警超限 -->
+           <bean id="dtaqWarnInfoManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqWarnInfoManager"></bean>
+           <bean id="dtaqWarnDataManager" class="com.whmetro.projectMonitor.monitorDataAnalysis.service.DtaqWarnDataManager"></bean>
+           <bean id="dtaqWarnAnalysisManager" class="com.whmetro.projectMonitor.warn.service.DtaqWarnAnalysisManager"></bean>
+           <bean id="warnAnalysisSignManager" class="com.whmetro.projectMonitor.warn.service.WarnAnalysisSignManager"></bean>
+           <bean id="dtaqWarnThingManager" class="com.whmetro.projectMonitor.warn.service.DtaqWarnThingManager"></bean>
+           <bean id="dtaqWarnThingSignManager" class="com.whmetro.projectMonitor.warn.service.DtaqWarnThingSignManager"></bean>
+           <!-- 形象进度 -->
+           <bean id="dtaqScheduleManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqScheduleManager"></bean>
+           <bean id="dtaqScheduleMainManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqScheduleMainManager"></bean>
+           <bean id="dtaqScheduleExcavateManager" class="com.whmetro.safeControlCenter.securitySituation.service.DtaqScheduleExcavateManager"></bean>
+</beans>

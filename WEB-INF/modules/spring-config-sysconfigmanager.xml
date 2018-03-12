@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+       <!--  Servlet  Action配置文件 -->
+<beans default-autowire="byName" default-lazy-init="true">
+	<bean name="/dataDictAction" class="com.whmetro.systemmanage.sysconfigmanager.action.DataDictAction"/>
+	<bean name="/dataDictRecordAction" class="com.whmetro.systemmanage.sysconfigmanager.action.DataDictRecordAction"/>
+	<bean name="/sysLogAction" class="com.whmetro.systemmanage.sysconfigmanager.action.SysLogAction"/>
+	<bean name="/projectPeriodsAction" class="com.whmetro.systemmanage.sysconfigmanager.action.ProjectPeriodsAction"/>
+	
+	<bean name="/projectInfoConfigAction" class="com.whmetro.systemmanage.sysconfigmanager.action.ProjectInfoConfigAction"/>
+	<bean name="/sysCodeRuleAction" class="com.whmetro.systemmanage.sysconfigmanager.action.SysCodeRuleAction"/>
+	<bean name="/sysCodeRuleitemAction" class="com.whmetro.systemmanage.sysconfigmanager.action.SysCodeRuleitemAction"/>
+	<bean name="/sysMessageRemindAction" class="com.whmetro.systemmanage.sysconfigmanager.action.SysMessageRemindAction"/>
+	<bean name="/sysProjectOrganconfigAction" class="com.whmetro.systemmanage.sysconfigmanager.action.SysProjectOrganconfigAction"/>
+    <!-- 工程基本信息管理 -->
+    <bean name="/dtaqScheduleTemplateAction" class="com.whmetro.systemmanage.sysconfigmanager.action.DtaqScheduleTemplateAction"/>
+    <bean name="/dtaqSegmentScheduleAction" class="com.whmetro.systemmanage.sysconfigmanager.action.DtaqSegmentScheduleAction"/>
+</beans>

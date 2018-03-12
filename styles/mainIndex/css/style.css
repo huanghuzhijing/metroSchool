@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,ul,li,dl,dt,dd,p,img,input{ margin:0; padding:0;}
+body{
+	background:url(../images/login_04.jpg)
+}
+#mainDiv {
+    background:url(../images/login_07.png) top center no-repeat;
+    height: 538px;
+    margin: -269px 0 0 0;
+    position: absolute;
+    top: 50%;
+    width:100%;
+}
+#loginDiv {
+    background-image: url("../images/login_03.png");
+    height: 332px;text-align:right;
+    margin:50px auto 0 auto;
+    width: 604px;
+}
+#loginDiv table{
+	width:50%;_display:inline;
+	margin-right:20px; margin-top:105px;
+}
+#loginDiv table tr td{
+	line-height:35px; padding:0px 3px;
+	text-align:left; font-size:12px;
+	color:#484849
+}
+#loginDiv table tr td.loginFont{
+	font-size:14px
+}
+#loginDiv table tr td input[type="checkbox"]{
+	position:relative; top:3px
+}
+.input_login{ border:1px solid #c8c8c8; width:200px; height:25px; line-height:25px; text-indent:2px;}
+.btn{ width:80px; height:26px; line-height:26px; background:url(../images/btn_03.jpg); border:none; color:white; font-size:14px; font-weight:bold; margin-left:1px; }
+.btn_cancle{ width:80px; height:26px; line-height:26px; background:url(../images/btn_05.jpg); border:none; color:white; font-size:14px; font-weight:bold; margin-left:1px; }
+#clock{color:white; font-size:12px; display:block; margin-top:25px;}
+.btn_reset{width:83px; height:25px; background-image:url(../images/cancel.jpg); border:none}
+
+
+a{ text-decoration:none}
+a img{border:0}
+ul,li{ margin:0; padding:0; list-style-type:none}
+.left{ float:left}
+.right{ float:right}
+.container{ width:100%; margin:0; padding:0; background:url(../images/bg.jpg)}
+.w_1200{width:1200px;margin:0 auto;}
+	.top{width:100%; height:40px; line-height:35px; background:black; color:white; font-size:12px; overflow:hidden}
+		.top .user_img{ position:relative; top:7px; width:25px; height:25px;}
+		.top a{ float:right}
+		.top span{ position:relative; top:0px; font-family:Arial, Helvetica, sans-serif}
+	.menu_box{width:100%; height:92px; line-height:92px; background:white; overflow:hidden; margin-bottom:20px;}
+		.logo{width:1200px; height:92px; margin:0 auto;background:url(../images/main_08.jpg) left center no-repeat}
+			ul.menu{ padding-right:5px; text-align:right; overflow:hidden}
+				ul.menu li{ float:left;width:auto; padding:15px 0  0 25px; height:64px; line-height:64px;color:#272727;}
+				ul.menu li a{ font-size:17px; font-weight:bold;color:#272727;font-family: "Microsoft YaHei",Arial, "Arial Black",SimSun ,Gadget, sans-serif}
+				ul.menu li a:hover{ border-bottom:3px solid #123b72; padding-bottom:3px}
+				
+.content{width:1200px;margin:0px auto 8px auto; overflow:hidden}
+	.item_icon{
+		width:143px; height:300px; overflow:hidden;
+		margin-right:10px;
+	}
+		.item_icon ul li{
+			width:143px; height:91px;background:url(../images/bg.png) no-repeat;
+			margin-bottom:12px; text-align:center
+		}
+			.item_icon ul li.item_1{
+				background:url(../images/bg.png) 0 0 ;
+			}
+			.item_icon ul li.item_2{
+				background:url(../images/bg.png) -144px 0 ;
+			}
+			.item_icon ul li.item_3{
+				background:url(../images/bg.png) -288px 0 ;
+			}
+			.item_icon ul li img{
+				display:block; margin:0 auto 6px auto;
+				padding-top:12px;
+			}
+			.item_icon ul li  a{
+				color:white; font-weight:bold
+			}
+			
+	.new{
+		width:770px; height:300px; overflow:hidden;
+	}
+		.new .new_top{
+			width:100%; height:13px; clear:both; overflow:hidden
+		}
+			.new .new_topbg{
+				width:743px; background:white; float:left;
+				height:13px;
+			}
+		.new .new_center{
+			background:white; height:270px; clear:both;
+			width:750px; padding:0 10px;
+		}
+			.new_pic {
+				width:340px; height:270px;
+				overflow:hidden
+			}
+			.article{
+				width:392px; overflow:hidden
+			}
+				.article_title{
+					height:30px; line-height:30px;background:url(../images/main_07.jpg) no-repeat;
+					border-bottom:1px solid #e0e0e0; color:white; font-size:15px;
+					font-weight:bold; text-indent:16px; margin-bottom:8px;
+				}
+				.article_title a{
+					float:right; color:#8e8e90; font-weight:normal
+				}
+					.article ul li{
+						height:32px; line-height:32px; color:#515152; text-indent:10px;
+						font-size:14px; background:url(../images/login_04.jpg) no-repeat left 13px;
+					}
+						.article ul li a{
+							color:#515152;
+						}
+						.article ul li span{
+							float:right
+						}
+		.new .new_bottom{
+			width:100%; height:15px; clear:both;overflow:hidden
+		}
+			.new .new_botbg{
+				width:743px; background:white; float:left;
+				height:15px;
+			}
+		.date{
+			width:267px; height:296px;
+		}
+			.date .mess_top{
+				width:100%; height:13px; clear:both;overflow:hidden
+			}
+				.date .mess_topbg{
+					width:240px; background:white; float:left;
+					height:13px;
+				}
+			.date .mess_center{
+				background:white; height:270px; clear:both;
+				width:247px; padding:0 10px; overflow:hidden
+			}
+			.date .mess_bottom{
+				width:100%; height:15px; clear:both;overflow:hidden
+			}
+				.date .mess_botbg{
+					width:240px; background:white; float:left;
+					height:15px;
+				}
+	.w_560{
+		width:560px; overflow:hidden
+	}
+		.db{
+			width:100%; height:220px; overflow:hidden;margin-bottom:5px;
+		}
+			.db .db_top{
+				width:100%; height:38px; clear:both;
+				overflow:hidden
+			}
+				.db .db_topbg{
+					width:540px;float:left; font-size:14px; font-weight:bold;
+					height:38px; line-height:38px;background:url(../images/yuan_20.png) repeat
+				}
+					.db .db_topbg a{
+						float:right; position:relative; top:8px;
+					}
+			.db .db_center{
+				background:white; height:162px; clear:both;
+				width:540px; padding:0 10px;
+			}
+				.icon_list{
+					width:100%; overflow:hidden
+				}
+						.icon_list li{
+							width:135px; float:left; display:inline-block;
+							text-align:center ; height:150px;
+						}
+							.icon_list li .icon_bg{
+								width:101px; height:98px; position:relative;
+								margin:15px auto 0px auto;_margin:10px auto 0px auto;
+							}
+								.icon_list  li .icon_item{
+								}
+							.icon_list  li  a{
+								color:#515152; display:block;font-size:13px;font-weight:bold
+							}
+			.db .db_bottom{
+				width:100%; height:15px; clear:both;overflow:hidden
+			}
+				.db .db_botbg{
+					width:533px; background:white; float:left;
+					height:15px;
+				}
+	.w_630{
+		width:630px;overflow:hidden;
+	}
+		.mess{
+			width:100%; height:220px; overflow:hidden; margin-bottom:5px;
+		}
+			.mess .mess_top{
+				width:100%; height:13px; clear:both;overflow:hidden
+			}
+				.mess .mess_topbg{
+					width:603px; background:white; float:left;
+					height:13px;
+				}
+			.mess .mess_center{
+				background:white; height:187px; clear:both;
+				width:610px; padding:0 10px; overflow:hidden
+			}
+				.mess_title{
+					width:87px; margin:25px 20px 25px 15px;
+				}
+					.article_line{
+						width:476px; overflow:hidden;
+					}
+						.article_line ul{
+							 height:160px; overflow:hidden
+						}
+						.article_line ul li{
+							height:31px; line-height:31px; color:#515152; text-indent:10px; border-bottom:1px dashed #c3c3c4;
+							font-size:14px; background:url(../images/login_04.jpg) no-repeat left 13px;
+						}
+							.article_line ul li a{
+								color:#515152;
+							}
+							.article_line ul li span{
+								float:right
+							}
+							.article_line .more{ float:right; margin-top:8px;}
+			.mess .mess_bottom{
+				width:100%; height:15px; clear:both;overflow:hidden
+			}
+				.mess .mess_botbg{
+					width:603px; background:white; float:left;
+					height:15px;
+				}
+		.link{
+			width:1200px; margin:-8px auto 8px auto; height:auto; overflow:hidden;
+		}
+			.link .link_top{
+				width:100%; height:38px; clear:both;
+				overflow:hidden
+			}
+				.link .link_topbg{
+					width:1180px;float:left; font-size:14px; font-weight:bold;
+					height:38px; line-height:38px;background:url(../images/yuan_20.png) repeat
+				}
+					.link .link_topbg a{
+						float:right; position:relative; top:8px;
+					}
+			.link .link_center{
+				background:white; height:auto; clear:both;
+				width:1180px; padding:0 10px 15px 10px;
+			}	
+			.link .link_bottom{
+				width:100%; height:15px; clear:both;overflow:hidden
+			}
+				.link .link_botbg{
+					width:1173px; background:white; float:left;
+					height:15px;
+				}
+				.s_icon_list{
+					width:100%; overflow:hidden
+				}
+						.s_icon_list li{
+							width:108px; float:left; display:inline-block;
+							text-align:center ; height:150px;
+						}
+							.s_icon_list li .icon_bg{
+								width:82px; height:82px; position:relative;
+								margin:15px auto 5px auto;_margin:10px auto 5px auto;
+							}
+								.s_icon_list  li .icon_item{
+								}
+							.s_icon_list  li  a{
+								color:#515152; display:block;font-size:13px;font-weight:bold
+							}	

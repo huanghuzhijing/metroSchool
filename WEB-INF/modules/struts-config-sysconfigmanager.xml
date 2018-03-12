@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="dataDictForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dataDictRecordForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysLogForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="projectPeriodsForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysCodeRuleForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysCodeRuleitemForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysMessageRemindForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="projectInfoConfigForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysProjectOrganconfigForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqScheduleTemplateForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqSegmentScheduleForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 数据字典-->
+		<action path="/dataDictAction" name="dataDictForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/dic/dicList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/dic/dicAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/dic/dicEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/dic/dicView.jsp"/>
+			<forward name="success" path="/dataDictAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 数据字典项-->
+		<action path="/dataDictRecordAction" name="dataDictRecordForm" parameter="method" scope="request" validate="false">
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/dicData/dicDataAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/dicData/dicDataEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/dicData/dicDataView.jsp"/>
+			<forward name="listRe" path="/biz/sysmanager/sysconfigmanager/dicData/dicDataList.jsp"/>
+			<forward name="success" path="/dataDictAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 系统日志管理-->
+		<action path="/sysLogAction" name="sysLogForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/sysLog/sysLogList.jsp"/>
+			<forward name="success" path="/sysLogAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 项目周期设置-->
+		<action path="/projectPeriodsAction" name="projectPeriodsForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/sysmanager/sysconfigmanager/projectPeriods/projectPeriodsIndex.jsp"/>
+			<forward name="listLeft" path="/biz/sysmanager/sysconfigmanager/projectPeriods/projectPeriodsListLeft.jsp"/>
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/projectPeriods/projectPeriodsList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/projectPeriods/projectPeriodsAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/projectPeriods/projectPeriodsEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/projectPeriods/projectPeriodsView.jsp"/>
+			<forward name="success" path="/projectPeriodsAction.do?method=index" redirect="true"/>
+		</action>
+		<!-- 工作流 -->
+		<action path="/workFlowAction" name="workFlowForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/workflow/workFlowList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/workflow/workFlowAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/workflow/workFlowEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/workflow/workFlowView.jsp"/>
+			<forward name="bind" path="/biz/sysmanager/sysconfigmanager/workflow/workFlowBind.jsp"/>
+			<forward name="actorEdit" path="/biz/sysmanager/sysconfigmanager/workflow/workFlowActorList.jsp"/>
+			<forward name="success" path="/workFlowAction.do?method=list" redirect="true"/>
+		  	<forward name="choseActor" path="/biz/sysmanager/sysconfigmanager/workflow/selectSysOperatorForWorkFlowActor.jsp"/>
+		    <forward name="choseRole" path="/biz/sysmanager/sysconfigmanager/workflow/selectSysRoleForWorkFlowActor.jsp"/>
+		</action>
+		<!--  -->
+		<action path="/sysCodeRuleAction" name="sysCodeRuleForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/sysCodeRule/sysCodeRuleList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/sysCodeRule/sysCodeRuleAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/sysCodeRule/sysCodeRuleEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/sysCodeRule/sysCodeRuleView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysconfigmanager/sysCodeRule/sysCodeRuleSuccess.jsp"/>
+		</action>
+		<!--  -->
+		<action path="/sysCodeRuleitemAction" name="sysCodeRuleitemForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/sysCodeRuleitem/sysCodeRuleitemList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/sysCodeRuleitem/sysCodeRuleitemAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/sysCodeRuleitem/sysCodeRuleitemEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/sysCodeRuleitem/sysCodeRuleitemView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysconfigmanager/sysCodeRuleitem/sysCodeRuleitemSuccess.jsp"/>
+		</action>
+		<!--  -->
+		<action path="/sysMessageRemindAction" name="sysMessageRemindForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/sysMessageRemindList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/sysMessageRemindAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/sysMessageRemindEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/sysMessageRemindView.jsp"/>
+			<forward name="success" path="/sysMessageRemindAction.do?method=list" redirect="true"/>
+			<forward name="listLeft" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/sysMessageRemindListLeft.jsp"/>
+			<forward name="listRight" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/sysMessageRemindListRight.jsp"/>
+			<forward name="selectRoleForMessRemind" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/selectRoleForMessRemind.jsp"/>
+			<forward name="selectOrganForMessRemind" path="/biz/sysmanager/sysconfigmanager/sysMessageRemind/selectOrganForMessRemind.jsp"/>
+		</action>
+		<!--  -->
+		<action path="/projectInfoConfigAction" name="projectInfoConfigForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigSuccess.jsp" />
+			<forward name="listLeft" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigListLeft.jsp"/>
+			<forward name="listRight" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectInfoConfigListRight.jsp"/>
+			<forward name="selectEmpForConstr" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/selectEmpForConstr.jsp"/>
+			<forward name="selectEmpForSurv" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/selectEmpForSurv.jsp"/>
+			<forward name="editEmpForConstr" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/editEmpForConstr.jsp"/>
+			<forward name="editEmpForSurv" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/editEmpForSurv.jsp"/>
+			<forward name="selectSegForSurv" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/selectSegForSurv.jsp"/>
+			<forward name="selectSeg" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/selectSeg.jsp"/>
+			<forward name="projectPeriodsEmplist" path="/biz/sysmanager/sysconfigmanager/projectInfoConfig/projectPeriodsEmplist.jsp"/>
+		</action>
+		<!--  -->
+		<action path="/sysProjectOrganconfigAction" name="sysProjectOrganconfigForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/sysProjectOrganconfigList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/sysProjectOrganconfigAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/sysProjectOrganconfigEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/sysProjectOrganconfigView.jsp"/>
+			<forward name="success" path="/sysProjectOrganconfigAction.do?method=list" redirect="true"/>
+			<forward name="selectPrjForPrjOrganCfg" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/selectPrjForPrjOrganCfg.jsp"/>
+			<forward name="selectEmpForPrjOrganCfg" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/selectEmpForPrjOrganCfg.jsp"/>
+			<forward name="selectPrjPeriodsForPrjOrganCfg" path="/biz/sysmanager/sysconfigmanager/sysProjectOrganconfig/selectPrjPeriodsForPrjOrganCfg.jsp"/>
+		</action>
+		<!-- 形象进度模块管理 -->
+		<action path="/dtaqScheduleTemplateAction" name="dtaqScheduleTemplateForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/dtaqScheduleTemplateRightList.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/dtaqScheduleTemplateEditForm.jsp"/>
+			<forward name="index" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/dtaqScheduleTemplateIndex.jsp"/>
+			<forward name="head" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/dtaqScheduleTemplateHead.jsp"/>
+			<forward name="left" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/dtaqScheduleTemplateLeft.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/dtaqScheduleTemplateAddForm.jsp"/>
+			<forward name="upFile1" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/upFile1.jsp"/>
+			<forward name="upFile2" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/upFile2.jsp"/>
+			<forward name="upFile3" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/upFile3.jsp"/>
+			<forward name="successPage" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/successPage.jsp"/>
+			<forward name="success" path="/dtaqScheduleTemplateViewAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/dtaqSegmentScheduleAction" name="dtaqSegmentScheduleForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/dtaqSegmentScheduleRightList.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/dtaqSegmentScheduleEditForm.jsp"/>
+			<forward name="index" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/dtaqSegmentScheduleIndex.jsp"/>
+			<forward name="head" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/dtaqSegmentScheduleHead.jsp"/>
+			<forward name="left" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/dtaqSegmentScheduleLeft.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/dtaqSegmentScheduleAddForm.jsp"/>
+			<forward name="successPage" path="/biz/sysmanager/sysconfigmanager/dtaqSegmentSchedule/successPage.jsp"/>
+			<forward name="upFile1" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/upFile1.jsp"/>
+			<forward name="upFile2" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/upFile2.jsp"/>
+			<forward name="upFile3" path="/biz/sysmanager/sysconfigmanager/dtaqScheduleTemplate/upFile3.jsp"/>
+			<forward name="success" path="/dtaqScheduleTemplateViewAction.do?method=list" redirect="true"/>
+			
+		</action>
+	</action-mappings>
+	
+</struts-config>

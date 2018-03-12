@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="sysModuleInfoForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysModuleOperationForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysRoleForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysRoleModuleJoinForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysOperatorForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysOperRoleJoinForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysUsergroupForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysUsergroupEmpForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="workFlowForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="pubAnnexForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysPostForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysMailboxSendForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="sysMailboxReceiveForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/sysModuleInfoAction" name="sysModuleInfoForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysModuleInfo/sysModuleInfoList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysModuleInfo/sysModuleInfoAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysModuleInfo/sysModuleInfoEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysModuleInfo/sysModuleInfoView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysmaintain/sysModuleInfo/sysModuleInfoSuccess.jsp"/>
+			<forward name="selectPrjPeriodsForModule" path="/biz/sysmanager/sysmaintain/sysModuleInfo/selectPrjPeriodsForModule.jsp"/>
+		</action>
+		
+		<action path="/sysModuleOperationAction" name="sysModuleOperationForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysModuleOperation/sysModuleOperationList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysModuleOperation/sysModuleOperationAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysModuleOperation/sysModuleOperationEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysModuleOperation/sysModuleOperationView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysmaintain/sysModuleOperation/sysModuleOperationSuccess.jsp"/>
+		</action>
+		
+		<action path="/sysRoleAction" name="sysRoleForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysRole/sysRoleList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysRole/sysRoleAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysRole/sysRoleEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysRole/sysRoleView.jsp"/>
+			<forward name="success" path="/sysRoleAction.do?method=list" redirect="true"/>
+			<forward name="selectForSysOperator" path="/biz/sysmanager/sysmaintain/sysOperator/selectRoleForSysOperator.jsp"/>
+			<forward name="platformset" path="/biz/sysmanager/sysmaintain/sysRole/sysRolePlatsetForm.jsp"/>
+		</action>
+		
+		<action path="/sysRoleModuleJoinAction" name="sysRoleModuleJoinForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysRoleModuleJoin/sysRoleModuleJoinList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysRoleModuleJoin/sysRoleModuleJoinAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysRoleModuleJoin/sysRoleModuleJoinEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysRoleModuleJoin/sysRoleModuleJoinView.jsp"/>
+			<forward name="success" path="/sysRoleModuleJoinAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<action path="/sysOperatorAction" name="sysOperatorForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysOperator/sysOperatorList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysOperator/sysOperatorAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysOperator/sysOperatorEditForm.jsp"/>
+			<forward name="pwdedit" path="/biz/sysmanager/sysmaintain/sysOperator/sysoperatorpwdEdit.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysOperator/sysOperatorView.jsp"/>
+			<forward name="success" path="/sysOperatorAction.do?method=list" redirect="true"/>
+			<forward name="purviewDisplay" path="/biz/sysmanager/sysmaintain/sysOperator/purviewDisplay.jsp"/>
+			<forward name="editPsw" path="/biz/sysmanager/sysmaintain/sysOperator/sysoperatorEditPsw.jsp"/>
+		</action>
+		
+		<action path="/sysOperRoleJoinAction" name="sysOperRoleJoinForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysOperRoleJoin/sysOperRoleJoinList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysOperRoleJoin/sysOperRoleJoinAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysOperRoleJoin/sysOperRoleJoinEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysOperRoleJoin/sysOperRoleJoinView.jsp"/>
+			<forward name="success" path="/sysOperRoleJoinAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<action path="/sysUsergroupAction" name="sysUsergroupForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysUsergroup/sysUsergroupList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysUsergroup/sysUsergroupAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysUsergroup/sysUsergroupEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysUsergroup/sysUsergroupView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysmaintain/sysUsergroup/sysUsergroupSuccess.jsp"/>
+		</action>
+		
+		<action path="/sysUsergroupEmpAction" name="sysUsergroupEmpForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpView.jsp"/>
+			<forward name="success" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpSuccess.jsp"/>
+			<forward name="listLeft" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpListLeft.jsp"/>
+			<forward name="listRight" path="/biz/sysmanager/sysmaintain/sysUsergroupEmp/sysUsergroupEmpListRight.jsp"/>
+		</action>
+		
+		<!-- 公共附件 -->
+		<action path="/pubAnnexAction" name="pubAnnexForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysmaintain/pubAnnex/pubAnnexList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysmaintain/pubAnnex/pubAnnexAddForm.jsp"/>
+			<forward name="webOfficeEdit" path="/biz/sysmanager/sysmaintain/pubAnnex/webOfficeEdit.jsp"/>
+			<forward name="webOfficeView" path="/biz/sysmanager/sysmaintain/pubAnnex/webOfficeView.jsp"/>
+			<forward name="webEdit" path="/biz/sysmanager/sysmaintain/pubAnnex/webEdit.jsp"/>
+			<forward name="success" path="/pubAnnexAction.do?method=list" redirect="true"/>
+		</action>
+		<!--内部邮件发文-->
+		<action path="/sysMailboxSendAction" name="sysMailboxSendForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendView.jsp"/>
+			<forward name="index" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendIndex.jsp"/>
+			<forward name="menu" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendMenu.jsp"/>
+			<forward name="receive" path="/biz/sysmanager/sysMailboxSend/sysMailboxSendReceive.jsp"/>
+			
+			<forward name="success" path="/sysMailboxSendAction.do?method=list" redirect="true"/>
+		</action>
+		<!--内部邮件接收-->
+		<action path="/sysMailboxReceiveAction" name="sysMailboxReceiveForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/sysMailboxReceive/sysMailboxReceiveList.jsp"/>
+			<forward name="view" path="/biz/sysmanager/sysMailboxReceive/sysMailboxReceiveView.jsp"/>
+			<forward name="success" path="/sysMailboxReceiveAction.do?method=list" redirect="true"/>
+		</action>
+	</action-mappings>
+	
+</struts-config>

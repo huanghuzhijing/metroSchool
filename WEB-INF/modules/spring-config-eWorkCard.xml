@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+       <!--  Servlet  Action配置文件 -->
+<beans default-autowire="byName" default-lazy-init="true">
+ <!-- e工卡 -->
+  <bean name="/eTourConditionAction" class="com.whmetro.eWorkCard.action.ETourConditionAction" />
+  <bean name="/eVideoTourAction" class="com.whmetro.eWorkCard.action.EVideoTourAction"/>
+  <bean name="/ePatrolRecordOpenCutAction" class="com.whmetro.eWorkCard.action.EPatrolRecordOpenCutAction"/>
+  <bean name="/ePatrolRecordExcavationAction" class="com.whmetro.eWorkCard.action.EPatrolRecordExcavationAction"/>
+  <bean name="/ePatrolRecordBraceAction" class="com.whmetro.eWorkCard.action.EPatrolRecordBraceAction"/>
+  <bean name="/ePatrolRecordCoverCutAction" class="com.whmetro.eWorkCard.action.EPatrolRecordCoverCutAction"/>
+  <bean name="/ePatrolRecordSTMAction" class="com.whmetro.eWorkCard.action.EPatrolRecordSTMAction"/>
+  
+</beans>

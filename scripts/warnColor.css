@@ -1,0 +1,116 @@
+.state1 {
+  border:1px solid #000;
+  background-color:#9eff8d;
+  width:30px;
+  zoom:1;
+  display:block ;
+  height:15px;
+}
+
+.state2 {
+  border:1px solid #000;
+  background-color:#fffc6c;
+  width:30px;
+  zoom:1;
+  display:block ;
+  height:15px;
+}
+
+.state3 {
+  border:1px solid #000;
+  background-color:#ffa40a;
+  width:30px;
+  zoom:1;
+  display:block ;
+  height:15px;
+}
+.state4 {
+  border:1px solid #000;
+  background-color:#ff3f32;
+  width:30px;
+  zoom:1;
+  display:block ;
+  height:15px;
+}
+
+.dataState1 {
+  border:1px solid #000;
+  background-color:#9eff8d;
+  width:100%;
+  zoom:1;
+}
+
+.dataState0 {
+  border:1px solid #000;
+  background-color:#fffc6c;
+  width:100%;
+  zoom:1;
+}
+
+#massage_box {   
+    position: absolute;   
+    left: expression((body.clientWidth-350)/ 2 );   
+    top: expression((body.clientHeight-200)/ 2 );   
+    width: 250px;   
+    height: 200px;   
+    filter: dropshadow(color = #666666, offx = 3, offy = 3,positive = 2);   
+    z-index: 2;   
+    visibility: hidden   
+}   
+  
+#mask {   
+    position: absolute;   
+    top: 0;   
+    left: 0;   
+    width: expression(body.scrollWidth);   
+    height: expression(body.scrollHeight);   
+    background: #d3ddea;   
+    filter: ALPHA(opacity =60);   
+    z-index: 1;   
+    visibility: hidden   
+}   
+
+.massage {   
+    border: orange solid;   
+    border-width: 1 1 3 1;   
+    height: 176px;   
+    overflow-y: auto;   
+    background: #fff;   
+    color: #036;   
+    font-size: 12px;   
+    line-height: 150%   
+}   
+  
+.header {   
+    font-size: 12pt;
+    font-weight:bold;
+    background: #209DEF;   
+    height: 24px;   
+    padding: 3 5 0 5;   
+    color: #fff;   
+    cursor: move;   
+}
+
+.massage_length {   
+    border: #A4E0FC solid;   
+    border-width: 1 1 3 1;   
+    height: 176px;   
+    overflow-y: auto;   
+    background: #fff;   
+    color: #036;
+	width:600px;
+	height:220px;
+    font-size: 12px;   
+    line-height: 150% 
+	
+}   
+  
+.header_length {   
+    background: #A4E0FC;   
+    height: 24px;   
+    padding: 3 5 0 5;
+	width:600px;
+    color: #fff;   
+    cursor: move;   
+}   
+

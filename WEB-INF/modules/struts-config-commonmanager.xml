@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="contentSelectForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/contentSelectAction" name="contentSelectForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/common/contentSelect/contentSelectList.jsp"/>
+			<forward name="editList" path="/biz/common/contentSelect/contentSelectEditForm.jsp"/>
+			<forward name="success" path="/contentSelectAction.do?method=list&amp;flag=1" redirect="true"/>
+			<forward name="selectBoardroom" path="/biz/common/sysPlug/selectBoardroom/selectBoardroom.jsp"/>
+			<forward name="selectSingleUser" path="/biz/common/sysPlug/selectSingleUser/selectSingleUser.jsp"/>
+			<forward name="selectPrj" path="/biz/common/sysPlug/selectPrj/selectPrj.jsp"/>
+			<forward name="selectCorp" path="/biz/common/sysPlug/selectCorp/selectPrjCorp.jsp"/>	
+			<forward name="selectCtr" path="/biz/common/sysPlug/selectCtr/selectCtr.jsp"/>
+			<forward name="selectPrjSort" path="/biz/common/sysPlug/selectPrjSort/selectSort.jsp"/>
+			<forward name="selectPayApplyPay" path="/biz/common/sysPlug/selectPayApplyPay/selectPay.jsp"/>
+			<forward name="selectPrjSeg" path="/biz/common/sysPlug/selectPrjSeg/selectPrjSeg.jsp"/>
+			<forward name="selectPrjSegs" path="/biz/common/sysPlug/selectPrjSegs/selectPrjSegs.jsp"/>
+			<forward name="selectPrjs" path="/biz/common/sysPlug/selectPrjs/selectPrj.jsp"/>
+			<forward name="selectWorkFlow" path="/biz/common/sysPlug/selectWorkFlow/selectWF.jsp"/>
+			<forward name="selectParcels" path="/biz/common/sysPlug/selectParcel/selectParcel.jsp"/>
+			<forward name="selectLandCtr" path="/biz/common/sysPlug/selectLandCtr/selectLandCtr.jsp"/>
+			<forward name="selectOwnership" path="/biz/common/sysPlug/selectOwnership/selectOwnership.jsp"/>
+			<forward name="selectFeePayPlan" path="/biz/common/sysPlug/selectFeePayPlan/selectFeePayPlan.jsp"/>
+			<forward name="selectParcelSingle" path="/biz/common/sysPlug/selectParcelSingle/selectParcelSingle.jsp"/>
+			<forward name="selectOaCtr" path="/biz/common/sysPlug/selectOaCtr/selectOaCtr.jsp"/>
+			<forward name="selectOrgans" path="/biz/common/sysPlug/selectOrgans/selectOrgan.jsp"/>
+			<forward name="selectSuperCorp" path="/biz/common/sysPlug/selectSuperCorp/selectSuperCorp.jsp"/>
+			<forward name="selectEmp" path="/biz/common/sysPlug/selectEmp/selectEmp.jsp"/>
+			<forward name="selectCtrCountWorklist" path="/biz/common/sysPlug/selectCtrCountWorklist/selectCtrCountWorklist.jsp"/>
+			<forward name="selectDocFileManager" path="/biz/common/sysPlug/selectDocFileManager/selectDocFileManager.jsp"/>
+			<forward name="selectCtrContractArchived" path="/biz/common/sysPlug/selectCtrContractArchived/selectCtrContractArchived.jsp"/>
+			<forward name="selectCostStatisticalAccount" path="/biz/common/sysPlug/selectCostStatisticalAccount/selectCostStatisticalAccount.jsp"/>
+			
+			<!-- 关于附件上传的 -->
+			<forward name="uploadFiles" path="/commons/uploaderfile_2.jsp"/>
+			<forward name="uploadFileSingle" path="/commons/uploaderfile_single.jsp"/>
+			<forward name="uploadFilesException" path="/commons/uploadFilesException.jsp"/>
+			<forward name="webOfficeView" path="/commons/webOfficeViewException.jsp"/>
+			
+			<forward name="corpSelects" path="/biz/common/sysPlug/selectOrgans/corpSelect.jsp"/>
+			<forward name="corpSelects_1" path="/biz/common/sysPlug/selectOrgans/corpSelect_1.jsp"/>
+			<forward name="corpSelects_2" path="/biz/common/sysPlug/selectOrgans/corpSelect_2.jsp"/>
+			<forward name="corpSelects_3" path="/biz/common/sysPlug/selectOrgans/corpSelect_3.jsp"/>
+			<forward name="corpSelects_safe" path="/biz/common/sysPlug/selectOrgans/corpSelect_safe.jsp"/>
+			
+		</action>
+		
+	</action-mappings>
+</struts-config>

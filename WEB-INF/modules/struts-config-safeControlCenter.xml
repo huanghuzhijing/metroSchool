@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="dtaqSituationAnalyseForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqSituationSuggestForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqWarnSignForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqRiskPatrolForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="safeAnalysisTotalForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="announcementForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dataEmulationForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqSituationMotionanalForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="hcHiddenTypeForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="hcSolutionForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="safetyDaylyLogForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="hcSolutionApproveForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="safeDocForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="safeDocAnnexForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="emergencyMemberForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="emergencyMaterialPlanForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="emergencyMaterialItemForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="riskLibForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="riskPlanForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		
+		<form-bean name="accidentDealForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="accidentReportForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="accidentReportAnnexForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		
+		<form-bean name="maSiteWorkForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="maGeneralWorkForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="maSiteWorkLogForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="maWorkLogAppraisalForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		
+		<form-bean name="serviceMailInfoForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+
+		
+		<form-bean name="dtaqSegmentScheduleForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+
+		<form-bean name="dtaqScheduleExcavateForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqScheduleForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="dtaqScheduleMainForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+
+	
+		
+	</form-beans>
+	<action-mappings>
+		<action path="/dtaqSituationAnalyseAction" name="dtaqSituationAnalyseForm" parameter="method" scope="request" validate="false">
+<!--			<forward name="list" path="/biz/common/contentSelect/contentSelectList.jsp"/>-->
+				<forward name="list" path="/biz/safeControlCenter/securitySituation/dtaqSituationAnalyseList.jsp"/>
+				<forward name="create" path="/biz/safeControlCenter/securitySituation/dtaqSituationAnalyseAddForm.jsp"/>
+				<forward name="edit" path="/biz/safeControlCenter/securitySituation/dtaqSituationAnalyseEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/securitySituation/dtaqSituationAnalyseView.jsp"/>
+				<forward name="check" path="/biz/safeControlCenter/securitySituation/dtaqSituationAnalyseCheck.jsp"/>
+				
+				<forward name="editFCKContent" path="/biz/safeControlCenter/securitySituation/fCKContentForm.jsp"/>
+<!--				<forward name="success" path="/dtaqSituationAnalyseAction.do?method=list" redirect="true"/>-->
+		</action>
+		<action path="/dtaqSecurityAnalyseAction" name="dtaqSituationAnalyseForm" parameter="method" scope="request" validate="false">
+				<forward name="reportStream" path="/biz/safeControlCenter/securityAnalyse/securityAnalyseExport.jsp"/>
+				<forward name="reportSelect" path="/biz/safeControlCenter/securityAnalyse/reportSelect.jsp"/>
+				<forward name="index" path="/biz/safeControlCenter/securityAnalyse/index.jsp"/>
+				<forward name="report" path="/biz/safeControlCenter/securityAnalyse/securityAnalyseReport.jsp"/>
+				
+<!--				<forward name="success" path="/dtaqSituationAnalyseAction.do?method=list" redirect="true"/>-->
+		</action>
+		<action path="/dtaqSituationSuggestAction" name="dtaqSituationSuggestForm" parameter="method" scope="request" validate="false">
+			<forward name="edit" path="/biz/safeControlCenter/securitySituation/dtaqSituationSuggestForm.jsp"/>
+		</action>
+		<action path="/dtaqWarnSignAction" name="dtaqWarnSignForm" parameter="method" scope="request" validate="false">
+	<forward name="list" path="/biz/safeControlCenter/signHistoryData/signHistoryDataList.jsp"/>
+	<forward name="stationTree" path="/biz/safeControlCenter/signHistoryData/stationTree.jsp"/>
+	<forward name="signView" path="/biz/safeControlCenter/signHistoryData/signView.jsp"/>
+				
+			<forward name="success" path="/dtaqWarnSignAction.do?method=list" redirect="true"/>
+			
+		</action>
+		<action path="/dtaqRiskPatrolAction" name="dtaqRiskPatrolForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/dtaqRiskPatrol/dtaqRiskPatrolList.jsp"/>
+				<forward name="create" path="/biz/safeControlCenter/dtaqRiskPatrol/dtaqRiskPatrolAddForm.jsp"/>
+				<forward name="edit" path="/biz/safeControlCenter/dtaqRiskPatrol/dtaqRiskPatrolEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/dtaqRiskPatrol/dtaqRiskPatrolView.jsp"/>
+				<forward name="projectReport" path="/biz/safeControlCenter/safeAnalysisTotal/projectReport.jsp"/>
+				<forward name="showMore" path="/biz/safeControlCenter/dtaqRiskPatrol/dtaqRiskPatrolListMore.jsp"/>
+				<forward name="riskInfo" path="/biz/safeControlCenter/dtaqRiskPatrol/riskPatrolInfo.jsp"/>
+				<forward name="stationTree" path="/biz/safeControlCenter/dtaqRiskPatrol/stationTree.jsp"/>
+				<forward name="success" path="/dtaqRiskPatrolAction.do?method=list" redirect="true"/>
+		</action>
+		<!-- 系统公告 -->
+		<action path="/announcementAction" name="announcementForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/announcement/announcementList.jsp"/>
+				<forward name="create" path="/biz/safeControlCenter/announcement/announcementAddForm.jsp"/>
+	
+				<forward name="edit" path="/biz/safeControlCenter/announcement/announcementEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/announcement/announcementView.jsp"/>
+				
+				<forward name="success" path="/announcementAction.do?method=list" redirect="true"/>
+		</action>
+		<!-- 数值与仿真编辑室 -->
+		<action path="/dataEmulationAction" name="dataEmulationForm" parameter="method" scope="request" validate="false">
+				<forward name="index" path="/biz/safeControlCenter/dataEmulation/dataEmulationIndex.jsp"/>
+				<forward name="listLeft" path="/biz/safeControlCenter/dataEmulation/dataEmulationListLeft.jsp"/>				
+				<forward name="list" path="/biz/safeControlCenter/dataEmulation/dataEmulationList.jsp"/>
+								
+				<forward name="create" path="/biz/safeControlCenter/dataEmulation/dataEmulationAddForm.jsp"/>
+				<forward name="edit" path="/biz/safeControlCenter/dataEmulation/dataEmulationEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/dataEmulation/dataEmulationView.jsp"/>
+				
+				<forward name="success" path="/dataEmulationAction.do?method=list" redirect="true"/>
+				<forward name="exsuccess" path="/biz/safeControlCenter/dataEmulation/exSuccess.jsp" />
+		</action>
+		
+		<!-- 运营期安全分析 -->
+	<action path="/dtaqSituationMotionanalAction" name="dtaqSituationMotionanalForm" parameter="method" scope="request" validate="false">
+		<forward name="index" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalIndex.jsp"/>
+		<forward name="listLeft" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalListLeft.jsp"/>
+		<forward name="list" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalList.jsp"/>
+		
+		<forward name="create" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalAddForm.jsp"/>
+		<forward name="edit" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalEditForm.jsp"/>
+		<forward name="view" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalView.jsp"/>
+		<forward name="add" path="/biz/safeControlCenter/dtaqSituationMotionanal/dtaqSituationMotionanalAdd.jsp"/>
+		
+		<forward name="success" path="/dtaqSituationMotionanalAction.do?method=list" redirect="true"/>
+		<forward name="exsuccess" path="/biz/safeControlCenter/dtaqSituationMotionanal/exSuccess.jsp" />
+	</action>
+	
+	<!-- 形象进度编辑室 -->
+		<action path="/segmentScheduleAction" name="dtaqSegmentScheduleForm" parameter="method" scope="request" validate="false">
+				<forward name="index" path="/biz/safeControlCenter/segmentSchedule/segmentScheduleIndex.jsp"/>
+				<forward name="listLeft" path="/biz/safeControlCenter/segmentSchedule/segmentScheduleListLeft.jsp"/>				
+				<forward name="list" path="/biz/safeControlCenter/segmentSchedule/segmentScheduleList.jsp"/>
+								
+				<forward name="edit" path="/biz/safeControlCenter/segmentSchedule/segmentScheduleEditForm.jsp"/>
+				<forward name="upFile1" path="/biz/safeControlCenter/segmentSchedule/upFile1.jsp"/>
+				<forward name="upFile2" path="/biz/safeControlCenter/segmentSchedule/upFile2.jsp"/>
+				<forward name="upFile3" path="/biz/safeControlCenter/segmentSchedule/upFile3.jsp"/>
+				
+				
+				<forward name="success" path="/segmentScheduleAction.do?method=list" redirect="true"/>
+				<forward name="exsuccess" path="/biz/safeControlCenter/segmentSchedule/exSuccess.jsp" />
+		</action>
+	
+	
+	<!-- 工点工作管理 -->
+	<action path="/maSiteWorkAction" name="maSiteWorkForm" parameter="method" scope="request" validate="false">
+		<forward name="index" path="/biz/safeControlCenter/maSiteWork/maSiteWorkIndex.jsp"/>
+		<forward name="listLeft" path="/biz/safeControlCenter/maSiteWork/maSiteWorkListLeft.jsp"/>
+		<forward name="list" path="/biz/safeControlCenter/maSiteWork/maSiteWorkList.jsp"/>
+		
+		<forward name="create" path="/biz/safeControlCenter/maSiteWork/maSiteWorkAddForm.jsp"/>
+		<forward name="edit" path="/biz/safeControlCenter/maSiteWork/maSiteWorkEditForm.jsp"/>
+		<forward name="view" path="/biz/safeControlCenter/maSiteWork/maSiteWorkView.jsp"/>
+		
+		<forward name="success" path="/maSiteWorkAction.do?method=list" redirect="true"/>
+		<forward name="exsuccess" path="/biz/safeControlCenter/maSiteWork/exSuccess.jsp" />
+	</action>
+	
+	<!-- 一般工作管理 -->
+		<action path="/maGeneralWorkAction" name="maGeneralWorkForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/maGeneralWork/maGeneralWorkList.jsp"/>
+				<forward name="create" path="/biz/safeControlCenter/maGeneralWork/maGeneralWorkAddForm.jsp"/>
+				<forward name="edit" path="/biz/safeControlCenter/maGeneralWork/maGeneralWorkEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/maGeneralWork/maGeneralWorkView.jsp"/>
+				
+				<forward name="success" path="/maGeneralWorkAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 工作日志填报 -->
+		<action path="/maSiteWorkLogAction" name="maSiteWorkLogForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/safeControlCenter/maSiteWorkLog/reportLogList.jsp"/>
+			<forward name="finishList" path="/biz/safeControlCenter/maSiteWorkLog/reportLogFinishList.jsp"/>
+			<forward name="edit" path="/biz/safeControlCenter/maSiteWorkLog/stationWorkForm.jsp"/>
+			<forward name="success" path="/maSiteWorkLogAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 工作日志评价 -->
+		<action path="/maWorkLogAppraisalAction" name="maWorkLogAppraisalForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/safeControlCenter/maWorkLogAppraisal/maWorkLogAppraisalList.jsp"/>
+			<forward name="viewWorkInfo" path="/biz/safeControlCenter/maWorkLogAppraisal/viewWorkLogInfo.jsp"/>
+			<forward name="appraisalFileContent" path="/biz/safeControlCenter/maWorkLogAppraisal/appraisalFileContent.jsp"/>
+			<forward name="appraisalWorkList" path="/biz/safeControlCenter/maWorkLogAppraisal/appraisalWindow.jsp"/>
+			<forward name="success" path="/maWorkLogAppraisalAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 邮件发送平台 -->
+		<action path="/serviceMailInfoAction" name="serviceMailInfoForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/sysmanager/serviceMailInfo/serviceMailInfoList.jsp"/>
+				<forward name="create" path="/biz/sysmanager/serviceMailInfo/serviceMailInfoAddForm.jsp"/>				
+				<forward name="view" path="/biz/sysmanager/serviceMailInfo/serviceMailInfoView.jsp"/>
+<!--				<forward name="successPage" path="/biz/sysmanager/serviceMailInfo/successPage.jsp"/>-->
+				<forward name="success" path="/serviceMailInfoAction.do?method=list" redirect="true"/>
+		</action>
+		
+	
+		<action path="/safeAnalysisTotalAction" name="safeAnalysisTotalForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalFormList.jsp"/>
+				<forward name="index" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalFormIndex.jsp"/>
+				<forward name="tree" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalFormTree.jsp"/>
+				<forward name="showTotalInfo" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalFormInfo.jsp"/>
+				
+				<forward name="showScheduleImage" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalScheduleImg.jsp"/>
+			    <forward name="showStationPointPic" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalStationPic.jsp"/>
+			    <forward name="showJcPage" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalJCPage.jsp"/>
+			    <forward name="showjctable" path="/biz/safeControlCenter/safeAnalysisTotal/safeAnalysisTotalShowJCTable.jsp"/>
+				<forward name="suggestView" path="/biz/safeControlCenter/safeAnalysisTotal/suggestView.jsp"/>
+				<forward name="exSuccess" path="/biz/safeControlCenter/safeAnalysisTotal/exSuccess.jsp"/>
+				
+				<forward name="riskInfo" path="/biz/safeControlCenter/safeAnalysisTotal/riskPatrolInfo.jsp"/>
+				<forward name="viewShedule" path="/biz/safeControlCenter/safeAnalysisTotal/projectSchedule.jsp"/>
+				<forward name="showFckContent" path="/biz/safeControlCenter/safeAnalysisTotal/fileContent.jsp"/>
+				<forward name="viewPointPicture" path="/biz/safeControlCenter/safeAnalysisTotal/dataPointPicture.jsp"/>
+				<forward name="editSign" path="/biz/safeControlCenter/safeAnalysisTotal/selectSendMessage.jsp"/>
+				<forward name="viewDataReport" path="/biz/safeControlCenter/safeAnalysisTotal/monitingDataReport.jsp"/>
+				<forward name="selectMailboxSend" path="/biz/safeControlCenter/safeAnalysisTotal/selectSendMessage.jsp"/>
+			    <forward name="showDetail" path="/biz/safeControlCenter/safeAnalysisTotal/showDetail.jsp"/>
+			
+				<forward name="success" path="/safeAnalysisTotalAction.do?method=list" redirect="true"/>
+		</action>
+		
+		
+		<!-- 质安隐患信息管理 -->
+		<action path="/hcSolutionAction" name="hcSolutionForm" parameter="method" scope="request" validate="false">
+				<forward name="index" path="/biz/safeControlCenter/hcSolution/hcSolutionIndex.jsp"/>
+				<forward name="listLeft" path="/biz/safeControlCenter/hcSolution/hcSolutionListLeft.jsp"/>				
+				<forward name="list" path="/biz/safeControlCenter/hcSolution/hcSolutionList.jsp"/>
+								
+				<forward name="create" path="/biz/safeControlCenter/hcSolution/hcSolutionAddForm.jsp"/>
+				<forward name="edit" path="/biz/safeControlCenter/hcSolution/hcSolutionEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/hcSolution/hcSolutionView.jsp"/>
+				
+				<forward name="success" path="/hcSolutionAction.do?method=list" redirect="true"/>
+				<forward name="exsuccess" path="/biz/safeControlCenter/hcSolution/exSuccess.jsp" />
+		</action>
+		
+		<!-- 质安隐患信息审核 -->
+		<action path="/hcSolutionApproveAction" name="hcSolutionApproveForm" parameter="method" scope="request" validate="false">
+								
+				<forward name="list" path="/biz/safeControlCenter/hcSolutionApprove/hcSolutionApproveList.jsp"/>												
+				<forward name="edit" path="/biz/safeControlCenter/hcSolutionApprove/hcSolutionApproveEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/hcSolutionApprove/hcSolutionApproveView.jsp"/>				
+				<forward name="success" path="/hcSolutionApproveAction.do?method=list" redirect="true"/>
+				
+		</action>
+		
+		<!-- 安全档案 -->
+		<action path="/safeDocAction" name="safeDocForm" parameter="method" scope="request" validate="false">
+								
+				<forward name="index" path="/biz/safeControlCenter/safeDoc/safeDocIndex.jsp"/>
+				<forward name="listLeft" path="/biz/safeControlCenter/safeDoc/safeDocListLeft.jsp"/>				
+				<forward name="list" path="/biz/safeControlCenter/safeDoc/safeDocList.jsp"/>
+				
+				<forward name="queryIndex" path="/biz/safeControlCenter/safeDoc/safeDocQueryIndex.jsp"/>
+				<forward name="queryListLeft" path="/biz/safeControlCenter/safeDoc/safeDocQueryListLeft.jsp"/>				
+				<forward name="queryList" path="/biz/safeControlCenter/safeDoc/safeDocQueryList.jsp"/>
+								
+				<forward name="create" path="/biz/safeControlCenter/safeDoc/safeDocAddForm.jsp"/>
+				<forward name="edit" path="/biz/safeControlCenter/safeDoc/safeDocEditForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/safeDoc/safeDocView.jsp"/>
+				
+				<forward name="success" path="/safeDocAction.do?method=list" redirect="true"/>
+				<forward name="exsuccess" path="/biz/safeControlCenter/safeDoc/exSuccess.jsp" />
+				
+		</action>
+		
+		<!-- 安全档案 附件 -->
+		<action path="/safeDocAnnexAction" name="safeDocAnnexForm" parameter="method" scope="request" validate="false">
+			
+			<forward name="webOfficeView" path="/biz/safeControlCenter/safeDoc/webOfficeView.jsp"/>
+			
+		</action>
+		
+		<!-- 安全事故 快报 -->
+		<action path="/accidentReportAction" name="accidentReportForm" parameter="method" scope="request" validate="false">
+								
+				<forward name="list" path="/biz/safeControlCenter/accident/accidentReportList.jsp"/>												
+				<forward name="create" path="/biz/safeControlCenter/accident/accidentReportAddForm.jsp"/>
+				<forward name="view" path="/biz/safeControlCenter/accident/accidentReportView.jsp"/>				
+				<forward name="success" path="/biz/safeControlCenter/accident/accidentReportAdd.jsp"/>
+				
+		</action>
+		
+		<!-- 安全事故 处理 -->
+		<action path="/accidentDealAction" name="accidentDealForm" parameter="method" scope="request" validate="false">
+								
+														
+				<forward name="edit" path="/biz/safeControlCenter/accident/accidentDealEditForm.jsp"/>								
+				<forward name="success" path="/accidentReportAction.do?method=list" redirect="true"/>
+				
+		</action>
+		
+		
+		<action path="/hcHiddenTypeAction" name="hcHiddenTypeForm" parameter="method" scope="request" validate="false">
+		<forward name="list" path="/biz/safeControlCenter/hcHiddenType/hcHiddenTypeList.jsp"></forward>
+		<forward name="edit" path="/biz/safeControlCenter/hcHiddenType/hcHiddenTypeEdit.jsp"></forward>
+		<forward name="create" path="/biz/safeControlCenter/hcHiddenType/hcHiddenTypeEdit.jsp"></forward>
+		<forward name="selectList" path="/biz/safeControlCenter/hcHiddenType/hcHiddenTypeSelectList.jsp"></forward>
+		<forward name="successPage" path="/biz/safeControlCenter/hcHiddenType/successPage.jsp"></forward>
+		</action>
+		<action path="/safetyDaylyLogAction" name="safetyDaylyLogForm" parameter="method" scope="request" validate="false">
+		<forward name="list" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogList.jsp"></forward>
+		<forward name="listQuery" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogListQuery.jsp"></forward>
+		<forward name="edit" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogForm.jsp"></forward>
+		<forward name="listLeft" path="/biz/safeControlCenter/safetyDaylyLog/pointTree.jsp"></forward>
+		<forward name="listLeftQuery" path="/biz/safeControlCenter/safetyDaylyLog/pointTreeQuery.jsp"></forward>
+		<forward name="index" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogIndex.jsp"></forward>
+		<forward name="queryIndex" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogQueryIndex.jsp"></forward>
+		<forward name="create" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogForm.jsp"></forward>
+		<forward name="view" path="/biz/safeControlCenter/safetyDaylyLog/safetyDaylyLogView.jsp"></forward>
+		<forward name="success" path="/safetyDaylyLogAction.do?method=listPage" redirect="true"/>
+		</action>
+		<action path="/emergencyMemberAction" name="emergencyMemberForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/emergencyMember/emergencyMemberList.jsp"></forward>
+				<forward name="edit" path="/biz/safeControlCenter/emergencyMember/emergencyMemberForm.jsp"></forward>
+				<forward name="create" path="/biz/safeControlCenter/hcHiddenType/hcHiddenTypeEdit.jsp"></forward>
+				<forward name="view" path="/biz/safeControlCenter/emergencyMember/emergencyMemberView.jsp"></forward>
+				<forward name="selectSignEmployee" path="/biz/safeControlCenter/emergencyMember/selectSignEmployee.jsp"></forward>
+				<forward name="success" path="/emergencyMemberAction.do?method=list" redirect="true"/>
+				
+		</action>
+		<action path="/emergencyMaterialPlanAction" name="emergencyMaterialPlanForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/emergencyMaterialPlan/emergencyMaterialPlanList.jsp"></forward>
+				<forward name="edit" path="/biz/safeControlCenter/emergencyMaterialPlan/emergencyMaterialPlanForm.jsp"></forward>
+				<forward name="create" path="/biz/safeControlCenter/emergencyMaterialPlan/emergencyMaterialPlanForm.jsp"></forward>
+				<forward name="view" path="/biz/safeControlCenter/emergencyMaterialPlan/emergencyMaterialPlanView.jsp"></forward>
+				<forward name="success" path="/emergencyMaterialPlanAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/emergencyMaterialItemAction" name="emergencyMaterialItemForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/emergencyMaterialItem/emergencyMaterialItemList.jsp"></forward>
+				<forward name="edit" path="/biz/safeControlCenter/emergencyMaterialItem/emergencyMaterialItemForm.jsp"></forward>
+				<forward name="create" path="/biz/safeControlCenter/hcHiddenType/hcHiddenTypeEdit.jsp"></forward>
+				<forward name="view" path="/biz/safeControlCenter/emergencyMaterialItem/emergencyMaterialItemView.jsp"></forward>
+				<forward name="success" path="/emergencyMaterialItemAction.do?method=list" redirect="true"/>
+		</action>
+		<action path="/riskLibAction" name="riskLibForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/riskLib/riskLibList.jsp"></forward>
+				<forward name="index" path="/biz/safeControlCenter/riskLib/riskLibIndex.jsp"></forward>
+				<forward name="tree" path="/biz/safeControlCenter/riskLib/riskLibTree.jsp"></forward>
+				<forward name="edit" path="/biz/safeControlCenter/riskLib/riskLibForm.jsp"></forward>
+				<forward name="view" path="/biz/safeControlCenter/riskLib/riskLibView.jsp"></forward>
+				<forward name="successPage" path="/biz/safeControlCenter/riskLib/successPage.jsp"></forward>
+		</action>
+		<action path="/riskPlanAction" name="riskPlanForm" parameter="method" scope="request" validate="false">
+				<forward name="list" path="/biz/safeControlCenter/riskPlan/riskPlanList.jsp"></forward>
+				<forward name="queryList" path="/biz/safeControlCenter/riskPlan/riskPlanQueryList.jsp"></forward>
+				
+				<forward name="edit" path="/biz/safeControlCenter/riskPlan/riskPlanForm.jsp"></forward>
+				<forward name="view" path="/biz/safeControlCenter/riskPlan/riskPlanView.jsp"></forward>
+				<forward name="successPage" path="/biz/safeControlCenter/riskLib/successPage.jsp"></forward>
+		</action>
+		<!-- 区间进度 -->
+		<action path="/dtaqScheduleAction" name="dtaqScheduleForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/safeControlCenter/schedule/scheduleList.jsp"/>
+			<forward name="view" path="/biz/safeControlCenter/schedule/scheduleView.jsp"/>
+			<forward name="edit" path="/biz/safeControlCenter/schedule/scheduleForm.jsp"/>
+			<forward name="success" path="/dtaqScheduleAction.do?method=list" redirect="true"/>
+			<forward name="showExcelImport" path="/biz/safeControlCenter/schedule/showExcelImport.jsp"/>
+		</action>
+		<!-- 车站进度 -->
+		<action path="/dtaqScheduleExcavateAction" name="dtaqScheduleExcavateForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/safeControlCenter/schedule/dtaqScheduleExcavateList.jsp"/>
+			<forward name="view" path="/biz/safeControlCenter/schedule/dtaqScheduleExcavateView.jsp"/>
+			<forward name="showDetail" path="/biz/safeControlCenter/schedule/showDetail.jsp"/>
+			<forward name="edit" path="/biz/safeControlCenter/schedule/dtaqScheduleExcavateForm.jsp"/>
+			<forward name="success" path="/dtaqScheduleExcavateAction.do?method=list" redirect="true"/>
+			<forward name="showExcelImport" path="/biz/safeControlCenter/schedule/showExcelImport.jsp"/>
+		</action>
+		<!-- 车站进度 -->
+		<action path="/dtaqScheduleMainAction" name="dtaqScheduleMainForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/safeControlCenter/schedule/dtaqScheduleMainList.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

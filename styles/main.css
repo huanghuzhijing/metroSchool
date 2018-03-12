@@ -1,0 +1,696 @@
+
+
+
+
+A:link {
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none
+}
+
+A:visited {
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none
+}
+
+A:hover {
+	FONT-SIZE: 12px;
+	COLOR: #cc0000;
+	TEXT-DECORATION: underline
+}
+
+.txtinput {
+	color: 184aff;
+	border: 0 double #ffffff;
+	font-size: 9pt
+}
+
+.boxinput {
+	color: #000099;
+	border: 1 double #999999;
+	font-size: 9pt;
+	width: 40px
+}
+
+
+
+.bgdqwz {
+	background-image: url(../../images/common/main/dh_center.gif);
+	padding-top: 3px;
+}
+
+.tableblack {
+	border: 1px solid #808080;
+	background-color: #F2F6FF;
+}
+
+.tablebg {
+	border: 1px solid #808080;
+	background-color: #FFFFFF;
+}
+
+.tabletitle {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(../../images/common/main/leftbg.gif);
+	padding-top: 2px;
+}
+
+.tablecenter {
+	background-image: url(../../images/common/main/centerbg.gif);
+}
+
+.btnbg {
+	font-weight: bold;
+	color: #333333;
+	background-image: url(../../images/common/main/gnan_center.gif);
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+
+
+.border_right {
+	background-image: url(../../images/common/main/bx_03.gif);
+	background-repeat: no-repeat;
+	height: 67px;
+	width: 557px;
+	background-position: left;
+}
+
+.border_right_02 {
+	background-image: url(../../images/common/main/bx_13.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 616px;
+	background-position: left;
+}
+
+.border_right_03 {
+	background-image: url(../../images/common/main/bx_14.gif);
+	background-position: left;
+	width: 60px;
+	height: 60px;
+}
+
+.border_right_04 {
+	background-image: url(../../images/common/main/bx_08.gif);
+	background-position: left;
+}
+
+.border_right_05 {
+	background-image: url(../../images/common/main/bx_15.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+	height: 203px;
+	width: 60px;
+}
+
+.border_left {
+	background-image: url(../../images/common/main/bx_02.gif);
+	background-repeat: no-repeat;
+	height: 67px;
+	width: 61px;
+	vertical-align: top;
+}
+
+.border_left_02 {
+	background-image: url(../../images/common/main/bx_10.gif);
+	background-repeat: repeat-y;
+}
+
+.border_left_03 {
+	background-image: url(../../images/common/main/bx_05.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 203px;
+	width: 61px;
+}
+
+.border_left_04 {
+	background-image: url(../../images/common/main/bx_12.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 22px;
+	width: 61px;
+	vertical-align: bottom;
+}
+
+p#outer {
+	margin: 0 auto;
+	width: 50px;
+}
+
+#outer a {
+	margin: 0px;
+	display: block;
+	position: relative;
+	border: 0px solid #ccc;
+}
+
+#outer a:hover {
+	border: 1px dashed blue;
+}
+
+#outer img {
+	display: block;
+	border: none;
+	background: #069;
+	border: 1px #c00;
+	FILTER: alpha(opacity = 70);
+	event: expression(onmouseout =   function() { low(this)
+}
+
+,
+onmouseover = function (){high (this)
+	
+}
+
+)
+}
+
+.div-01 {
+	color: #333333;
+	background-image: url(../../images/common/main/div_title01.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 3px;
+	font-weight: bold;
+	padding-left: 10px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #22A3FE;
+	border-right-color: #228BDB;
+	border-bottom-color: #96CFFD;
+	border-left-color: #7CC1F6;
+	padding-right: 5px;
+	height: 21px;
+}
+
+.div-02 {
+	color: #FFFFFF;
+	background-image: url(../../images/common/main/div_title02.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 3px;
+	font-weight: bold;
+	padding-left: 6px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #A6D2F0;
+	border-right-color: #A3C5E1;
+	border-bottom-color: #D6E9F9;
+	border-left-color: #CCE3F5;
+	height: 21px;
+	padding-right: 5px;
+}
+
+.tr-title {
+	font-weight: bold;
+	color: #000000;
+	background-color: #C9D8FF;
+	padding-left: 10px;
+	border: 1px solid #C1C1C1;
+	padding-top: 4px;
+	padding-bottom: 3px;
+}
+
+.lc-01 {
+	background-image: url(../../images/common/main/bg_lc01.gif);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-left: 26px;
+	height: 25px;
+	font-weight: bold;
+	color: #5D5D5D;
+	border: 1px solid #DADADA;
+	padding-right: 5px;
+}
+
+.lc-02 {
+	background-image: url(../../images/common/main/bg_lc02.gif);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-left: 30px;
+	height: 25px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: 1px solid #777AE8;
+	padding-right: 5px;
+}
+
+.unlineinput {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+}
+
+select {
+	font-size: 12px;
+	line-height: 18px;
+	border: 0px;
+	color: #000000;
+}
+
+.inputUnable {
+	border-right: #cccccc 1px solid;
+	border-top: #cccccc 1px solid;
+	font-size: 9pt;
+	border-left: #cccccc 1px solid;
+	color: black;
+	border-bottom: #cccccc 1px solid;
+	font-family: "verdana", "arial", "����";
+	background-color: ghostwhite;
+}
+
+.input1Unable {
+	border-right: #cccccc 1px;
+	border-top: #cccccc 1px;
+	font-size: 9pt;
+	border-left: #cccccc 1px;
+	color: black;
+	border-bottom: lightgrey 1px solid;
+	font-family: "verdana", "arial", "����";
+	background-color: transparent;
+}
+
+input.button {
+	border-right: #3333ff 1px solid;
+	border-top: #3333ff 1px solid;
+	font-size: 9pt;
+	border-left: #3333ff 1px solid;
+	color: #3333ff;
+	border-bottom: mediumpurple 1px solid;
+	font-family: "verdana", "arial", "����";
+	background-color: transparent;
+	event: expression(onmouseover =   function() { 
+ this . style . background = '#D1D8DD', this . style . color = '#1679AA'
+}
+
+,
+onmouseout  = function () {this
+	.style.background='transparent',this.style.color='#696969'
+	
+}
+
+)
+}
+.buttonUnable {
+	border-right: lightgrey 1px solid;
+	border-top: lightgrey 1px solid;
+	font-size: 9pt;
+	border-left: lightgrey 1px solid;
+	color: dimgray;
+	border-bottom: lightgrey 1px solid;
+	font-family: "verdana", "arial", "����";
+	background-color: transparent;
+	event: expression(onmouseover =   function() { 
+ this.style.background = '#D1D8DD',this.style.color = '#1679AA'
+},
+onmouseout  = function () {this
+	.style.background='transparent',this.style.color='#696969'
+	
+}
+
+)
+}
+
+.flattext {
+	font-size: 9pt;
+	background-color: #FFFFFF;
+	border-left: dimgray 1px solid;
+	border-right: dimgray 1px solid;
+	border-top: dimgray 1px solid;
+	border-bottom: dimgray 1px solid
+}
+
+
+.whitetext {
+	font-size: 12px;
+	background-color: #FFFFFF;
+	border-left: #000000 1px solid;
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	border-bottom: #000000 1px solid
+}
+
+.flatbutton {
+	background-color: "#EeEeFe";
+	color: "#000000";;
+	border: 1px double
+}
+
+.hiddenover {
+	width: 200px;
+	white-space: nowrap;
+	word-break: keep-all;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 12px;
+	border-right: #cccccc 0px;
+	border-top: #cccccc 1px;
+	font-size: 9pt;
+	border-left: #cccccc 1px;
+	color: black;
+	border-bottom: lightgrey 0px solid;
+	font-family: "verdana", "arial", "����";
+	background-color: transparent;
+}
+
+
+
+.titleandlist span {
+	display: block;
+}
+
+.full {
+	width: 98%;
+	border-top: 2px groove;
+	border-right: 2px groove;
+	border-bottom: 2px groove;
+	border-left: 2px groove;
+}
+
+.Noprint{
+	display:"";
+    border-right: lightgrey 1px solid;
+	border-top: lightgrey 1px solid;
+	font-size: 9pt;
+	border-left: lightgrey 1px solid;
+	color: dimgray;
+	border-bottom: lightgrey 1px solid;
+	font-family: "verdana", "arial", "����";
+	background-color: transparent;
+	event: expression(onmouseover =   function() { 
+ this.style.background = '#D1D8DD',this.style.color = '#1679AA'
+},
+onmouseout  = function () {this
+	.style.background='transparent',this.style.color='#696969'
+	
+}
+
+)
+
+}
+.PageNext{page-break-after: always;}
+
+/* The main calendar widget.  DIV containing a table. */
+
+.calendar {
+  position: relative;
+  display: none;
+  border: 1px solid;
+  border-color: #fff #000 #000 #fff;
+  font-size: 11px;
+  cursor: default;
+  background: Window;
+  color: WindowText;
+  font-family: tahoma,verdana,sans-serif;
+}
+
+.calendar table {
+  border: 1px solid;
+  border-color: #fff #000 #000 #fff;
+  font-size: 11px;
+  cursor: default;
+  background: Window;
+  color: WindowText;
+  font-family: tahoma,verdana,sans-serif;
+}
+
+/* Header part -- contains navigation buttons and day names. */
+
+.calendar .button { /* "<<", "<", ">", ">>" buttons have this class */
+  text-align: center;
+  padding: 1px;
+  border: 1px solid;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+  background: ButtonFace;
+}
+
+.calendar .nav {
+  background: ButtonFace url(menuarrow.gif) no-repeat 100% 100%;
+}
+
+.calendar thead .title { /* This holds the current "month, year" */
+  font-weight: bold;
+  padding: 1px;
+  border: 1px solid #000;
+  background: ActiveCaption;
+  color: CaptionText;
+  text-align: center;
+}
+
+.calendar thead .headrow { /* Row <TR> containing navigation buttons */
+}
+
+.calendar thead .daynames { /* Row <TR> containing the day names */
+}
+
+.calendar thead .name { /* Cells <TD> containing the day names */
+  border-bottom: 1px solid ButtonShadow;
+  padding: 2px;
+  text-align: center;
+  background: ButtonFace;
+  color: ButtonText;
+}
+
+.calendar thead .weekend { /* How a weekend day name shows in header */
+  color: #f00;
+}
+
+.calendar thead .hilite { /* How do the buttons in header appear when hover */
+  border: 2px solid;
+  padding: 0px;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.calendar thead .active { /* Active (pressed) buttons in header */
+  border-width: 1px;
+  padding: 2px 0px 0px 2px;
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+}
+
+/* The body part -- contains all the days in month. */
+
+.calendar tbody .day { /* Cells <TD> containing month days dates */
+  width: 2em;
+  text-align: right;
+  padding: 2px 4px 2px 2px;
+}
+.calendar tbody .day.othermonth {
+  font-size: 80%;
+  color: #aaa;
+}
+.calendar tbody .day.othermonth.oweekend {
+  color: #faa;
+}
+
+.calendar table .wn {
+  padding: 2px 3px 2px 2px;
+  border-right: 1px solid ButtonShadow;
+  background: ButtonFace;
+  color: ButtonText;
+}
+
+.calendar tbody .rowhilite td {
+  background: Highlight;
+  color: HighlightText;
+}
+
+.calendar tbody td.hilite { /* Hovered cells <TD> */
+  padding: 1px 3px 1px 1px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #fff;
+}
+
+.calendar tbody td.active { /* Active (pressed) cells <TD> */
+  padding: 2px 2px 0px 2px;
+  border: 1px solid;
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+}
+
+.calendar tbody td.selected { /* Cell showing selected date */
+  font-weight: bold;
+  border: 1px solid;
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+  padding: 2px 2px 0px 2px;
+  background: ButtonFace;
+  color: ButtonText;
+}
+
+.calendar tbody td.weekend { /* Cells showing weekend days */
+  color: #f00;
+}
+
+.calendar tbody td.today { /* Cell showing today date */
+  font-weight: bold;
+  color: #00f;
+}
+
+.calendar tbody td.disabled { color: GrayText; }
+
+.calendar tbody .emptycell { /* Empty cells (the best is to hide them) */
+  visibility: hidden;
+}
+
+.calendar tbody .emptyrow { /* Empty row (some months need less than 6 rows) */
+  display: none;
+}
+
+/* The footer part -- status bar and "Close" button */
+
+.calendar tfoot .footrow { /* The <TR> in footer (only one right now) */
+}
+
+.calendar tfoot .ttip { /* Tooltip (status bar) cell <TD> */
+  background: ButtonFace;
+  padding: 1px;
+  border: 1px solid;
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+  color: ButtonText;
+  text-align: center;
+}
+
+.calendar tfoot .hilite { /* Hover style for buttons in footer */
+  border-top: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #fff;
+  padding: 1px;
+  background: #e4e0d8;
+}
+
+.calendar tfoot .active { /* Active (pressed) style for buttons in footer */
+  padding: 2px 0px 0px 2px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #000;
+}
+
+/* Combo boxes (menus that display months/years for direct selection) */
+
+.calendar .combo {
+  position: absolute;
+  display: none;
+  width: 4em;
+  top: 0px;
+  left: 0px;
+  cursor: default;
+  border: 1px solid;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+  background: Menu;
+  color: MenuText;
+  font-size: 90%;
+  padding: 1px;
+  z-index: 100;
+}
+
+.calendar .combo .label,
+.calendar .combo .label-IEfix {
+  text-align: center;
+  padding: 1px;
+}
+
+.calendar .combo .label-IEfix {
+  width: 4em;
+}
+
+.calendar .combo .active {
+  padding: 0px;
+  border: 1px solid #000;
+}
+
+.calendar .combo .hilite {
+  background: Highlight;
+  color: HighlightText;
+}
+
+.calendar td.time {
+  border-top: 1px solid ButtonShadow;
+  padding: 1px 0px;
+  text-align: center;
+  background-color: ButtonFace;
+}
+
+.calendar td.time .hour,
+.calendar td.time .minute,
+.calendar td.time .ampm {
+  padding: 0px 3px 0px 4px;
+  border: 1px solid #889;
+  font-weight: bold;
+  background-color: Menu;
+}
+
+.calendar td.time .ampm {
+  text-align: center;
+}
+
+.calendar td.time .colon {
+  padding: 0px 2px 0px 3px;
+  font-weight: bold;
+}
+
+.calendar td.time span.hilite {
+  border-color: #000;
+  background-color: Highlight;
+  color: HighlightText;
+}
+
+.calendar td.time span.active {
+  border-color: #f00;
+  background-color: #000;
+  color: #0f0;
+}
+	#info {
+          font-size: 12px;
+          overflow:hidden;
+          background-color: #FFFFFF;
+          color: black;
+          padding-right:5px;
+          padding-left:5px;
+          font-family: courier;
+          width:100%;
+          letter-spacing:0;
+          line-height:12px;
+          border-style:none;
+        }
+ 
+.queryHead{
+  padding:4px;
+  }
+  
+.queryHead span{
+  display:block;
+  width:25%;
+  float:left;
+}
+
+#qbutton{
+  display:block;
+  width:100%;
+  float: none;
+  text-align: center;
+}
+

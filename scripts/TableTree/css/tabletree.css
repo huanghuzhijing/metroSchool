@@ -1,0 +1,145 @@
+/*--------------------------------------------------|
+
+| TableTree4j 1.1 Release                           |
+
+| IE Mozilla  Opera  FireFox  Netscape  Safari      |
+
+| www.xcode-studio.cn                               |
+
+|---------------------------------------------------|
+
+| authod : Lanner.K       YuBiao Ke                 |
+
+| QQ:214392346  E-Mail:lannerk@qq.com               |
+
+| http://www.xcode-studio.cn                        |
+
+|---------------------------------------------------|
+
+| Copyright (c) 2007-2008 xcode-studio              |
+
+| This CSS can be used freely as long as all        |
+
+| copyright messages are intact.                    |
+
+| Create Date: 2008.5.7                             |
+
+| Updated: 2008.5.17                                |
+
+|--------------------------------------------------*/
+
+body {
+	
+}
+
+.GridView {
+	font-size:10pt;
+	width:99% ;
+	border:1px solid ;
+	border-bottom: 1px solid #C0C0C0;
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	border-top: 1px solid #C0C0C0;
+	border-collapse: collapse;
+	border-spacing: 0px;
+
+}
+
+.GridHead td {
+	font-size:9pt;
+	background:#f1f1f1;
+	height:20px;
+	font-weight:bold;
+	color: #313131;
+	border: 1px solid #C0C0C0;
+	
+}
+
+.GridHead a {
+	color: #1F4A65;
+	white-space: nowrap;
+	text-decoration: none;	
+}
+
+.GridHead a:hover{
+	color: #1F4A65;
+}
+
+.GridHighLightRow td {/*dafult name*/
+	background-color: #F1F4F5;
+	border: 1px solid #C0C0C0;
+	
+}
+
+.GRIDTREESTYLE{
+	font-size:12px;
+	
+}
+
+.GRIDTREESTYLE a{
+	white-space: nowrap;
+	color: #865AF6;
+	text-decoration: none;
+}
+
+.GRIDTREESTYLE a:hover{
+	color: #865AF6;
+	text-decoration: underline;
+}
+
+.GRIDTREESTYLE a.nodeSel{
+	background-color: #DEEFEF;
+}
+
+.MenuRoot td {
+	font-size:12px;
+	text-align: left;
+	/*font-weight:bold;*/
+}
+
+.MenuRoot a {
+	color: #333;
+	white-space: nowrap;
+	text-decoration: none;	
+}
+
+.MenuRoot a:hover{
+	color: #333;
+	/*border:#83C2C2 solid;
+	border-width:0px 0px 1px;*/
+}
+
+.MENUTREESTYLE{
+	color:#666;
+	font-size:9pt;
+}
+
+.MENUTREESTYLE a{
+	white-space: nowrap;
+	color: #333;
+	text-decoration: none;
+}
+
+.MENUTREESTYLE a:hover{
+	color: #333;	
+	border:#83C2C2 solid;
+	border-width:0px 0px 1px;	
+	/*text-decoration: underline;*/
+}
+
+.MENUTREESTYLE a.nodeSel{
+	background-color: #DEEFEF;
+}
+
+.centerClo {
+		text-align: center;
+		border: 1px solid #C0C0C0;
+	}
+.leftClo {
+		text-align: left;
+		border: 1px solid #C0C0C0;
+	}
+.rightClo {
+		text-align: right;
+		border: 1px solid #C0C0C0;
+	}

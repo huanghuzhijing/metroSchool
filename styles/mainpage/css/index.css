@@ -1,0 +1,93 @@
+﻿body, div, ul, li ,dl,dt,dd,h3{
+		margin: 0px;padding: 0px;
+		font-size:8px
+}
+img{
+	border:0px; margin:0px;padding:0px
+}
+ul,li,dl,dt,dd{
+	list-style-type:none
+}
+a{ color:black; text-decoration:none}
+a:hover{}
+.clear{clear:both}
+
+	.picture{
+		width:336px;border:1px solid #d7d7d7; height:250px; margin:5px;
+	}
+	ul.icon{
+		margin:5px;width:338px;height:80px;
+	}
+ul.icon a{color:white;}
+		ul.icon li{ float:left; display:inline;}
+		ul.icon .icon_1{ background-color:#70bf28;width:102px; margin-right:3px; height:80px; background-image:url(../ie.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+			ul.icon .icon_1 a{text-align:center;padding-top:58px; display:block; font-size:14px; font-weight:bold; text-indent:8px;}
+			
+		ul.icon .icon_2{ background-color:#eb710c;width:100px; margin-right:3px; height:80px; background-image:url(../images/icon_09.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+		ul.icon .icon_3{ background-color:#653ebf;width:100px;height:80px; background-image:url(../images/icon_18.png); background-repeat:no-repeat; background-position:32px 10px; padding:0 5px; position:relative}
+			ul.icon .icon_2 a,ul.icon .icon_3 a{text-align:center;padding-top:58px; display:block; font-size:14px; font-weight:bold; text-indent:2px}
+			
+	.list_common{width:336px;margin:5px; border:1px solid #4794e4;overflow:hidden;height:265px;}
+					.list_common h3{text-align:left;width:336px;font-size:16px; height:42px;line-height:42px; font-weight:bolder;padding-left:5px;color:#06297d;border-bottom:3px solid #4794e4; color:#4794e4;text-indent:8px;}
+				.list_common h3 a{float:right;font-weight:normal;background:url(../images/icon_20.jpg) no-repeat 0 5px;width:41px; height:42px;  }
+				.list_common h3 a:hover{text-decoration:underline;}
+				.list_common ul{ margin:0px; padding:0px;  width:336px; height:200px;}
+					.list_common ul li{
+						text-align:left;height:41px; line-height:41px;float:left; display:inline;text-indent:10px; font-size:14px;width:336px;
+					}
+					.list_common ul li span{float:right;padding-right:10px;color:#4794e4;}
+					
+	.list_commons{width:370px;margin:5px;overflow:hidden; }
+		.list_commons h3{text-align:left;width:370px;font-size:16px; height:42px;line-height:42px; font-weight:bolder;padding-left:5px;color:#06297d;border-bottom:3px solid #4794e4; color:#4794e4;text-indent:8px;}
+				.list_commons h3 a{float:right;font-weight:normal;background:url(../images/icon_20.jpg) no-repeat 0 5px;width:41px; height:42px;  }
+				.list_commons h3 a:hover{text-decoration:underline;}
+				.list_commons ul{ margin:0px; padding:0px;  width:370px; height:250px;}
+					.list_commons ul li{
+						text-align:left;height:51px; line-height:51px;float:left; display:inline;text-indent:10px; font-size:14px;width:370px;
+					}
+					.list_commons ul li span{float:right;padding-right:10px;color:#4794e4;}
+	
+	ul.icon2{
+		margin:5px;width:261px; height:163px;
+	}
+	
+		ul.icon2 a{color:white;}
+		ul.icon2 li{float:left; display:inline; height:80px; margin-bottom:3px}
+		ul.icon2 .icon_1{ background-color:#70bf28;width:116px; margin-right:3px; height:80px; background-image:url(../styles/mainpage/images/icon_03.jpg); background-repeat:no-repeat; background-position:110px 10px; padding:0 5px; position:relative}
+			ul.icon2 .icon_1 a,ul.icon2 .icon_3 a{padding-top:58px; display:block; font-size:14px; font-weight:bold; color:white;text-indent:8px}
+			ul.icon2 .icon_1 span,ul.icon2 .icon_3 span{ display:block; bottom:10px; font-size:12px; font-weight:normal; left:5px;}
+			ul.icon2 .icon_1 em,ul.icon2 .icon_3 em{ font-weight:bold; position:absolute;bottom:10px; right:27px; font-style:normal;}
+		ul.icon2 .icon_2{ background-color:#70bf28;width:116px; height:80px; background-image:url(../styles/mainpage/images/icon_05.jpg); background-repeat:no-repeat; background-position:20px 10px; padding:0 5px; position:relative}
+		ul.icon2 .icon_3{ background-color:#f1a400;width:116px; margin-right:3px; height:80px; background-image:url(../styles/mainpage/images/icon_09.jpg); background-repeat:no-repeat; background-position:110px 10px; padding:0 5px; position:absolute}
+		ul.icon2 .icon_4{ background-color:#f1a400;width:116px; height:80px; background-image:url(../styles/mainpage/images/icon_10.jpg); background-repeat:no-repeat; background-position:20px 10px; padding:0 5px; position:relative}
+			ul.icon2 .icon_2 a,ul.icon2 .icon_4 a{padding-top:58px; display:block; font-size:14px; font-weight:bold; text-indent:8px}
+	
+	ul.icon3{
+		margin:5px;width:261px; height:81px;
+	}
+ 		ul.icon3 a{color:white;padding-top:58px; display:block; font-size:14px; font-weight:bold; text-indent:0px}
+ 		ul.icon3 li{text-align:center;float:left; display:inline; height:80px; margin-bottom:3px}
+ 		ul.icon3 .icon_2{background-color:#f1a400;width:117px; margin-right:3px;font-size:8px; height:80px; background-image:url(../images/sw_transact.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+ 		ul.icon3 .icon_3{background-color:#f1a400;width:117px; margin-right:3px;font-size:8px; height:80px; background-image:url(../images/fw_transact.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+ 		ul.icon3 .icon_4{background-color:#f1a400;width:117px; margin-right:3px;font-size:8px; height:80px; background-image:url(../images/dc_transact.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+ 		ul.icon3 .icon_5{background-color:#f1a400;width:117px; margin-right:3px;font-size:8px; height:80px; background-image:url(../images/other_transact.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+ 		ul.icon3 .icon3_6{background-color:#f1a400;width:117px; margin-right:3px;font-size:8px; height:80px; background-image:url(../images/icon_03.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+ 		ul.icon3 .icon3_7{background-color:#f1a400;width:117px; margin-right:3px;font-size:8px; height:80px; background-image:url(../images/icon_05.png); background-repeat:no-repeat; background-position:35px 10px; padding:0 5px; position:relative}
+ 		
+ 		ul.icon3 .icon_2 a{font-size:13px;padding-left:1px}
+ 		ul.icon3 .icon_3 a{font-size:13px;}
+ 		ul.icon3 .icon_4 a{font-size:13px;}
+ 		ul.icon3 .icon_5 a{font-size:13px;}
+ 		ul.icon3 .icon3_6 a{font-size:13px;}
+ 		ul.icon3 .icon3_7 a{font-size:13px;}
+ 		
+	.weather{
+		margin:5px; width:259px;height:73px; background-color:#e3e8ec; background-image:url(../styles/mainpage/images/san.jpg); background-position:right bottom; background-repeat:no-repeat
+	}
+	
+	.listimg{
+		background:#e3e8ec; margin:5px; width:261px;
+	}
+		.listimg ul li{float:left;width:84px; height:85px; background:#4794e4;margin-right:3px; margin-bottom:3px}
+		.listimg ul li img{ display:block; margin:8px auto;height:45px;}
+		.listimg ul li a{ display:block; text-align:center; font-size:12px; font-weight:bold; color:white;}

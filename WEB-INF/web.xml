@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!-- Spring ApplicationContext配置文件的路径�,可使用通配符，多个路径用�1,号分隔
+		此参数用于后面的Spring-Context loader -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:spring/*.xml</param-value>
+	</context-param>
+	<!-- 默认i18n资源文件 -->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>i18n/messages</param-value>
+	</context-param>
+	<!-- ExtremeTable 表格标签的Properties文件 -->
+	<context-param>
+		<param-name>extremecomponentsPreferencesLocation</param-name>
+		<param-value>/config/extremetable.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>extremecomponentsMessagesLocation</param-name>
+		<param-value>i18n/messages</param-value>
+	</context-param>
+
+
+	<!--Spring ApplicationContext 载入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<!-- 支持session scope的Spring bean -->
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>org.extremecomponents.table.filter.SitemeshPageFilter</filter-class>
+	</filter>
+
+	<!-- 著名 Character Encoding filter -->
+	<filter>
+        <filter-name>encodingFilter</filter-name>
+         <filter-class>com.software.pack.lisn.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+	<!--   所有的过滤器处理  包含有解码过滤器，Hibernate连接过滤器，ACL页面控制过滤器  -->
+		<filter>
+		<filter-name>ACLFilter</filter-name>
+		<filter-class>
+		com.software.pack.lisn.ACLFilter
+		</filter-class>
+		<init-param>
+		<param-name>loginUrl</param-name>
+		<param-value>/login.do</param-value>
+		</init-param>
+		<init-param>
+		<param-name>doLoginUrl</param-name>
+		<param-value>/loginsystem.do</param-value>
+		</init-param>
+		</filter> 
+	<filter>
+		<filter-name>hibernateFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>eXtremeExport</filter-name>
+		<filter-class>org.extremecomponents.table.filter.ExportFilter</filter-class>
+	</filter>
+	<!--   过滤器结束 -->
+	<!--   过滤器mapping  -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping> 
+		<filter-name>eXtremeExport</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ACLFilter</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ACLFilter</filter-name>
+		<servlet-name>*.do*</servlet-name>
+	</filter-mapping>
+		<filter-mapping>
+		<filter-name>ACLFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+ 
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+			/WEB-INF/struts-config.xml,	
+			/WEB-INF/modules/struts-config-sysmaintain.xml,
+			/WEB-INF/modules/struts-config-organstaffmanager.xml,
+			/WEB-INF/modules/struts-config-sysconfigmanager.xml,
+			/WEB-INF/modules/struts-config-commonmanager.xml,
+			/WEB-INF/modules/struts-config-videoMonitor.xml,
+            /WEB-INF/modules/struts-config-safeControlCenter.xml,
+            /WEB-INF/modules/struts-config-projectMonitor.xml,
+            /WEB-INF/modules/struts-config-eWorkCard.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	<!-- 与报表有关的servlet -->
+	<servlet>
+		<servlet-name>DisplayChart</servlet-name>
+		<servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+   	</servlet>
+   	
+   	<servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>net.sf.jasperreports.j2ee.servlets.ImageServlet</servlet-class>
+    </servlet>
+    
+    
+    <!--xfire+spring的webservice服务配置 -->
+<!--	<servlet>-->
+<!--		<servlet-name>XFireServlet</servlet-name>-->
+<!--		<servlet-class>org.codehaus.xfire.spring.XFireSpringServlet</servlet-class>-->
+<!--	</servlet>-->
+<!--	<servlet-mapping>-->
+<!--		<servlet-name>XFireServlet</servlet-name>-->
+<!--		<url-pattern>/services/*</url-pattern>-->
+<!--	</servlet-mapping>-->
+    
+    <!-- 工作流图片动态显示的servlet -->
+   	<servlet>
+		<servlet-name>ProcessImageServlet</servlet-name>
+		<servlet-class>
+			org.jbpm.webapp.servlet.ProcessImageServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessImageServlet</servlet-name>
+		<url-pattern>/processimage</url-pattern>
+	</servlet-mapping>
+    
+    <servlet>
+    <servlet-name>CewolfServlet</servlet-name>
+    <servlet-class>de.laures.cewolf.CewolfRenderer</servlet-class>
+    <init-param>
+        <param-name>storage</param-name>
+        <param-value>de.laures.cewolf.storage.TransientSessionStorage</param-value>
+    </init-param>
+    <init-param>
+        <param-name>overliburl</param-name>
+        <param-value>/scripts/overlib.js</param-value>
+    </init-param>
+    <init-param>
+        <param-name>debug</param-name>
+        <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CewolfServlet</servlet-name>
+    <url-pattern>/cewolf/*</url-pattern>
+  </servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/servlet/DisplayChart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/servlets/image</url-pattern>
+    </servlet-mapping>
+       <!-- 编辑控件有关 -->
+    	<servlet>
+		<servlet-name>Connector</servlet-name>
+		<servlet-class>
+			com.fredck.FCKeditor.connector.ConnectorServlet
+		</servlet-class>
+		<init-param>
+			<param-name>baseDir</param-name>
+			<param-value>/uploadNewsTextFiles/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>Connector</servlet-name>
+		<url-pattern>
+			/FCKeditor/editor/filemanager/browser/default/connectors/jsp/connector
+		</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SimpleUploader</servlet-name>
+		<servlet-class>
+			com.fredck.FCKeditor.uploader.SimpleUploaderServlet
+		</servlet-class>
+		<init-param>
+			<param-name>baseDir</param-name>
+			<param-value>/upload/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>enabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>AllowedExtensionsFile</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>DeniedExtensionsFile</param-name>
+			<param-value>
+				php|php3|php5|phtml|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|dll|reg|cgi
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>AllowedExtensionsImage</param-name>
+			<param-value>jpg|gif|jpeg|png|bmp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>DeniedExtensionsImage</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>AllowedExtensionsFlash</param-name>
+			<param-value>swf|fla</param-value>
+		</init-param>
+		<init-param>
+			<param-name>DeniedExtensionsFlash</param-name>
+			<param-value></param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+    <servlet>
+    	<servlet-name>RandomCodeServlet</servlet-name>
+    	<servlet-class>com.whmetro.systemmanage.sysmaintain.action.RandomCodeServlet</servlet-class>
+  	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SimpleUploader</servlet-name>
+		<url-pattern>
+			/FCKeditor/editor/filemanager/upload/simpleuploader
+		</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RandomCodeServlet</servlet-name>
+    <url-pattern>/servlet/RandomCodeServlet</url-pattern>
+  </servlet-mapping>
+
+	<!-- 错误页面的转向处理 -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/commons/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/commons/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/commons/403.jsp</location>
+	</error-page>
+	<!-- session过期时间处理 分钟为单位 -->
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+	<security-role>
+		<role-name>everyone</role-name>
+	</security-role>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<display-name>BlazeDS</display-name>
+    <description>BlazeDS Application</description>
+
+    <servlet>
+    	<servlet-name>imageLoad</servlet-name>
+    	<servlet-class>com.whmetro.extend.base.ImageLoadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>imageLoad</servlet-name>
+    	<url-pattern>/servlet/imageLoad</url-pattern>
+    </servlet-mapping>
+    
+    <listener>
+		<listener-class>com.whmetro.common.util.listener.ServiceContextListener</listener-class>
+	</listener>
+	
+	
+	<servlet>
+        <servlet-name>UploadFY</servlet-name>
+        <servlet-class>com.whmetro.common.util.servlet.UploadFY</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadFY</servlet-name>
+        <url-pattern>/servlet/UploadFY</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UploadFYNew</servlet-name>
+        <servlet-class>com.whmetro.common.util.servlet.UploadFYNew</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadFYNew</servlet-name>
+        <url-pattern>/servlet/UploadFYNew</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UploadFYException</servlet-name>
+        <servlet-class>com.whmetro.common.util.servlet.UploadFYException</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadFYException</servlet-name>
+        <url-pattern>/servlet/UploadFYException</url-pattern>
+    </servlet-mapping>
+    
+    
+     <servlet>
+		<servlet-name>XhEditor</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>XhEditor</servlet-name>
+		<url-pattern>/servlet/UploadFileServlet</url-pattern>
+	</servlet-mapping>
+	<!--NTKO 插件 -->
+	<servlet>
+		<servlet-name>Ntkooffice</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ntkooffice</servlet-name>
+		<url-pattern>/servlet/UploadOfficeServlet</url-pattern>
+			</servlet-mapping>
+		<servlet>
+		<servlet-name>NtkoofficeFile</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NtkoofficeFile</servlet-name>
+		<url-pattern>/servlet/UploadOfficeFileServlet</url-pattern>
+	</servlet-mapping>
+
+<!-- 超大附件上传 -->
+	<servlet>
+		<servlet-name>NtkoofficeSaveFile</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeSaveFileServlet</servlet-class>
+		 <init-param>
+      		<param-name>filePath</param-name>
+	      <param-value>upload</param-value>
+	    </init-param>
+	    <init-param>
+	      <param-name>tempFilePath</param-name>
+	      <param-value>temp</param-value>
+	    </init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NtkoofficeSaveFile</servlet-name>
+		<url-pattern>/servlet/UploadOfficeSaveFileServlet</url-pattern>
+	</servlet-mapping>
+<servlet>
+		<servlet-name>NtkoofficeQueryFile</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeQueryFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NtkoofficeQueryFile</servlet-name>
+		<url-pattern>/servlet/UploadOfficeQueryFileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NtkoofficeFinishFile</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeFinishFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NtkoofficeFinishFile</servlet-name>
+		<url-pattern>/servlet/UploadOfficeFinishFileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NtkoofficeDeleteFile</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeDeleteFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NtkoofficeDeleteFile</servlet-name>
+		<url-pattern>/servlet/UploadOfficeDeleteFileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NtkoofficeDownloadFile</servlet-name>
+		<servlet-class>com.whmetro.common.util.servlet.UploadOfficeDownloadFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NtkoofficeDownloadFile</servlet-name>
+		<url-pattern>/servlet/UploadOfficeDownloadFileServlet</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

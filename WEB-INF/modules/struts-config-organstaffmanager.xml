@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="organizationForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="employeeForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="corpTypeForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="corpForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="oaEmployeeForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="employeeExtendForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="ntkoOfficeFileForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="organizationOutForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+  <action-mappings>
+  		<!-- 组织信息-->
+		<action path="/organizationAction" name="organizationForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/sysmanager/organstaffmanager/organization/organizationIndex.jsp"/>
+			<forward name="listLeft" path="/biz/sysmanager/organstaffmanager/organization/organizationListLeft.jsp"/>
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/organization/organizationList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/organization/organizationAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/organization/organizationEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/organization/organizationView.jsp"/>
+			<forward name="selectProjectPeriods" path="/biz/sysmanager/organstaffmanager/organization/selectProjectPeriods.jsp"/>
+			<forward name="changePro" path="/biz/sysmanager/organstaffmanager/organization/changePro.jsp"/>
+			
+			<forward name="queryOrgInfoList" path="/biz/sysmanager/organstaffmanager/organization/selectQueryOrganInfo.jsp"/>
+			
+			<forward name="success" path="/organizationAction.do?method=index" redirect="true"/>
+		</action>
+		<action path="/organizationOutAction" name="organizationOutForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/organizationOut/organizationOutList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/organizationOut/organizationOutAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/organizationOut/organizationOutEditForm.jsp"/>
+			
+			<forward name="selectCorp" path="/biz/sysmanager/organstaffmanager/organizationOut/selectCorp.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/organizationOut/organizationOutView.jsp"/>
+			<forward name="success" path="/organizationOutAction.do?method=list" redirect="true"/>
+		</action>
+		
+		<!-- 组织员工管理-->
+		<action path="/employeeAction" name="employeeForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/sysmanager/organstaffmanager/employee/employeeIndex.jsp"/>
+			<forward name="left" path="/biz/sysmanager/organstaffmanager/employee/employeeListLeft.jsp"/>
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/employee/employeeList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/employee/employeeAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/employee/employeeEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/employee/employeeView.jsp"/>
+			<forward name="listRe" path="/biz/sysmanager/organstaffmanager/corp/corpEmpList.jsp"/>
+			<forward name="successPage" path="/biz/sysmanager/organstaffmanager/employee/successPage.jsp"/>
+			<forward name="success" path="/employeeAction.do?method=index" redirect="true"/>
+			
+			<forward name="selectMailEmployee" path="/biz/sysmanager/organstaffmanager/employee/selectMailEmployee.jsp"/>
+			<forward name="selectOrg" path="/biz/sysmanager/organstaffmanager/employee/selectOrg.jsp"/>
+			<forward name="selectEmpsInnerForSysOperator" path="/biz/sysmanager/sysmaintain/sysOperator/selectEmpsInnerForSysOperator.jsp"/>
+			<forward name="selectEmpsOuterForSysOperator" path="/biz/sysmanager/sysmaintain/sysOperator/selectEmpsOuterForSysOperator.jsp"/>
+			<forward name="selectListForPersonReceiveFileSend" path="/biz/sysmanager/personalInfomanager/personMailboxSend/employeeSelectListForPersonReceiveFileSend.jsp"/>
+			<forward name="selectListForUserGroupForPersonReciveFileMailbox"  path="/biz/sysmanager/personalInfomanager/personMailboxSend/selectListForUserGroupForPersonReciveFileMailbox.jsp"/>
+			<forward name="selectListForPersonMailboxSend" path="/biz/sysmanager/personalInfomanager/personMailboxSend/employeeSelectListForPersonMailboxSend.jsp"/>
+			<forward name="selectListForUserGroupForPersonMailbox" path="/biz/sysmanager/personalInfomanager/personMailboxSend/selectListForUserGroupForPersonMailbox.jsp"/>
+			<forward name="selectListForEmpCorpForPersonMailbox" path="/biz/sysmanager/personalInfomanager/personMailboxSend/selectListForEmpCorpForPersonMailbox.jsp"/>
+			<forward name="selectOrganForEmp" path="/biz/sysmanager/organstaffmanager/employee/selectOrganForEmp.jsp"/>
+			
+			<forward name="selectEmpNoteOGCOrgan" path="/biz/sysmanager/sysmaintain/sysPlug/selectEmpNoteOrganGroupCorp/selectEmpNoteOGCOrgan.jsp"/>
+			<forward name="selectEmpNoteOGCGroup" path="/biz/sysmanager/sysmaintain/sysPlug/selectEmpNoteOrganGroupCorp/selectEmpNoteOGCGroup.jsp"/>
+			<forward name="selectEmpNoteOGCCorp" path="/biz/sysmanager/sysmaintain/sysPlug/selectEmpNoteOrganGroupCorp/selectEmpNoteOGCCorp.jsp"/>
+			<forward name="selectEmp" path="/biz/sysmanager/organstaffmanager/employee/employeeSelect.jsp"/>
+			
+			<forward name="selectEmpNoteOGOrgan" path="/biz/sysmanager/sysmaintain/sysPlug/selectEmpNoteOrganGroup/selectEmpNoteOGOrgan.jsp"/>
+			<forward name="selectEmpNoteOGGroup" path="/biz/sysmanager/sysmaintain/sysPlug/selectEmpNoteOrganGroup/selectEmpNoteOGGroup.jsp"/>
+			
+			<forward name="selectEmpsForLine" path="/biz/sysmanager/sysmaintain/sysOperator/selectEmpsForLine.jsp"/>
+		</action>
+		
+		<!-- 参建单位类型-->
+		<action path="/corpTypeAction" name="corpTypeForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/sysmanager/organstaffmanager/corpType/corpTypeIndex.jsp"/>
+			<forward name="listLeft" path="/biz/sysmanager/organstaffmanager/corpType/corpTypeListLeft.jsp"/>
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/corpType/corpTypeList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/corpType/corpTypeAddForm.jsp"/>
+			
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/corpType/corpTypeEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/corpType/corpTypeView.jsp"/>
+			<forward name="success" path="/corpTypeAction.do?method=index" redirect="true"/>
+		</action>
+		
+		<!-- 参建单位-->
+		<action path="/corpAction" name="corpForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/sysmanager/organstaffmanager/corp/corpIndex.jsp"/>
+			<forward name="listLeft" path="/biz/sysmanager/organstaffmanager/corp/corpListLeft.jsp"/>
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/corp/corpList.jsp"/>
+			<forward name="corpAdd" path="/biz/sysmanager/organstaffmanager/corp/corpAdd.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/corp/corpAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/corp/corpEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/corp/corpView.jsp"/>
+			<forward name="success" path="/corpAction.do?method=index" redirect="true"/>
+			<forward name="corpEdit" path="/biz/sysmanager/organstaffmanager/corp/corpEditForm2.jsp"/>
+		</action>
+		
+		<!-- 参建单位员工-->
+		<action path="/corpEmployeeAction" name="employeeForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/sysmanager/organstaffmanager/corp/corpIndex.jsp"/>
+			<forward name="listLeft" path="/biz/sysmanager/organstaffmanager/corp/corpListLeft.jsp"/>
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/corp/corpList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/corp/corpEmployeeAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/corp/corpEmployeeEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/corp/corpEmployeeView.jsp"/>
+			<forward name="success" path="/corpAction.do?method=index" redirect="true"/>
+		</action>
+		
+		<!-- 单位员工-->
+		<action path="/employeeExtendAction" name="employeeExtendForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/sysmanager/organstaffmanager/employeeExtend/employeeExtendList.jsp"/>
+			<forward name="create" path="/biz/sysmanager/organstaffmanager/employeeExtend/employeeExtendAddForm.jsp"/>
+			<forward name="edit" path="/biz/sysmanager/organstaffmanager/employeeExtend/employeeExtendEditForm.jsp"/>
+			<forward name="view" path="/biz/sysmanager/organstaffmanager/employeeExtend/employeeExtendView.jsp"/>
+			<forward name="add" path="/biz/sysmanager/organstaffmanager/employeeExtend/employeeExtendForwordAdd.jsp"/>
+			<forward name="selectEmpsOuterForSysOperator" path="/biz/sysmanager/sysmaintain/sysOperator/selectEmpsOuterForSysOperator.jsp"/>
+			
+		</action>
+		
+		<!-- OA 组织员工管理-->
+		<action path="/oaEmployeeAction" name="oaEmployeeForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/biz/oamanager/oaemployee/oaemployeeIndex.jsp"/>
+			<forward name="listLeft" path="/biz/oamanager/oaemployee/oaemployeeListLeft.jsp"/>
+			<forward name="list" path="/biz/oamanager/oaemployee/oaemployeeList.jsp"/>
+			<forward name="create" path="/biz/oamanager/oaemployee/oaemployeeAddForm.jsp"/>
+			<forward name="edit" path="/biz/oamanager/oaemployee/oaemployeeEditForm.jsp"/>
+			<forward name="view" path="/biz/oamanager/oaemployee/oaemployeeView.jsp"/>
+			<forward name="success" path="/oaEmployeeAction.do?method=index" redirect="true"/>
+			<forward name="selectOrganForEmp" path="/biz/oamanager/oaemployee/oaselectOrganForEmp.jsp"/>
+		</action>
+		<!-- office 控件 -->
+		<action path="/ntkoOfficeFileAction" name="ntkoOfficeFileForm" parameter="method" scope="request" validate="false">
+			<forward name="editoffice" path="/officeControlDemo-Oracle/editoffice.jsp"/>
+		</action>
+  </action-mappings> 
+</struts-config>

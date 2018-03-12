@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="dataLiveVideoForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/dataLiveVideoAction" name="dataLiveVideoForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/safeControlCenter/videoMonitor/dataLiveVideoList.jsp"/>
+			<forward name="create" path="/biz/safeControlCenter/videoMonitor/dataLiveVideoAddForm.jsp"/>
+			<forward name="edit" path="/biz/safeControlCenter/videoMonitor/dataLiveVideoEditForm.jsp"/>
+			<forward name="view" path="/biz/safeControlCenter/videoMonitor/dataLiveVideoView.jsp"/>
+			<forward name="success" path="/dataLiveVideoAction.do?method=list" redirect="true"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

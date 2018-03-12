@@ -1,0 +1,17 @@
+﻿本示例使用root用户，口令 root 连接数据库。
+
+create database ntko;
+
+use ntko;
+
+DROP TABLE IF EXISTS ntko.filesinfo;
+CREATE TABLE filesinfo (
+  FileMd5ID char(32) character set latin1 NOT NULL,
+  FileOriginalName varchar(255) character set utf8 collate utf8_bin NOT NULL,
+  FileSize bigint(20) unsigned zerofill NOT NULL,
+  IsFinished tinyint(1) NOT NULL,
+  CreateTime datetime default NULL,
+  FileName varchar(255) character set utf8 collate utf8_bin NOT NULL,
+  UploadInfoFileName varchar(255) character set utf8 collate utf8_bin NOT NULL,
+  PRIMARY KEY  (FileMd5ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

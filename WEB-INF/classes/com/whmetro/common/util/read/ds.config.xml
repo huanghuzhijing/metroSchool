@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ds-config>
+<pool>
+<type>oracle</type>
+<name>xcland</name>
+<driver>oracle.jdbc.driver.OracleDriver</driver>
+<url>jdbc:oracle:thin:@192.168.1.100:1521:LCSOFT</url>
+<username>xcland</username>
+<password>xcland</password>
+<maxconn>1000</maxconn>
+</pool>
+</ds-config>

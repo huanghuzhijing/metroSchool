@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<converters>
+	<converter className="com.whmetro.common.utils.convertors.SqlDateConverter" register="java.sql.Date" used="true">
+	</converter>
+
+	<converter className="com.whmetro.common.utils.convertors.TimestampConverter" register="java.sql.Timestamp"
+		used="true">
+		<property name="timestampFormat" value="yyyy-MM-dd HH:mm:ss" /> 
+	</converter>
+
+	<converter className="com.whmetro.common.utils.convertors.DateConverter" register="java.util.Date" used="false">
+		<property name="dateFormat" value="yyyy-MM-dd" />
+	</converter>
+
+	<converter className="com.whmetro.common.utils.convertors.CurrencyConverter" register="java.lang.Double"
+		used="false" />
+
+	<converter className="com.whmetro.common.utils.convertors.BigDecimalConvertor" register="java.math.BigDecimal"
+		used="true" />
+
+	<converter className="com.whmetro.common.utils.convertors.IntegerConverter" register="java.lang.Integer"
+		used="true" />
+
+	<converter className="com.whmetro.common.utils.convertors.LongConverter" register="java.lang.Long" used="true" />
+
+	<converter className="com.whmetro.common.utils.convertors.DoubleConverter" register="java.lang.Double" used="true" />
+</converters>

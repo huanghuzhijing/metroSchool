@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+       <!--  Servlet  Action配置文件 -->
+<beans default-autowire="byName" default-lazy-init="true">
+	<bean name="/bizplat" class="com.whmetro.systemmanage.sysmaintain.action.BizplatformAction"/>
+    <bean name="/abstractCStrutsEntityAction" class="com.whmetro.common.core.action.AbstractCStrutsEntityAction"/>
+	<bean name="/sysModuleInfoAction" class="com.whmetro.systemmanage.sysmaintain.action.SysModuleInfoAction"/>
+	<bean name="/sysModuleOperationAction" class="com.whmetro.systemmanage.sysmaintain.action.SysModuleOperationAction"/>
+	<bean name="/sysRoleAction" class="com.whmetro.systemmanage.sysmaintain.action.SysRoleAction"/>
+	<bean name="/sysRoleModuleJoinAction" class="com.whmetro.systemmanage.sysmaintain.action.SysRoleModuleJoinAction"/>
+	<bean name="/sysOperatorAction" class="com.whmetro.systemmanage.sysmaintain.action.SysOperatorAction"/>
+	<bean name="/sysOperRoleJoinAction" class="com.whmetro.systemmanage.sysmaintain.action.SysOperRoleJoinAction"/>
+	<bean name="/sysUsergroupAction" class="com.whmetro.systemmanage.sysmaintain.action.SysUsergroupAction"/>
+	<bean name="/sysUsergroupEmpAction" class="com.whmetro.systemmanage.sysmaintain.action.SysUsergroupEmpAction"/>
+	<bean name="/workFlowAction" class="com.whmetro.systemmanage.sysconfigmanager.action.WorkFlowAction"/>
+	<bean name="/pubAnnexAction" class="com.whmetro.systemmanage.sysmaintain.action.PubAnnexAction"/>
+	<bean name="/sysPostAction" class="com.whmetro.systemmanage.sysmaintain.action.SysPostAction"/>
+	
+	<bean name="/ntkoOfficeBigFileAction" class="com.whmetro.common.common.action.NtkoOfficeBigFileAction"/>
+	
+	<bean name="/sysMailboxReceiveAction" class="com.whmetro.systemmanage.action.SysMailboxReceiveAction"/>
+	<bean name="/sysMailboxSendAction" class="com.whmetro.systemmanage.action.SysMailboxSendAction"/>
+</beans>

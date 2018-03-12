@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="eTourConditionForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="eVideoTourForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="ePatrolRecordOpenCutForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="ePatrolRecordExcavationForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="ePatrolRecordBraceForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="ePatrolRecordCoverCutForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+		<form-bean name="ePatrolRecordSTMForm" type="org.apache.struts.validator.LazyValidatorForm"/>
+	</form-beans>
+	<action-mappings>
+		
+		<action path="/eTourConditionAction" name="eTourConditionForm" parameter="method" scope="request" validate="false">
+			<forward name="list" path="/biz/eWorkCard/eTourCondition/eTourConditionList.jsp"/>
+			<forward name="completionList" path="/biz/eWorkCard/eTourCondition/eTourConditionCompletionList.jsp"/>
+			<forward name="completionForm" path="/biz/eWorkCard/eTourCondition/eTourConditionCompletionForm.jsp"/>
+			<forward name="planList" path="/biz/eWorkCard/eTourCondition/eTourConditionPlanList.jsp"/>
+			<forward name="create" path="/biz/eWorkCard/eTourCondition/eTourConditionAddForm.jsp"/>
+			<forward name="yesterdayList" path="/biz/eWorkCard/eTourCondition/eTourConditionYesterdayList.jsp"/>
+			<forward name="workPointList" path="/biz/eWorkCard/eTourCondition/eTourConditionWorkPointList.jsp"/>
+			<forward name="tab" path="/biz/eWorkCard/eTourCondition/eTourConditionTab.jsp"/>
+			<forward name="findList" path="/biz/eWorkCard/eTourCondition/eTourConditionFindList.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/eTourCondition/eTourConditionView.jsp"/>
+			<forward name="engineerList" path="/biz/eWorkCard/eTourCondition/eTourConditionEngineerList.jsp"/>
+			<forward name="completeFill" path="/biz/eWorkCard/eTourCondition/eTourConditionCompleteFill.jsp"/>
+			<forward name="selectRecordType" path="/biz/eWorkCard/eTourCondition/selectRecordType.jsp"/>
+			<forward name="selectLine" path="/biz/eWorkCard/eTourCondition/selectLine.jsp"/>
+		</action>
+		<action path="/eVideoTourAction" name="eVideoTourForm" parameter="method" scope="request" validate="false">
+			<forward name="tab" path="/biz/eWorkCard/eTourCondition/eTourConditionTab.jsp"/>
+			<forward name="create" path="/biz/eWorkCard/eVideoTour/eVideoTourAddForm.jsp"/>
+			<forward name="edit" path="/biz/eWorkCard/eVideoTour/eVideoTourAddForm.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/eVideoTour/eVideoTourView.jsp"/>
+			<forward name="successPage" path="/biz/eWorkCard/eVideoTour/successPage.jsp"/>
+			<forward name="list" path="/biz/eWorkCard/eVideoTour/eVideoTourList.jsp"/>
+		</action>
+		<action path="/ePatrolRecordOpenCutAction" name="ePatrolRecordOpenCutForm" parameter="method" scope="request" validate="false">
+			<forward name="create" path="/biz/eWorkCard/ePatrolRecordOpenCut/ePatrolRecordOpenCutAddForm.jsp"/>
+			<forward name="edit" path="/biz/eWorkCard/ePatrolRecordOpenCut/ePatrolRecordOpenCutEditForm.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/ePatrolRecordOpenCut/ePatrolRecordOpenCutView.jsp"/>
+		</action>
+		<action path="/ePatrolRecordExcavationAction" name="ePatrolRecordExcavationForm" parameter="method" scope="request" validate="false">
+			<forward name="create" path="/biz/eWorkCard/ePatrolRecordExcavation/ePatrolRecordExcavationAdd.jsp"/>
+			<forward name="edit" path="/biz/eWorkCard/ePatrolRecordExcavation/ePatrolRecordExcavationEdit.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/ePatrolRecordExcavation/ePatrolRecordExcavationView.jsp"/>
+		</action>
+		<action path="/ePatrolRecordBraceAction" name="ePatrolRecordBraceForm" parameter="method" scope="request" validate="false">
+			<forward name="create" path="/biz/eWorkCard/ePatrolRecordBrace/ePatrolRecordBraceAdd.jsp"/>
+			<forward name="edit" path="/biz/eWorkCard/ePatrolRecordBrace/ePatrolRecordBraceEdit.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/ePatrolRecordBrace/ePatrolRecordBraceView.jsp"/>
+		</action>
+		
+		<action path="/ePatrolRecordCoverCutAction" name="ePatrolRecordCoverCutForm" parameter="method" scope="request" validate="false">
+			<forward name="create" path="/biz/eWorkCard/ePatrolRecordCoverCut/ePatrolRecordCoverCutAddForm.jsp"/>
+			<forward name="edit" path="/biz/eWorkCard/ePatrolRecordCoverCut/ePatrolRecordCoverCutEditForm.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/ePatrolRecordCoverCut/ePatrolRecordCoverCutView.jsp"/>
+		</action>
+		
+		<action path="/ePatrolRecordSTMAction" name="ePatrolRecordSTMForm" parameter="method" scope="request" validate="false">
+			<forward name="create" path="/biz/eWorkCard/ePatrolRecordSTM/ePatrolRecordSTMAddForm.jsp"/>
+			<forward name="edit" path="/biz/eWorkCard/ePatrolRecordSTM/ePatrolRecordSTMEditForm.jsp"/>
+			<forward name="view" path="/biz/eWorkCard/ePatrolRecordSTM/ePatrolRecordSTMView.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

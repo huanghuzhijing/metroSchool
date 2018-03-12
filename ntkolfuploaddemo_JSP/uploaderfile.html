@@ -1,0 +1,246 @@
+﻿<html>
+	<head>
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="Stylesheet.css" rel="stylesheet" type="text/css" />		
+		<script type="text/javascript" language="JavaScript">
+
+			//提示用户选择文件并上传。参数说明是否允许选择多个文件
+			function AddAndUpload(isMulti)
+			{
+				try
+				{
+					AddLocalFile(isMulti);
+					BeginSaveToURL();
+				}
+				catch(err)
+				{
+					if(document.all("Ntko.LargeFileUploader").StatusCode == 10)
+					{
+						//用户取消
+					}
+					else
+					{
+						alert("err" + err.number + ":" + err.description);
+					}
+				}
+			}
+			function AddLocalFile(isMulti)
+			{	
+			alert(1);
+				try
+				{
+					document.all("Ntko.LargeFileUploader").AddLocalFile("",isMulti,"*.*");
+				}
+				catch(err)
+				{
+					if(document.all("Ntko.LargeFileUploader").StatusCode == 10)
+					{
+						//用户取消
+					}
+					else
+					{
+						alert("err" + err.number + ":" + err.description);
+					}
+				}
+					alert(2);
+			}
+			function BeginSaveToURL()
+			{
+				document.all("PerFileUploadStatus").innerHTML = ""; //清除状态显示信息
+				document.all("SaveToURLFinishedStatus").innerHTML = "";
+				blocksProcessURL = "savefileblocks.jsp";
+				blocksFileField = "NTKO_LF_BLOCK";
+				//注意以下两个属性是必须设定的
+				document.all("Ntko.LargeFileUploader").QueryFileStatusURL="queryfilestatus.jsp";//向服务器查询上传文件状态信息的url
+				document.all("Ntko.LargeFileUploader").FinishedUploadURL="finishedupload.jsp";  //文件上传完成以后需要后台做的善后处理url
+				document.all("Ntko.LargeFileUploader").BeginSaveToURL(blocksProcessURL,blocksFileField,"QiTa=其他用户表单数据2");
+			}
+			function StopSaveToURL()
+			{
+				document.all("Ntko.LargeFileUploader").StopSaveToURL();
+			}
+			function ResetControl()
+			{
+				try
+				{
+					document.all('Ntko.LargeFileUploader').Reset();
+					document.all("AllFilesInfo").innerHTML = "";
+				}
+				catch(err)
+				{
+					alert("err：" + err.number + ":" + err.description);
+				}
+			}
+			function alertAllFiles()
+			{
+				var obj = document.all("Ntko.LargeFileUploader");
+				if (obj.FilesCount == 0)
+				{
+					alert("没有文件.");
+				}
+				else
+				{
+					for(i=0;i<obj.FilesCount;i++)
+					{
+						fileObj = obj.GetFile(i);
+						alert(fileObj.FilePath+":\r\n大小:"+formatSize(fileObj.FileSize)+"字节");
+					}
+				}
+			}
+			function alertAllRetMessage()
+			{
+				var obj = document.all("Ntko.LargeFileUploader");
+				alert("LastQueryStatusRetMes=\r\n" + obj.LastQueryStatusRetMes);
+				alert("LastFinishedUploadRetMes=\r\n" + obj.LastFinishedUploadRetMes);
+				for(i=0;i<5;i++)
+				{
+					alert("GetLastUploadRetMes(" + i +")=\r\n" + obj.GetLastUploadRetMes(i));
+				}
+			}
+			function beforeCloseAsk()
+			{
+				var obj = document.all("Ntko.LargeFileUploader");
+				if(obj.IsUploading)
+				{
+					event.returnValue = "文件正在上传中,您确认要关闭吗?";
+				}
+			}
+			function formatSize(fsize)
+			{
+				re=/(\d{1,3})(?=(\d{3})+(?:$|\.))/g;
+				return fsize.toString().replace(re,"$1,");
+			}
+		</script>
+		<title>ntko大文件上传控件演示</title>
+	</head>
+	<body onbeforeunload="beforeCloseAsk();">
+	<center>
+	<div id="weburldiv"><a href="http://www.ntko.com" title="软航科技官方网站" target="_blank">主网站</a>&nbsp;&nbsp;&nbsp;
+       <a href="http://dev.ntko.com/admin/support.nsf/fmBSQuestion?openform" title="欢迎向我们反馈各种问题!" target="_blank">反馈问题</a>&nbsp;&nbsp;&nbsp;
+       <a href="http://www.ntko.com/admin/homepagenew.nsf/vwDocsByAIDSumary/7D869CB7F47563E648257619006102A1" title="软航科技联系方式" target="_blank">联系我们</a>&nbsp;&nbsp;&nbsp;
+       <p class="demotitle">大文件上传组件V4.0演示</p>
+       </div>
+		<table cellpadding="0" cellspacing="0" class="dvtable">
+            <tr>
+                <td align="left">
+                    &nbsp; &nbsp;<img src="images/morefileupload1.png" alt="可以选择多个文件进行上传" onmouseover="this.src='images/morefileupload2.png'" onmouseout="this.src='images/morefileupload1.png'"  onclick="AddLocalFile(true);"  />
+                    <img src="images/compartline.png" alt="" style="width: 4px; height: 65px" />
+                    <img src="images/onefileupload1.png" alt="可以选择单一文件上传" onmouseover="this.src='images/onefileupload2.png'" onmouseout="this.src='images/onefileupload1.png'" onclick="AddLocalFile(false);"  />
+                    <img src="images/compartline.png" alt="" style="width: 4px; height: 65px" />
+                   <img src="images/reload1.png" alt="刷新当前页面窗口" onmouseover="this.src='images/reload2.png'" onmouseout="this.src='images/reload1.png'" onclick="document.location.reload();" style="width: 76px; height: 65px;cursor:pointer"/>
+                    <img src="images/compartline.png" alt="" style="width: 4px; height: 65px" alt="" />
+                    <img src="images/close1.png" alt="关闭当前窗口" onmouseover="this.src='images/close2.png'" onmouseout="this.src='images/close1.png'" onclick="window.close();" style="width: 76px; height: 65px;cursor:pointer" />
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" class="dvtable">
+                        <tr>
+                            <td>
+                                <img src="images/topbord.png" alt="" /></td>
+                        </tr>
+                        <tr>
+                            <td class="uploadtable">
+                            <!--文件上传状态和相关信息-->
+                            <table id="filecz"><tr>
+                            <td class="filelefttd">
+                            文件上传/分析状态:<span id="FilePersentDisplayText"></span><br />
+                            <span id="FilePersentDisplayTotalWidth" style="background-color:#FFF;color:#000;width:350;height:30px;border-color:#047700;border-width:2px;border-style:solid;">
+                            <span id="FilePersentDisplay" style="background-color:#42a312;width:0;height:30px;border:solid 2px #ffffc3"></span></span>
+                            <br/><div id="FileProcessStatus"></div><br/>
+                            总体上传状态:<span id="ManagerPersentDisplayText"></span><br/>
+                            <span id="ManagerPersentDisplayTotalWidth" style="background-color:#FFF;color:#000;width:350;height:30px;border-color:#047700;border-width:2px;border-style:solid;">
+							<span id="ManagerPersentDisplay" style="background-color:#42a312;width:0;height:30px;border:solid 2px #ffffc3"></span></span>
+                            <br /><div id="ManagerProcessStatus"></div><br /><br />
+                            所有要上传文件信息:<br/><br />
+                            <div id="AllFilesInfo"></div>
+                            </td>
+                            <td class="filerighttd">
+                            <a onclick="ResetControl();" title="删除控件中读取的文件">删除控件中文件</a>&nbsp;&nbsp;
+                            <a onclick="alertAllFiles();" title="查看控件已经加载的文件信息">查看文件信息</a>&nbsp;&nbsp;
+                            <a onclick="alertAllRetMessage();" title="查看服务器执行结果返回信息,可作为程序调试使用">查看服务器返回信息</a>&nbsp;&nbsp;<br />
+                            <img src="images/startupload1.jpg" alt="上传文件到服务器" onmouseover="this.src='images/startupload2.jpg'" onmouseout="this.src='images/startupload1.jpg'"  onclick="BeginSaveToURL();"/>&nbsp;
+                            <img src="images/cancel1.jpg" alt="取消正在上传的操作" onmouseover="this.src='images/cancel2.jpg'" onmouseout="this.src='images/cancel1.jpg'"  onclick="StopSaveToURL();" /><br /><br />
+                            完成文件信息:<br />
+                            <div id="wcfileinfo">
+                                <span>单文件上传结束消息:</span><br/>
+						        <div id="PerFileUploadStatus" ></div><br /><br />
+						        <span >全部文件上传结束消息:</span><br/>
+						        <div id="SaveToURLFinishedStatus" ></div>
+                            </div>
+                            </td>
+                            </tr></table>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td id="statustd">
+                            <span id="statuscode">控件返回状态:<span id="status"></span></span>
+                             </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" id="indexfoot">
+            <tr><td align="left">服务电话:023-62943208</td><td align="right">重庆软航科技有限公司版权所有</td></tr>
+         </table>
+         
+		<!--  产生控件的js代码 -->
+		<SPAN STYLE="color:red">如果不能装载控件。请确认你可以连接网络或者检查浏览器的选项中安全设置。<a href="http://www.ntko.com/control/bigfileuploadcontrol/bigfileuploadcontrol.zip">下载演示产品</a></SPAN>
+             <script type="text/javascript" language ="javascript" src="http://www.ntko.com/control/bigfileuploadcontrol/ntkogenUploaderObj.js"></script>
+		
+		<!-- 控件事件代码 -->
+		<script language="JScript" for="Ntko.LargeFileUploader" event="OnLocalFileAdded(fullname,fname,fsize)">
+			document.all("AllFilesInfo").innerHTML += "文件:"+fname + ",大小:"+formatSize(fsize)+"字节.<br>";
+			document.all("status").innerHTML="文件准备就绪,请选择\"开始上传\"保存到服务器";
+		</script>
+		<script language="JScript" for="Ntko.LargeFileUploader" event="OnStatusChange(mes,code)">
+			document.all("status").innerHTML = mes + ",code:"+code;
+		</script>
+		<script language="JScript" for="Ntko.LargeFileUploader" event="OnFileProcessStatusChange(AttachFile,mes,isPersent,Persent)">
+		document.all("FileProcessStatus").innerHTML = mes ;
+		if(isPersent)
+		{
+			var totalWidth =  parseInt(document.all("FilePersentDisplayTotalWidth").style.width); //因为width返回的是类似250px，有单位，所以需要转换
+			document.all("FilePersentDisplay").style.width = Persent*totalWidth/100;
+			document.all("FilePersentDisplayText").innerHTML = Persent + "%";
+		}
+				</script>
+				<script language="JScript" for="Ntko.LargeFileUploader" event="OnManagerStatusChange(mes,isPersent,Persent)">
+		document.all("ManagerProcessStatus").innerHTML = mes ;
+		if(isPersent)
+		{
+			var totalWidth =  parseInt(document.all("ManagerPersentDisplayTotalWidth").style.width);
+			document.all("ManagerPersentDisplay").style.width = Persent*totalWidth/100;
+			document.all("ManagerPersentDisplayText").innerHTML = Persent + "%";
+		}
+		</script>
+		<script language="JScript" for="Ntko.LargeFileUploader" event="OnOneFileUploadFinished(AttachFile,IsAllUploaded)">
+	document.all("PerFileUploadStatus").innerHTML += AttachFile.FileName +
+		":大小"+formatSize(AttachFile.FileSize)+"字节,上传停止,"+((IsAllUploaded)?"全部完成.":"尚未完成.")+"<br>";
+		</script>
+		<script language="JScript" for="Ntko.LargeFileUploader" event="OnSaveToURLFinished(IsAllUploaded)">
+			if(IsAllUploaded)
+			{
+				document.all("SaveToURLFinishedStatus").innerHTML="所有文件上传已成功完成 ";
+				try
+				{
+					if(window.opener)
+					{
+						window.opener.location.reload();//刷新父窗口文档列表
+					}
+				}
+				catch(e)
+				{
+				}	
+			}
+			else
+			{
+				document.all("SaveToURLFinishedStatus").innerHTML = "上传结束，不是所有文件上传都已成功 ";
+			}
+		</script>
+		</center>
+	</body>
+</html>
